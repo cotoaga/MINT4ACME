@@ -1,0 +1,400 @@
+<HTML>
+<!--
+
+You are free to copy the "Folder-Tree" script as long as you keep this copyright notice:
+
+   * 
+   * Script found in: http://www.geocities.com/Paris/LeftBank/2178/
+   *
+   * Author: Marcelino Alves Martins (martins@hks.com)
+   *
+
+
+Version control:  Creation: January '97.
+                  Last changes: June '97
+
+
+Instructions:
+  - You only have to touch in function generateTree()
+  - Nodes with other folders inside are created with folderNode(<folder name>)
+  - Nodes with documents inside are created with leafNode(<folder name>)
+  - Documents are nodes created with generateDocEntry(<new window?>, <doc name>, <doc link>)
+  - You cannot have 'mixed' folders (folders with other folders _and_ with documents)
+
+For other information refer to http://www.geocities.com/Paris/LeftBank/2178/foldertree.html
+
+-->
+<HEAD>
+	<TITLE>Frameset_1</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function initPage()	{
+	top.CurrentFrameset = 1;
+	top.FrameSet = 1;
+	top.setCookie ("Frame", top.FrameSet);
+	top.CONTENT.MAINFRAME.location.href = top.WeAreHere;
+}
+
+// ***************
+// Explorer Script
+// ***************
+
+//each node in the tree is an Array with 4+n positions 
+//  node[0] is 0/1 when the node is closed/open
+//  node[1] is 0/1 when the folder is closed/open
+//  node[2] is 1 if the children of the node are documents 
+//  node[3] is the name of the folder
+//  node[4]...node[4+n] are the n children nodes
+
+
+// ***************
+// Building the data in the tree
+// ***************
+
+function generateTree()
+{
+	var aux1, aux2, aux3, aux4;
+
+	foldersTree = folderNode("Homepage")
+		aux1 = appendChild(foldersTree, folderNode("Proposal"))
+			aux2 = appendChild(aux1, leafNode("Introduction"))
+				appendChild(aux2, generateDocEntry(0, "Introduction", "1_1.html", ""))
+				appendChild(aux2, generateDocEntry(0, "Objectives", "1_2.html", ""))
+				appendChild(aux2, generateDocEntry(0, "Problem Definition", "1_3.html", ""))
+			aux2 = appendChild(aux1, leafNode("General Approach"))
+				appendChild(aux2, generateDocEntry(0, "General Approach", "2_1.html", ""))
+				appendChild(aux2, generateDocEntry(0, "Business Processes", "2_2.html", ""))
+				appendChild(aux2, generateDocEntry(0, "Business Objects", "2_3.html", ""))
+				appendChild(aux2, generateDocEntry(0, "Framework Structure", "2_4.html", ""))
+				appendChild(aux2, generateDocEntry(0, "Benefits", "2_5.html", ""))
+			aux2 = appendChild(aux1, leafNode("Business Functionality"))
+				appendChild(aux2, generateDocEntry(0, "Business Functionality", "3_1.html", ""))
+				appendChild(aux2, generateDocEntry(0, "Benefits", "3_2.html", ""))
+			aux2 = appendChild(aux1, leafNode("Technical Environment"))
+				appendChild(aux2, generateDocEntry(0, "Technical Environment", "4_1.html", ""))
+				appendChild(aux2, generateDocEntry(0, "Overview", "4_2.html", ""))
+				appendChild(aux2, generateDocEntry(0, "MINT Layers", "4_3.html", ""))
+				appendChild(aux2, generateDocEntry(0, "MINT Versions", "4_4.html", ""))
+				appendChild(aux2, generateDocEntry(0, "Display", "4_5.html", ""))
+				appendChild(aux2, generateDocEntry(0, "Security", "4_6.html", ""))
+				appendChild(aux2, generateDocEntry(0, "Statistical Information", "4_7.html", ""))
+				appendChild(aux2, generateDocEntry(0, "Multimedia Objects", "4_8.html", ""))
+				appendChild(aux2, generateDocEntry(0, "Help", "4_9.html", ""))
+			aux2 = appendChild(aux1, leafNode("Project Plan"))
+				appendChild(aux2, generateDocEntry(0, "Project Plan", "5_1.html", ""))
+				appendChild(aux2, generateDocEntry(0, "Project Team", "5_2.html", ""))
+				appendChild(aux2, generateDocEntry(0, "Working Packages", "5_3.html", ""))
+		aux1 = appendChild(foldersTree, folderNode("Examples"))
+			aux2 = appendChild(aux1, leafNode("Automotive Sites"))
+				appendChild(aux2, generateDocEntry(1, "Netscape/Yahoo", "netscape.yahoo.com/guide/shopping/autos.html", ""))
+				appendChild(aux2, generateDocEntry(1, "Infoseek", "www.infoseek.com/Shopping/Shopping_for_cars", ""))
+				appendChild(aux2, generateDocEntry(1, "MotorTrend", "www.motortrend.com", ""))
+				appendChild(aux2, generateDocEntry(1, "Carpoint", "carpoint.msn.com", ""))
+				appendChild(aux2, generateDocEntry(1, "Audi", "www.audi.com", ""))
+				appendChild(aux2, generateDocEntry(1, "BMW", "www.bmw.de", ""))
+				appendChild(aux2, generateDocEntry(1, "Ford", "www.ford.com", ""))
+				appendChild(aux2, generateDocEntry(1, "GM", "www.gm.com", ""))
+				appendChild(aux2, generateDocEntry(1, "Mercedes Benz", "www.mercedes-benz.com", ""))
+				appendChild(aux2, generateDocEntry(1, "Mitsubishi", "www.mitsucars.com", ""))
+				appendChild(aux2, generateDocEntry(1, "Volkswagen", "www.vw.com", ""))
+			aux2 = appendChild(aux1, leafNode("Internet Technology"))
+				appendChild(aux2, generateDocEntry(1, "Yahoo Internet Index", "www.yahoo.com/Computers/Internet", ""))
+				appendChild(aux2, generateDocEntry(1, "Infoseek Internet Index", "www.infoseek.com/Internet", ""))
+			aux2 = appendChild(aux1, leafNode("Multimedia Technology"))
+				appendChild(aux2, generateDocEntry(1, "Yahoo Multimedia Index", "www.yahoo.com/Computers/Multimedia", ""))
+				appendChild(aux2, generateDocEntry(1, "TechWeb", "www.techweb.com", ""))
+		aux1 = appendChild(foldersTree, folderNode("Guided Tours"))
+			aux2 = appendChild(aux1, folderNode("Complete Tour"))
+				aux3 = appendChild(aux2, leafNode("Introduction"))
+					appendChild(aux3, generateDocEntry(0, "Introduction", "1_1.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Objectives", "1_2.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Problem Definition", "1_3.html", ""))
+				aux3 = appendChild(aux2, leafNode("General Approach"))
+					appendChild(aux3, generateDocEntry(0, "General Approach", "2_1.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Business Processes", "2_2.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Business Objects", "2_3.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Framework Structure", "2_4.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Benefits", "2_5.html", ""))
+				aux3 = appendChild(aux2, leafNode("Business Functionality"))
+					appendChild(aux3, generateDocEntry(0, "Business Functionality", "3_1.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Benefits", "3_2.html", ""))
+				aux3 = appendChild(aux2, leafNode("Technical Environment"))
+					appendChild(aux3, generateDocEntry(0, "Technical Environment", "4_1.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Overview", "4_2.html", ""))
+					appendChild(aux3, generateDocEntry(0, "MINT Layers", "4_3.html", ""))
+					appendChild(aux3, generateDocEntry(0, "MINT Versions", "4_4.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Display", "4_5.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Security", "4_6.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Statistical Information", "4_7.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Multimedia Objects", "4_8.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Help", "4_9.html", ""))
+				aux3 = appendChild(aux2, leafNode("Project Plan"))
+					appendChild(aux3, generateDocEntry(0, "Project Plan", "5_1.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Project Team", "5_2.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Working Packages", "5_3.html", ""))
+			aux2 = appendChild(aux1, folderNode("Quick Tour"))
+				aux3 = appendChild(aux2, leafNode("General Approach"))
+					appendChild(aux3, generateDocEntry(0, "Business Processes", "2_2.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Business Objects", "2_3.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Framework Structure", "2_4.html", ""))
+				aux3 = appendChild(aux2, leafNode("Technical Environment"))
+					appendChild(aux3, generateDocEntry(0, "MINT Layers", "4_3.html", ""))
+					appendChild(aux3, generateDocEntry(0, "MINT Versions", "4_4.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Display", "4_5.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Multimedia Objects", "4_8.html", ""))
+			aux2 = appendChild(aux1, folderNode("Technical Tour"))
+				aux3 = appendChild(aux2, leafNode("Introduction"))
+					appendChild(aux3, generateDocEntry(0, "Introduction", "1_1.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Objectives", "1_2.html", ""))
+				aux3 = appendChild(aux2, leafNode("General Approach"))
+					appendChild(aux3, generateDocEntry(0, "Framework Structure", "2_4.html", ""))
+				aux3 = appendChild(aux2, leafNode("Technical Environment"))
+					appendChild(aux3, generateDocEntry(0, "Technical Environment", "4_1.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Overview", "4_2.html", ""))
+					appendChild(aux3, generateDocEntry(0, "MINT Layers", "4_3.html", ""))
+					appendChild(aux3, generateDocEntry(0, "MINT Versions", "4_4.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Display", "4_5.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Security", "4_6.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Statistical Information", "4_7.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Multimedia Objects", "4_8.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Help", "4_9.html", ""))
+			aux2 = appendChild(aux1, folderNode("Business Tour"))
+				aux3 = appendChild(aux2, leafNode("Introduction"))
+					appendChild(aux3, generateDocEntry(0, "Introduction", "1_1.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Objectives", "1_2.html", ""))
+				aux3 = appendChild(aux2, leafNode("General Approach"))
+					appendChild(aux3, generateDocEntry(0, "General Approach", "2_1.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Business Processes", "2_2.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Business Objects", "2_3.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Framework Structure", "2_4.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Benefits", "2_5.html", ""))
+				aux3 = appendChild(aux2, leafNode("Business Functionality"))
+					appendChild(aux3, generateDocEntry(0, "Business Functionality", "3_1.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Benefits", "3_2.html", ""))
+				aux3 = appendChild(aux2, leafNode("Project Plan"))
+					appendChild(aux3, generateDocEntry(0, "Project Plan", "5_1.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Project Team", "5_2.html", ""))
+					appendChild(aux3, generateDocEntry(0, "Working Packages", "5_3.html", ""))
+		aux1 = appendChild(foldersTree, leafNode("About"))
+			appendChild(aux1, generateDocEntry(0, "Vision & Concept", "info.html", ""))
+			appendChild(aux1, generateDocEntry(0, "Sitemap", "sitemap/sitemap.wrl", ""))
+			appendChild(aux1, generateDocEntry(0, "Help", "help.html", ""))
+			appendChild(aux1, generateDocEntry(0, "Copyright", "about.html", ""))
+}
+
+// Auxiliary function to build the node
+function folderNode(name)
+{
+var arrayAux
+        arrayAux = new Array
+        arrayAux[0] = 0
+        arrayAux[1] = 0
+        arrayAux[2] = 0
+        arrayAux[3] = name
+        
+        return arrayAux
+}
+
+// Auxiliary function to build the node
+// The entries in arrayAux[4]..array[length-1] are strings built in generate doc entry
+function leafNode(name)
+{
+var arrayAux
+        arrayAux = new Array
+        arrayAux[0] = 0
+        arrayAux[1] = 0
+        arrayAux[2] = 1
+        arrayAux[3] = name
+        
+        return arrayAux
+}
+
+//this way the generate tree function becomes simpler and less error prone
+function appendChild(parent, child)
+{
+        parent[parent.length] = child
+        return child
+}
+
+//these are the last entries in the hierarchy, the local and remote links to html documents
+function generateDocEntry(icon, docDescription, link)
+{
+var retString =""
+
+        if (icon==0)
+                retString = "<A href='"+link+"' target=MAINFRAME><img src='images/doc.gif' alt='Opens in right frame'"
+        else
+                retString = "<A href='http://"+link+"' target=_blank><img src='images/link.gif' alt='Opens in new window'"
+        retString = retString + " border=0></a><td nowrap><font size=-2 face='Helvetica, Arial'>" + docDescription + "</font>"
+
+        return retString
+
+}
+
+
+// **********************
+// display functions
+
+//redraws the left frame
+function redrawTree()
+{
+var doc = top.CONTENT.EXPLORER.window.document
+
+        doc.clear()
+        doc.write("<body bgcolor='white'>")     
+        redrawNode(foldersTree, doc, 0, 1, "")
+        doc.close()
+}
+
+//recursive function over the tree structure called by redrawTree
+function redrawNode(foldersNode, doc, level, lastNode, leftSide)
+{
+var j=0
+var i=0
+
+        doc.write("<table border=0 cellspacing=0 cellpadding=0>")
+        doc.write("<tr><td valign = middle nowrap>")
+
+        doc.write(leftSide)
+
+        if (level>0)
+                if (lastNode) //the last 'brother' in the children array
+                {
+                        doc.write("<img src='images/lastnode.gif' width=16 height=22>")
+                        leftSide = leftSide + "<img src='images/blank.gif' width=16 height=22>" 
+                }
+                else
+                {
+                        doc.write("<img src='images/node.gif' width=16 height=22>")
+                        leftSide = leftSide + "<img src='images/vertline.gif' width=16 height=22>"
+                }
+
+        displayIconAndLabel(foldersNode, doc)
+        doc.write("</table>")
+
+        if (foldersNode.length > 4 && foldersNode[0]) //there are sub-nodes and the folder is open
+        {
+                if (!foldersNode[2]) //for folders with folders
+                {
+                        level=level+1
+                        for (i=4; i<foldersNode.length;i++)
+                                if (i==foldersNode.length-1)
+                                        redrawNode(foldersNode[i], doc, level, 1, leftSide)
+                                else
+                                        redrawNode(foldersNode[i], doc, level, 0, leftSide)
+                }
+                else //for folders with documents
+                {
+                        for (i=4; i<foldersNode.length;i++)
+                        {
+                                doc.write("<table border=0 cellspacing=0 cellpadding=0 valign=center>")
+                                doc.write("<tr><td nowrap>")
+                                doc.write(leftSide)
+                                if (i==foldersNode.length - 1)
+                                        doc.write("<img src='images/lastnode.gif' width=16 height=22>")
+                                else
+                                        doc.write("<img src='images/node.gif' width=16 height=22>")
+                                doc.write(foldersNode[i])
+                                doc.write("</table>")
+                        }
+                }
+        }
+}
+
+//builds the html code to display a folder and its label
+function displayIconAndLabel(foldersNode, doc)
+{
+        doc.write("<A href='javascript:top.CONTENT.openBranch(\"" + foldersNode[3] + "\")'")
+        if (foldersNode[1])
+        {
+                doc.write("onMouseOver='window.status=\"Close folder\"; return true'><img src=")
+                doc.write("images/openfolder.gif width=24 height=22 border=0></a>")
+        }
+        else
+        {
+                doc.write("onMouseOver='window.status=\"Open folder\"; return true'><img src=")
+                doc.write("images/closedfolder.gif width=24 height=22 border=0></a>")
+        }
+        doc.write("<td valign=middle align=left nowrap>")
+        doc.write("<font size=-2 face='Helvetica, Arial'><b>"+foldersNode[3]+"</b></font>")
+}
+
+//**********************+
+// Recursive functions
+
+//when a parent is closed all children also are
+function closeFolders(foldersNode)
+{
+var i=0
+
+        if (!foldersNode[2])
+        {
+                for (i=4; i< foldersNode.length; i++)
+                        closeFolders(foldersNode[i])
+
+        }
+        foldersNode[0] = 0
+        foldersNode[1] = 0
+}
+
+//recursive over the tree structure
+//called by openbranch
+function clickOnFolderRec(foldersNode, folderName)
+{
+var i=0
+
+        if (foldersNode[3] == folderName)
+        {
+                if (foldersNode[0])
+                        closeFolders(foldersNode)
+                else
+                {
+                        foldersNode[0] = 1
+                        foldersNode[1] = 1
+                }
+        }
+        else
+        {
+                if (!foldersNode[2])
+                        for (i=4; i< foldersNode.length; i++)
+                                clickOnFolderRec(foldersNode[i], folderName)
+        }
+}
+
+
+// ********************
+// Event handlers
+
+//called when the user clicks on a folder
+function openBranch(branchName)
+{
+        clickOnFolderRec(foldersTree, branchName)
+        if (branchName=="Homepage" && foldersTree[0]==0)
+                top.CONTENT.MAINFRAME.location="home.html"
+        timeOutId = setTimeout("redrawTree()",100)
+}
+
+//called after this html file is loaded
+function initializeTree()
+{
+        generateTree()
+        redrawTree()
+}
+
+var foldersTree = 0
+var timeOutId = 0
+generateTree() //sometimes when the user reloads the document Netscape 3.01 does not trigger the onLoad event (!!)
+
+// -->
+</SCRIPT>
+</HEAD>
+
+<FRAMESET COLS="200,*" BORDER="0" FRAMESPACING="0" FRAMEBORDER="0" onLoad="initPage();initializeTree()">
+	<FRAME NAME="EXPLORER" SRC="explorer_loading.html" SCROLLING="AUTO">
+	<FRAMESET ROWS="*,75" BORDER="0" FRAMESPACING=0 FRAMEBORDER="NO">
+		<FRAME NAME="MAINFRAME" SRC="blank.html" SCROLLING="AUTO" FRAMEBORDER="YES">
+		<FRAME NAME="COLLECTION" SRC="collection.html" SCROLLING="NO" FRAMEBORDER="NO">
+	</FRAMESET>
+</FRAMESET>
+
+</HTML>

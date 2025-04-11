@@ -1,0 +1,162 @@
+<HTML>
+<HEAD>
+<TITLE>Control Panel</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function initPage()	{
+	if (top && top.CurrentFrameset && top.CurrentFrameset == 0)	{
+		document.images[3].src = "images/explorer_off.gif"
+		document.images[4].src = "images/browser_off.gif"
+	}
+	else if (top && top.CurrentFrameset && top.CurrentFrameset == 1)	{
+		document.images[3].src = "images/explorer_on.gif"
+		document.images[4].src = "images/browser_on.gif"
+	}
+	else if (top && top.CurrentFrameset && top.CurrentFrameset == 2)	{
+		document.images[3].src = "images/explorer_on.gif"
+		document.images[4].src = "images/browser_off.gif"
+	}
+	else if (top && top.CurrentFrameset && top.CurrentFrameset == 3)	{
+		document.images[3].src = "images/explorer_off.gif"
+		document.images[4].src = "images/browser_on.gif"
+	}
+	if (top && top.SiteSound && top.SiteSound == "on")	{
+		top.CONTROL.document.images[5].src = "images/sound_on.gif";
+	}
+}
+
+function disabledMsg()	{
+	window.alert("Button is temporarily disabled! Please proceed to the next page using the link below.");
+}
+
+function goHome()	{
+	if (top.CONTENT.location.href.indexOf("disclaimer.html") == -1)	{
+		top.WeAreHere = "home.html";
+		top.CONTENT.location.href = "frameset_1.html";
+		initPage();
+	}
+	else	{
+		disabledMsg();
+	}
+}
+
+function doPanic()	{
+	top.location.href = "index.html";
+}
+
+function doToC()	{
+	if (top.CONTENT.location.href.indexOf("disclaimer.html") == -1)	{
+		top.CONTENT.MAINFRAME.location.href = "sitemap/sitemap.wrl";
+	}
+	else	{
+		disabledMsg();
+	}
+}
+
+function doExplorer()	{
+	if (top.CONTENT.location.href.indexOf("disclaimer.html") == -1)	{
+		if ((top.CurrentFrameset == 1) || (top.CurrentFrameset == 2))	{
+			if (top.CurrentFrameset == 1)	{
+				top.setCookie ("Frame", 3);
+				top.CONTENT.location.href = "frameset_3.html";
+			}
+			else	{					// if (top.CurrentFrameset == 2)
+				top.setCookie ("Frame", 0);
+				top.CONTENT.location.href = "frameset_0.html";
+			}
+			document.images[3].src = "images/explorer_off.gif"
+		}
+		else	{				// if ((top.CurrentFrameset == 0) || (top.CurrentFrameset == 3))
+			if (top.CurrentFrameset == 0)	{
+				top.setCookie ("Frame", 2);
+				top.CONTENT.location.href = "frameset_2.html";
+			}
+			else	{					// if (top.CurrentFrameset == 3)
+				top.setCookie ("Frame", 1);
+				top.CONTENT.location.href = "frameset_1.html";
+			}
+			document.images[3].src = "images/explorer_on.gif"
+		}
+	}
+	else	{
+		disabledMsg();
+	}
+}
+
+function closeCollection()	{
+	if (top.CurrentFrameset == 3)	{
+		top.CONTENT.location.href = "frameset_0.html";
+	}
+	else if (top.CurrentFrameset == 1)	{
+		top.CONTENT.location.href = "frameset_2.html";
+	}
+	document.images[4].src = "images/browser_off.gif"
+}
+
+function openCollection()	{
+	if (top.CurrentFrameset == 0)	{
+		top.CONTENT.location.href = "frameset_3.html";
+	}
+	else if (top.CurrentFrameset == 2)	{
+		top.CONTENT.location.href = "frameset_1.html";
+	}
+	document.images[4].src = "images/browser_on.gif"
+}
+
+function doCollection()	{
+	if (top.CONTENT.location.href.indexOf("disclaimer.html") == -1)	{
+		if ((top.CurrentFrameset == 1) || (top.CurrentFrameset == 3))	{
+			closeCollection();
+		}
+		else	{				// if ((top.CurrentFrameset == 0) || (top.CurrentFrameset == 2))
+			openCollection();
+		}
+	}
+	else	{
+		disabledMsg();
+	}
+}
+
+function openHelp()	{
+	if (top.CONTENT.location.href.indexOf("disclaimer.html") == -1)	{
+		top.CONTENT.MAINFRAME.location.href = "help.html";
+	}
+	else	{
+		disabledMsg();
+	}
+}
+//-->
+</SCRIPT>
+</HEAD>
+<BODY onLoad="initPage()" BGCOLOR="White" BACKGROUND="images/background_navigation.jpg">
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0 ALIGN="CENTER" VALIGN="MIDDLE" WIDTH="100%">
+<TR>
+<TD>
+<A HREF="javascript:goHome()"><IMG SRC="images/home.gif" WIDTH=53 HEIGHT=34 BORDER=0 ALT="Home"></A>
+</TD>
+<TD>
+<A HREF="javascript:doToC()"><IMG SRC="images/sitemap.gif" WIDTH=63 HEIGHT=34 BORDER=0 ALT="Sitemap"></A>
+</TD>
+<TD>
+<A HREF="javascript:doPanic()"><IMG SRC="images/restart.gif" WIDTH=59 HEIGHT=34 BORDER=0 ALT="Restart"></A>
+</TD>
+<TD>
+<A HREF="javascript:doExplorer()"><IMG SRC="images/explorer_on.gif" NAME="ExplorerButton" WIDTH=83 HEIGHT=34 BORDER=0 ALT="Toggle Explorer Window"></A>
+</TD>
+<TD>
+<A HREF="javascript:doCollection()"><IMG SRC="images/browser_on.gif" NAME="CollectionButton" WIDTH=83 HEIGHT=34 BORDER=0 ALT="Toggle Collection Browser"></A>
+</TD>
+<TD>
+<A HREF="javascript:top.switchSound()"><IMG SRC="images/sound_off.gif" NAME="SoundButton" WIDTH=83 HEIGHT=34 BORDER=0 ALT="Toggle Sound"></A>
+</TD>
+<TD>
+<A HREF="javascript:openHelp()"><IMG SRC="images/help.gif" WIDTH=47 HEIGHT=34 BORDER=0
+ ALT="Help"></A>
+</TD>
+</TR>
+</TABLE>
+<!--
+<EMBED SRC="sounds/mission.mid" TYPE="audio/midi" AUTOSTART=TRUE HIDDEN=TRUE>
+-->
+</BODY>
+</HTML>

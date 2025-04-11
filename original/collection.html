@@ -1,0 +1,150 @@
+<HTML>
+<HEAD>
+<TITLE>Collection Browser</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var BrowserSucks = "yes";
+var ActiveX = "disabled";
+var FlashPlugin = "disabled";
+if (navigator.appName.indexOf("Microsoft") != -1 && parseInt (navigator.appVersion) >= 2) {
+	ActiveX = "enabled";
+	if (parseInt (navigator.appVersion) >= 4) BrowserSucks = "no";
+}
+if (navigator.appName.indexOf("Netscape") != -1 && parseInt (navigator.appVersion) >= 3) {
+	BrowserSucks = "no";
+	var myPlugin = navigator.plugins["Shockwave Flash 2.0"];
+	if (myPlugin)
+		var myType = myPlugin["application/x-shockwave-flash"];
+	if (myType && myType.enabledPlugin == myPlugin)
+		FlashPlugin = "enabled";
+}
+function press_back_to_start () {
+	if (BrowserSucks == "no") {
+		document.images ["start"].src="images/back_to_start_up.gif";
+	}
+}
+function press_back () {
+	if (BrowserSucks == "no") {
+		document.images ["back"].src="images/back_up.gif";
+	}
+}
+function press_forward () {
+	if (BrowserSucks == "no") {
+		document.images ["next"].src="images/forward_up.gif";
+	}
+}
+function release_back_to_start () {
+	if (BrowserSucks == "no") {
+		document.images ["start"].src="images/back_to_start.gif";
+	}
+}
+function release_back () {
+	if (BrowserSucks == "no") {
+		document.images ["back"].src="images/back.gif";
+	}
+}
+function release_forward () {
+	if (BrowserSucks == "no") {
+		document.images ["next"].src="images/forward.gif";
+	}
+}
+
+WorkCollection = top.giveCollection()
+
+function initPage()	{
+	document.NaviForm.CollectionList.selectedIndex = top.CurrentCollectionNo;
+	showNext();
+}
+
+function showNext()	{
+	if (top.CurrentPageIdx < WorkCollection.length-1)	{
+		document.NaviForm.TextBox.value = WorkCollection[top.CurrentPageIdx+1].title;
+	}
+	else {
+		document.NaviForm.TextBox.value = "This is the last page!";
+	}
+}
+
+function startCollection()	{
+	top.CurrentCollectionNo = document.NaviForm.CollectionList.selectedIndex;
+	top.CurrentPageIdx = 1;
+	WorkCollection = top.giveCollection()
+	top.CONTENT.MAINFRAME.location.href = WorkCollection[top.CurrentPageIdx].url;
+	showNext();
+}
+
+function goStart()	{
+	top.CurrentPageIdx = 1;
+	top.CONTENT.MAINFRAME.location.href = WorkCollection[top.CurrentPageIdx].url;
+	showNext();
+}
+
+function goPrev()	{
+	if (top.CurrentPageIdx > 0)	{
+		top.CurrentPageIdx--;
+		top.CONTENT.MAINFRAME.location.href = WorkCollection[top.CurrentPageIdx].url;
+		showNext();
+	}
+	else {
+		window.alert("You are already on the first page!");
+	}
+}
+
+function goNext()	{
+	if (top.CurrentPageIdx < WorkCollection.length-1)	{
+		top.CurrentPageIdx++;
+		top.CONTENT.MAINFRAME.location.href = WorkCollection[top.CurrentPageIdx].url;
+		showNext();
+	}
+	else {
+		window.alert("There are no more pages in the selected Tour!");
+	}
+}
+
+function unDock()	{
+	FLOATINGWIN=window.open('collection_floating.html', 'FLOATER', 'resizable,height=40,width=500');
+}
+
+function openHelp()	{
+	HelpWin=window.open('blank.html', '', 'resizable,height=350,width=350');
+	HelpWin.document.clear();
+	HelpWin.document.writeln("<HTML><HEAD><TITLE>Help Window</TITLE>");
+	HelpWin.document.writeln("<LINK REL='stylesheet' TYPE='text/css' HREF='mintstyle.css'>");
+	HelpWin.document.writeln("</HEAD><BODY><H3>Guided Tour Browser</H3>");
+	HelpWin.document.writeln("<P>The guided tour browser offers special viewpoints for different interests. By using the back and forward buttons you can browse through the most important pages of the document. You can always see the actual viewpoint and the next topic that can be reached with the forward button. By undocking this control you can customize your display area.</P><P>Click on the upper right help button if you want to get additional information.</P><FORM><CENTER>");
+	HelpWin.document.writeln("<INPUT TYPE='BUTTON' VALUE='OK'onClick='window.close()'>");
+	HelpWin.document.writeln("</CENTER></FORM></BODY></HTML>");
+}
+//-->
+</SCRIPT>
+</HEAD>
+<BODY onLoad="initPage()" TEXT="Black" LEFTMARGIN=0 TOPMARGIN=0 BACKGROUND="images/background_collection.jpg">
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0 WIDTH="100%" VALIGN="TOP">
+<TR VALIGN="TOP">
+<TD ALIGN="LEFT">
+<FORM NAME="NaviForm">
+<A HREF="javascript:goStart()" onMouseOver="press_back_to_start ()" onMouseOut="release_back_to_start ()"><IMG NAME="start" SRC="images/back_to_start.gif" BORDER=0></A>
+<A HREF="javascript:goPrev()" onMouseOver="press_back ()" onMouseOut="release_back ()"><IMG NAME="back" SRC="images/back.gif" BORDER=0></A>
+<A HREF="javascript:goNext()" onMouseOver="press_forward ()" onMouseOut="release_forward ()"><IMG NAME="next" SRC="images/forward.gif" BORDER=0></A>
+<IMG SRC="images/guided_tour.gif" WIDTH=70 HEIGHT=24 BORDER=0 ALT="Guided Tour">
+<SELECT NAME="CollectionList" onChange="startCollection()">
+	<OPTION NAME="Full"> Complete
+	<OPTION NAME="Quick"> Quick
+	<OPTION NAME="Technical"> Technical
+	<OPTION NAME="Business"> Business
+	</SELECT>
+<BR>
+<IMG SRC="images/next_topic.gif" WIDTH=63 HEIGHT=24 BORDER=0 ALT="Next Topic">
+<INPUT TYPE="TEXT" NAME="TextBox" VALUE="-">
+</FORM>
+</TD>
+<TD ALIGN="RIGHT">
+<A HREF="javascript:unDock()"><IMG SRC="images/undock.gif" WIDTH=60 HEIGHT=34 BORDER=0 ALT="Undock Window"></A>
+</TD>
+<TD ALIGN="RIGHT">
+<A HREF="javascript:openHelp()"><IMG SRC="images/help.gif" WIDTH=47 HEIGHT=34 ALIGN="MIDDLE" BORDER=0 ALT="Help"></A>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

@@ -1,0 +1,370 @@
+<HTML>
+<HEAD>
+<TITLE>Help</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var BrowserSucks = "yes";
+var CurrentBrowser = "null";
+
+function getCookie(name)	{
+	var search = name + "=";
+	if (document.cookie.length > 0)	{
+		offset = document.cookie.indexOf(search) 
+		if (offset != -1)	{
+			offset += search.length;
+			end = document.cookie.indexOf(";", offset);
+			if (end == -1)	{
+				end = document.cookie.length;
+			}
+			return unescape(document.cookie.substring(offset, end));
+		}
+	}
+}
+function press_copy () {
+	if (BrowserSucks == "no") {
+		document.images ["cp"].src="images/copyright_up.gif";
+	}
+}
+function release_copy () {
+	if (BrowserSucks == "no") {
+		document.images ["cp"].src="images/copyright.gif";
+	}
+}
+function setCookie(name, value)	{
+	var Expiry = new Date();
+	Expiry.setMinutes(Expiry.getMinutes()+1);
+	document.cookie = name + "=" + escape(value) + "; expires=" + Expiry;
+}
+
+function checkBrowser()	{
+	if (parseInt(navigator.appVersion) < 4)	{
+		window.alert("Sorry, but your Web browser is outdated! "
+			+ "It will produce random JavaScript errors when displaying the Mint for ACME pages. "
+			+ "This browser may even crash your system and therefore cause data loss! "
+			+ "Please read the section about your current browser to find out how to get the right browser.");
+	}
+
+	if (navigator.appName.indexOf("Netscape") != -1 || parseInt (navigator.appVersion) >= 3)
+		BrowserSucks = "no";
+
+	if (navigator.appName.indexOf("Netscape") != -1 && parseInt (navigator.appVersion) >= 4)
+		CurrentBrowser = "NS4";
+	else if (navigator.appName.indexOf("Microsoft") != -1 && parseInt (navigator.appVersion) >= 4)
+		CurrentBrowser = "IE4";
+}
+
+setCookie("Cookies", "yes");
+checkBrowser ();
+//-->
+</SCRIPT>
+</HEAD>
+<LINK REL="stylesheet" TYPE="text/css" HREF="mintstyle.css">
+<BODY onLoad='setCookie("Cookies", "yes")' BGCOLOR="White">
+<H1>Help Page</H1>
+<A NAME="help_about"></A>
+<H2>Our intension</H2>
+<P>
+This document describes our vision and concept for an integrated internet based multimedia solution for the automotive industry.
+</P>
+<P ALIGN=CENTER>
+<A HREF="1_1.html"><IMG SRC="images/mint4acme.jpg" ALT="MINT for ACME" ALIGN="CENTER" BORDER=0 WIDTH=300 HEIGHT=134></A>
+</P>
+<BR CLEAR="ALL">
+<P>
+Find out more about our <A HREF="info.html">vision and concept</A> or jump directly into <A HREF="1_1.html">MINT for ACME</A>.
+</P>
+<P>
+We have used a lot of the cited internet and multimedia technology to visualize our ideas. The best way to enter MINT is the start button on the <A HREF="index.html" TARGET="_top">home page</A>.
+</P>
+<P>
+<B><I>Use the links on this page only if you have encountered problems or wish to read about MINT for ACME without the required technology.</I></B>
+</P>
+<HR SIZE="1" COLOR="BLACK" NOSHADE WIDTH="50%" ALIGN="CENTER">
+<A NAME="help_browser"></A>
+<H2>Is my browser capable of viewing all of MINT?</H2>
+<P>
+This depends on some points. The Browser itself, activated features, add-ons and the installed Plug-ins. The following secions will give you all answers. If everything is fine you should see only green check marks and no red cross.
+</P>
+<H3>Browser</H3>
+<P>
+MINT for ACME can be used only with the latest versions of the Netscape and Microsoft browsers.
+This means you need at least the <A HREF="http://www.netscape.com">Netscape Communicator V4.01</A> or the <A HREF="http://www.microsoft.com/ie">Microsoft Internet Explorer V4.0 Preview2</A> in order to view all of MINT for ACME.
+You can click on the icons in the table to get the browser you prefer.
+</P>
+<TABLE BORDER=1 ALIGN="CENTER" VALIGN="MIDDLE" WIDTH="60%">
+<TR ALIGN="CENTER" VALIGN="MIDDLE">
+<TH ALIGN="CENTER" VALIGN="MIDDLE" COLSPAN=2>
+Browser
+</TH>
+<TH ALIGN="CENTER" VALIGN="MIDDLE">
+Status
+</TH>
+</TR>
+<TR ALIGN="CENTER" VALIGN="MIDDLE">
+<TD ALIGN="CENTER" VALIGN="MIDDLE">
+<A HREF="http://www.netscape.com"><IMG SRC="images/tuneup.gif" WIDTH=90 HEIGHT=54 BORDER=0 ALT="Netscape 4.0"></A>
+<BR><A HREF="http://www.microsoft.com/ie"><IMG SRC="images/ie_spotlight.gif" WIDTH=110 HEIGHT=89 BORDER=0 ALT="IE4.0"></A>
+</TD>
+<TD>
+<P>
+You are currently using
+</P>
+<P>
+<B>
+<SCRIPT LANGUAGE="JavaScript">
+document.writeln(navigator.appName);
+</SCRIPT>
+</B>
+<I>
+<SCRIPT LANGUAGE="JavaScript">
+document.writeln(navigator.appVersion);
+</SCRIPT>
+</I>
+</P>
+</TD>
+<TD>
+<SCRIPT LANGUAGE="JavaScript">
+if (CurrentBrowser == "IE4" || CurrentBrowser == "NS4") {
+	document.writeln('<IMG SRC="images/plugin_yes.gif" WIDTH=48 HEIGHT=35 BORDER=0 ALT="Yes">');
+} else {
+	document.writeln('<IMG SRC="images/plugin_no.gif" WIDTH=48 HEIGHT=35 BORDER=0 ALT="No">');
+}
+</SCRIPT>
+<NOSCRIPT>
+<IMG SRC="images/question.gif" WIDTH=48 HEIGHT=35 BORDER=0>
+</NOSCRIPT>
+</TD>
+</TR>
+</TABLE>
+<A NAME="plugins"></A>
+<H3>Plug-ins</H3>
+<P>
+In order to view all multimedia examples you need a lot of plugins.
+Most of the Plug-ins are preinstalled with your browser but there are some you have to get yourself.
+</P>
+<P>
+If you are using a Microsoft browser you will only see question marks.
+However, you will be automatically prompted to download the corresponding ActiveX components to view the multimedia objects.
+</P>
+<TABLE BORDER=1 ALIGN="CENTER" VALIGN="MIDDLE" WIDTH="60%">
+<TR ALIGN="CENTER" VALIGN="MIDDLE">
+<TH ALIGN="CENTER" VALIGN="MIDDLE" COLSPAN=2>
+Plug-in
+</TH>
+<TH ALIGN="CENTER" VALIGN="MIDDLE">
+Status
+</TH>
+</TR>
+<TR ALIGN="CENTER" VALIGN="MIDDLE">
+<TD><A HREF="http://www.macromedia.com" TARGET="_blank"><IMG SRC="images/shockwave_flash.gif" WIDTH=88 HEIGHT=31 BORDER=0 ALT="Shockwave Flash"></A></TD>
+<TD>Flash</TD>
+<TD>
+<SCRIPT LANGUAGE="JavaScript">
+if (navigator.appName.indexOf("Microsoft") != -1) {
+	document.writeln('<IMG SRC="images/question.gif" WIDTH=48 HEIGHT=35 BORDER=0 ALT="?">');
+} else {
+	var myPlugin = navigator.plugins["Shockwave Flash 2.0"];
+	if (myPlugin)
+		var myType = myPlugin["application/x-shockwave-flash"];
+	if (myType && myType.enabledPlugin == myPlugin)
+		document.writeln('<IMG SRC="images/plugin_yes.gif" WIDTH=48 HEIGHT=35 BORDER=0 ALT="Yes">');
+	else
+		document.writeln('<IMG SRC="images/plugin_no.gif" WIDTH=48 HEIGHT=35 BORDER=0 ALT="No">');
+}
+</SCRIPT>
+<NOSCRIPT>
+<IMG SRC="images/question.gif" WIDTH=48 HEIGHT=35 BORDER=0>
+</NOSCRIPT>
+</TD>
+</TR>
+<TR ALIGN="CENTER" VALIGN="MIDDLE">
+<TD><A HREF="http://www.macromedia.com" TARGET="_blank"><IMG SRC="images/get_shockwave.gif" WIDTH=88 HEIGHT=31 BORDER=0 ALT="Shockwave Director"></A></TD>
+<TD>Shockwave for Director</TD>
+<TD>
+<SCRIPT LANGUAGE="JavaScript">
+if (navigator.appName.indexOf("Microsoft") != -1) {
+	document.writeln('<IMG SRC="images/question.gif" WIDTH=48 HEIGHT=35 BORDER=0 ALT="?">');
+} else {
+	var myPlugin = navigator.plugins["Shockwave for Director"];
+	if (myPlugin)
+		var myType = myPlugin["application/x-director"];
+	if (myType && myType.enabledPlugin == myPlugin)
+		document.writeln('<IMG SRC="images/plugin_yes.gif" WIDTH=48 HEIGHT=35 BORDER=0 ALT="Yes">');
+	else
+		document.writeln('<IMG SRC="images/plugin_no.gif" WIDTH=48 HEIGHT=35 BORDER=0 ALT="No">');
+}
+</SCRIPT>
+<NOSCRIPT>
+<IMG SRC="images/question.gif" WIDTH=48 HEIGHT=35 BORDER=0>
+</NOSCRIPT>
+</TD>
+</TR>
+<TR ALIGN="CENTER" VALIGN="MIDDLE">
+<TD><A HREF="http://quicktime.apple.com" TARGET="_blank"><IMG SRC="images/qtlogo2.gif" WIDTH=67 HEIGHT=78 BORDER=0 ALT="QuickTime"></A></TD>
+<TD>QuickTime</TD>
+<TD>
+<SCRIPT LANGUAGE="JavaScript">
+if (navigator.appName.indexOf("Microsoft") != -1) {
+	document.writeln('<IMG SRC="images/question.gif" WIDTH=48 HEIGHT=35 BORDER=0 ALT="?">');
+} else {
+	var myPlugin = navigator.plugins["QuickTime Plug-In"];
+	if (myPlugin)
+		var myType = myPlugin["video/quicktime"];
+	if (myType && myType.enabledPlugin == myPlugin)
+		document.writeln('<IMG SRC="images/plugin_yes.gif" WIDTH=48 HEIGHT=35 BORDER=0 ALT="Yes">');
+	else
+		document.writeln('<IMG SRC="images/plugin_no.gif" WIDTH=48 HEIGHT=35 BORDER=0 ALT="No">');
+}
+</SCRIPT>
+<NOSCRIPT>
+<IMG SRC="images/question.gif" WIDTH=48 HEIGHT=35 BORDER=0>
+</NOSCRIPT>
+</TD>
+</TR>
+<TR ALIGN="CENTER" VALIGN="MIDDLE">
+<TD><A HREF="http://vrml.sgi.com" TARGET="_blank"><IMG SRC="images/cosmoplayer.gif" WIDTH=88 HEIGHT=31 BORDER=0 ALT="CosmoPlayer"></A></TD>
+<TD>VRML2.0<BR><FONT COLOR="Red" SIZE="-1"><I>Don't worry about the three meaningless initialisation errors in the ddraw.dll library</I></FONT></TD>
+<TD>
+<SCRIPT LANGUAGE="JavaScript">
+if (navigator.appName.indexOf("Microsoft") != -1) {
+	document.writeln('<IMG SRC="images/question.gif" WIDTH=48 HEIGHT=35 BORDER=0 ALT="?">');
+} else {
+	var myPlugin = navigator.plugins["Cosmo Player 1.0"];
+	if (myPlugin)
+		var myType = myPlugin["model/vrml"];
+	if (myType && myType.enabledPlugin == myPlugin)
+		document.writeln('<IMG SRC="images/plugin_yes.gif" WIDTH=48 HEIGHT=35 BORDER=0 ALT="Yes">');
+	else
+		document.writeln('<IMG SRC="images/plugin_no.gif" WIDTH=48 HEIGHT=35 BORDER=0 ALT="No">');
+}
+</SCRIPT>
+<NOSCRIPT>
+<IMG SRC="images/question.gif" WIDTH=48 HEIGHT=35 BORDER=0>
+</NOSCRIPT>
+</TD>
+</TR>
+<TR ALIGN="CENTER" VALIGN="MIDDLE">
+<TD><IMG SRC="images/audiovideo.gif" WIDTH=86 HEIGHT=66 BORDER=0></TD>
+<TD>Sound</TD>
+<TD>
+<SCRIPT LANGUAGE="JavaScript">
+if (navigator.appName.indexOf("Microsoft") != -1) {
+	document.writeln('<IMG SRC="images/question.gif" WIDTH=48 HEIGHT=35 BORDER=0 ALT="?">');
+} else {
+	var myPlugin = navigator.plugins["LiveAudio"];
+	if (myPlugin)
+		var myType = myPlugin["audio/wav"];
+	if (myType && myType.enabledPlugin == myPlugin)
+		document.writeln('<IMG SRC="images/plugin_yes.gif" WIDTH=48 HEIGHT=35 BORDER=0 ALT="Yes">');
+	else
+		document.writeln('<IMG SRC="images/plugin_no.gif" WIDTH=48 HEIGHT=35 BORDER=0 ALT="No">');
+}
+</SCRIPT>
+<NOSCRIPT>
+<IMG SRC="images/question.gif" WIDTH=48 HEIGHT=35 BORDER=0>
+</NOSCRIPT>
+</TD>
+</TR>
+</TABLE>
+<A NAME="addons"></A>
+<H3>Add-ons</H3>
+<P>
+Last but not least, some general features must be activated.
+</P>
+<TABLE BORDER=1 ALIGN="CENTER" VALIGN="MIDDLE" WIDTH="60%">
+<TR ALIGN="CENTER" VALIGN="MIDDLE">
+<TH ALIGN="CENTER" VALIGN="MIDDLE">
+Feature
+</TH>
+<TH ALIGN="CENTER" VALIGN="MIDDLE">
+Status
+</TH>
+</TR>
+<TR ALIGN="CENTER" VALIGN="MIDDLE">
+<TD><A HREF="http://developer.netscape.com/one/javascript/index.html" TARGET="_blank">JavaScript</A></TD>
+<TD>
+<SCRIPT LANGUAGE="JavaScript">
+document.writeln('<IMG SRC="images/plugin_yes.gif" WIDTH=48 HEIGHT=35 BORDER=0 ALT="Yes">');
+</SCRIPT>
+<NOSCRIPT>
+<IMG SRC="images/plugin_no.gif" WIDTH=48 HEIGHT=35 BORDER=0>
+</NOSCRIPT>
+</TD>
+</TR>
+<TR ALIGN="CENTER" VALIGN="MIDDLE">
+<TD>Cookies</TD>
+<TD>
+<SCRIPT LANGUAGE="JavaScript">
+if (getCookie ("Cookies") == "yes")
+	document.writeln('<IMG SRC="images/plugin_yes.gif" WIDTH=48 HEIGHT=35 BORDER=0 ALT="Yes">');
+else
+	document.writeln('<IMG SRC="images/plugin_no.gif" WIDTH=48 HEIGHT=35 BORDER=0 ALT="No">');
+</SCRIPT>
+<NOSCRIPT>
+<IMG SRC="images/question.gif" WIDTH=48 HEIGHT=35 BORDER=0>
+</NOSCRIPT>
+</TD>
+</TR>
+<TR ALIGN="CENTER" VALIGN="MIDDLE">
+<TD><A HREF="http://java.sun.com" TARGET="_blank">Java</A></TD>
+<TD>
+<SCRIPT LANGUAGE="JavaScript">
+if (navigator.appName.indexOf("Netscape") != -1 && navigator.javaEnabled != null && navigator.javaEnabled())
+	document.writeln('<IMG SRC="images/plugin_yes.gif" WIDTH=48 HEIGHT=35 BORDER=0 ALT="Yes">');
+else if (navigator.appName.indexOf("Microsoft") != -1)
+	document.writeln('<IMG SRC="images/question.gif" WIDTH=48 HEIGHT=35 BORDER=0 ALT="?">');
+else
+	document.writeln('<IMG SRC="images/plugin_no.gif" WIDTH=48 HEIGHT=35 BORDER=0 ALT="No">');
+</SCRIPT>
+<NOSCRIPT>
+<IMG SRC="images/question.gif" WIDTH=48 HEIGHT=35 BORDER=0>
+</NOSCRIPT>
+</TD>
+</TR>
+</TABLE>
+<P>
+For the Netscape Communicator these features can be enabled from the preferences dialog. You can reach this dialog by choosing the menupoint <B>edit/preferences...</B> where you must select the <B>advanced settings</B>.
+</P>
+<P>
+If you are using Microsoft Internet Explorer you must go to the options dialog. You can reach this dialog by choosing the menupoint <B>view/options...</B>. In the security section of the <B>advanced tab</B> page you can switch <I>Cookies</I> on and off. In the <b>security tab</b> page you can activate <I>Java</I> by choosing custom security and enabling Java in the corresponding section.
+</P>
+<P>
+<B><I>At the end of all these features on last general advice! MINT for ACME will terrible stress your browser environment. So please be kind and give it some time to execute all the tasks.</I></B>
+</P>
+<A NAME="javabooster"></A>
+<H3>Tune up network performance</H3>
+<P>
+Due to the great number of big multimedia objects you will need at least an ISDN based access to the internet. However, MINT for ACME is <A HREF="http://www.isg.de/javabooster/">Java BOOSTER</A> optimized and there is a simple way to boost up access speed - you can even work offline!
+</P>
+<DIV ALIGN=CENTER>
+<A HREF="http://www.isg.de/javabooster/"><IMG SRC="images/fastcup.gif" WIDTH=185 HEIGHT=100 BORDER=0 ALT="Java BOOSTER"></A>
+</DIV><BR CLEAR=ALL><BR CLEAR="ALL">
+<P>
+By using Innovative Software's <A HREF="http://www.isg.de/javabooster/">Java BOOSTER</A> (it's free!) you can permanently cache all MINT for ACME objects and reduce network traffic to a minimum. All you have to do is to follow the install instructions, to browse on time through the entire document and finaly to mark MINT for ACME as an non updateable favorite.
+</P>
+<HR SIZE="1" COLOR="BLACK" NOSHADE WIDTH="50%" ALIGN="CENTER">
+<A NAME="help_use"></A>
+<H2>How should I use this hypermedia document?</H2>
+<P>
+Click on the MINT for ACME logo to start from the beginning. Use the forward and back buttons on the top and bottom of each page to browse through the document.
+</P>
+<DIV ALIGN=CENTER><A HREF="1_1.html"><IMG SRC="images/mint4acme.jpg" ALT="MINT 4 ACME" BORDER=0 WIDTH=300 HEIGHT=134></A>
+</DIV><BR CLEAR=ALL>
+<P>
+MINT for ACME offers special guided tours through its features. Choose the corresponding tour from the drop down box. Click the leftmost button to start from the beginning and then flip through with the forward and back buttons. This control can be undocked if you wish to customize your display area.
+</P>
+<DIV ALIGN=CENTER>
+<IMG SRC="images/collection.jpg" ALT="Guided Tour Browser" WIDTH=320 HEIGHT=110></DIV><BR CLEAR=ALL>
+<P>
+Use the tree control on the left hand side to explore the struture of the document. You can expand and contract sections by clicking the green buttons. By clicking the red buttons you can jump directly to the identified sub-sections.
+</P>
+<DIV ALIGN=CENTER>
+<IMG SRC="images/explorer.jpg" ALT="Explorer" WIDTH=135 HEIGHT=225>
+</DIV><BR CLEAR=ALL><BR>
+<HR SIZE="1" COLOR="BLACK" NOSHADE WIDTH="50%" ALIGN="CENTER">
+<DIV ALIGN="CENTER">
+<A HREF="about.html" onMouseOver="press_copy ()" onMouseOut="release_copy ()">
+<IMG NAME="cp" SRC="images/copyright.gif" ALT="Copyright 1997 INC. InterNet Consult GmbH / CSC PLOENZKE AG" WIDTH=246 HEIGHT=24 BORDER=0></A>
+</DIV><BR CLEAR=ALL>
+</BODY>
+</HTML>

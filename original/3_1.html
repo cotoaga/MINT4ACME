@@ -1,0 +1,305 @@
+<HTML>
+<LINK REL="stylesheet" TYPE="text/css" HREF="mintstyle.css">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+if (top && top.WeAreHere) {
+	top.WeAreHere = "3_1.html";
+	top.setCookie ("Location", top.WeAreHere);
+}
+var BrowserSucks = "yes";
+var ActiveX = "disabled";
+var FlashPlugin = "disabled";
+if (navigator.appName.indexOf("Microsoft") != -1 && parseInt (navigator.appVersion) >= 2) {
+	ActiveX = "enabled";
+	if (parseInt (navigator.appVersion) >= 4) BrowserSucks = "no";
+}
+if (navigator.appName.indexOf("Netscape") != -1 && parseInt (navigator.appVersion) >= 3) {
+	BrowserSucks = "no";
+	var myPlugin = navigator.plugins["Shockwave Flash 2.0"];
+	if (myPlugin)
+		var myType = myPlugin["application/x-shockwave-flash"];
+	if (myType && myType.enabledPlugin == myPlugin)
+		FlashPlugin = "enabled";
+}
+function press_back_to_start () {
+	if (BrowserSucks == "no") {
+		document.images ["s1"].src="images/back_to_start_up.gif";
+	}
+}
+function press_back_to_start2 () {
+	if (BrowserSucks == "no") {
+		document.images ["s2"].src="images/back_to_start_up.gif";
+	}
+}
+function press_back () {
+	if (BrowserSucks == "no") {
+		document.images ["b1"].src="images/back_up.gif";
+	}
+}
+function press_back2 () {
+	if (BrowserSucks == "no") {
+		document.images ["b2"].src="images/back_up.gif";
+	}
+}
+function press_copy () {
+	if (BrowserSucks == "no") {
+		document.images ["cp"].src="images/copyright_up.gif";
+	}
+}
+function press_forward () {
+	if (BrowserSucks == "no") {
+		document.images ["f1"].src="images/forward_up.gif";
+	}
+}
+function press_forward2 () {
+	if (BrowserSucks == "no") {
+		document.images ["f2"].src="images/forward_up.gif";
+	}
+}
+function release_back_to_start () {
+	if (BrowserSucks == "no") {
+		document.images ["s1"].src="images/back_to_start.gif";
+	}
+}
+function release_back_to_start2 () {
+	if (BrowserSucks == "no") {
+		document.images ["s2"].src="images/back_to_start.gif";
+	}
+}
+function release_back () {
+	if (BrowserSucks == "no") {
+		document.images ["b1"].src="images/back.gif";
+	}
+}
+function release_back2 () {
+	if (BrowserSucks == "no") {
+		document.images ["b2"].src="images/back.gif";
+	}
+}
+function release_copy () {
+	if (BrowserSucks == "no") {
+		document.images ["cp"].src="images/copyright.gif";
+	}
+}
+function release_forward () {
+	if (BrowserSucks == "no") {
+		document.images ["f1"].src="images/forward.gif";
+	}
+}
+function release_forward2 () {
+	if (BrowserSucks == "no") {
+		document.images ["f2"].src="images/forward.gif";
+	}
+}
+//-->
+</SCRIPT>
+<BODY BGCOLOR="White">
+<TABLE BORDER=0 WIDTH="100%">
+<TR VALIGN="MIDDLE">
+<TD ALIGN="LEFT" WIDTH="20%">
+<A HREF="1_1.html" onMouseOver="press_back_to_start ()" onMouseOut="release_back_to_start ()">
+<IMG NAME="s1" SRC="images/back_to_start.gif" ALT="Back to start" WIDTH=30 HEIGHT=24 BORDER=0></A>
+<A HREF="2_5.html" onMouseOver="press_back ()" onMouseOut="release_back ()">
+<IMG NAME="b1" SRC="images/back.gif" ALT="Back" WIDTH=30 HEIGHT=24 BORDER=0></A>
+</TD>
+<TD ALIGN="RIGHT" WIDTH="80%">
+<A HREF="3_2.html" onMouseOver="press_forward ()" onMouseOut="release_forward ()">
+<IMG NAME="f1" SRC="images/forward.gif" ALT="Forward" WIDTH=30 HEIGHT=24 BORDER=0></A>
+</TD>
+</TR>
+</TABLE>
+<HR SIZE="1" COLOR="BLACK" NOSHADE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+if (top && top.SiteSound && top.SiteSound == "on") {
+	document.writeln ('<EMBED SRC="sounds/3_1.wav" AUTOSTART=TRUE HIDDEN=TRUE>');
+} 
+if (FlashPlugin == "enabled") {
+   document.writeln('<EMBED SRC="title/3_1.swf" TYPE="application/x-shockwave-flash" ALIGN=CENTER WIDTH=80% HEIGHT=80%><BR CLEAR=ALL>');
+} else if (ActiveX == "enabled") {
+   document.writeln('<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=2,0,0,0" align=center width=80% height=80%><PARAM name="Movie" value="title/3_1.swf"></OBJECT><BR CLEAR=ALL>');
+} else {
+   document.writeln('<DIV><IMG SRC="title/3_1.jpg" ALT="3.1. Business Functionality" ALIGN="LEFT" WIDTH=444 HEIGHT=167></DIV><BR CLEAR=ALL>');
+}
+//-->
+</SCRIPT>
+<NOSCRIPT>
+<IMG SRC="title/3_1.jpg" ALT="3.1. Business Functionality" ALIGN="LEFT" WIDTH=444 HEIGHT=167>
+<BR CLEAR="ALL">
+</NOSCRIPT>
+
+<P>
+MINT will be <A HREF="4_5.html#layout">highly graphical</A> in concept: the application will be capable of displaying all kinds of files that are supported in a browser environment.
+This will naturally evolve with time, as HTML evolves itselfe, effectively
+giving ACME a self-evolving application at no extra cost.
+</P>
+<P>Initially <A HREF="4_8.html">supported file formats</A> will be:
+</P>
+<UL>
+<LI>
+GIF and JPEG for <A HREF="4_8.html#pictures">pictures</A>
+</LI>
+<LI>
+MPEG, AVI and QuickTime for <A HREF="4_8.html#videos">video</A>
+</LI>
+<LI>
+Virtual reality worlds built with <A HREF="4_8.html#vrml">VRML</A>
+</LI>
+<LI>
+Wave, MIDI and different <A HREF="4_8.html#sound">sound</A> streams
+</LI>
+</UL>
+<P>
+MINT will consist of functionality pages (little text, many graphics, functionality
+controls) and <A HREF="4_9.html">help pages</A> (much text, many how-to wizards and controls).
+The Help pages will be capable of being accessed directly (as a manual),
+as in-context Help, and automatically in case of repeated errors.
+</P>
+<P>
+MINT will be capable of supporting and integrating the following <A HREF="2_2.html">vehicle
+sales processes</A>. The Chapter Technical Environment shows for some of the following
+processes examples how the different <A HREF="4_4.html">MINT versions</A> will support these processes
+at different sites:
+</P>
+<UL>
+<LI>
+The <A HREF="2_2.html#closurephase">assisted sales process</A> at the sales location, where the customer visits the dealership in order to investigate and possibly buy a car; at the <A HREF="4_3.html">dealership</A> he/she interacts with a sales representative in what is the current classical sales process.
+</LI>
+<LI>
+The assisted sales process at the customer location, where the customer
+is visited by a sales representative at his/her home, office or other convenient
+location for the <A HREF="4_4.html#negotiationphase">negotiation phase</A>; the sales representative carries information about the car or car range and may physically drive a specimen car to the customer.
+</LI>
+<LI>
+The unassisted sales process at the <A HREF="2_2.html#infophase">information location</A>, where the customer can retrieve a large amount of information about a car or car family and
+receive a quote. This may happen outside or inside a sales location, depending
+on where the information location (<A HREF="4_4.html">kiosk</A>) is placed. When the kiosk is
+located inside a sales location, this process may transform itself into
+the assisted sales process at the sales location.
+</LI>
+<LI>
+The unassisted sales process at the <A HREF="4_3.html#acmeweblayer">customer location</A>, where the customer can, by using his/her PC, retrieve a large amount of information about
+a car or car family and receive a quote. He should also be capable, by
+using his own equipment to electronically access a ACME or dealer-owned
+information pool, of obtaining a non-binding delivery date for a particular
+car configuration.
+</LI>
+</UL>
+<P>
+These four aspects share sub-processes, but require carefully thought-out
+implementation because of the physical location of the supporting IT infrastructure.
+We believe that the approach we have taken allows the requested multimedia
+application to be developed in such a way as to make the physical location
+of the supporting IT infrastructure transparent, and will therefore fully
+support all of the above aspects of the sales process.
+</P>
+<P>
+MINT will normally start at a page giving a high-level picture of available
+functions:
+<UL>
+<LI>
+Choice of desired vehicle by family/model
+</LI>
+<LI>
+Choice of desired vehicle(s) by price ceiling
+</LI>
+<LI>
+Choice of desired vehicle(s) by function (sports, estate etc.)
+</LI>
+<LI>
+Resumption of a saved sales process
+</LI>
+<LI>
+Launch of other available ACME or dealer applications
+</LI>
+</UL>
+<P>
+MINT will not be just a menu system and an integrator of other applications;
+existing applications within the dealership will be utilized fully for
+the information content and functionality they may provide, but this will
+be done as much as possible under the direction of MINT. As an example,
+MINT will be capable of dynamically configuring a vehicle on-screen in
+the right power train, colour, trim level and accessories from on-screen
+pictures of the available features, but the existing configuration validation
+systems will be the only source of information. The dynamic configuration
+will reflect the changes in choice made by the customer and/or salesman
+on the screen:
+</P>
+<UL>
+<LI>
+Colour and trim changes will be fully reflected on the screen through the
+use of special software. The effect will be to show the car on screen in
+the selected colour and to allow the customer and/or salesman to rotate
+it through the use of <A HREF="4_8.html#video">surround video</A> techniques in order to simulate the
+effect of walking around the car or of turning around inside the car.
+</LI>
+<LI>
+ACME options and accessories will be shown both in graphical form for selection
+and, after selection, mounted on the car if they are visible externally
+or internally; for example, if a customer were to choose an optional CD
+player, the in-the-car surround video picture would change the standard-mounted
+radio to the selected one.
+</LI>
+</UL>
+<P>
+All configuration changes will be priced and a running total of the current
+price will be displayed in a frame on-screen. The total will reflect any
+net pricing and/or percentage discounts that may be input by the salesman.
+</P>
+<P>
+The surround video pictures involved in the configuration process will
+contain intelligent hot spots capable of acting as functionality controls
+so that they may demonstrate features of the vehicle that are either normally
+not seen or rarely seen (air bags etc.).
+</P>
+<P>
+Buttons will be located on-screen to demonstrate other features that
+may be of interest to the customer, like general safety, economy and performance.
+MINT can be extended to utilize some over-the-counter applications to promote
+understanding in the customer of the real meaning of economy and performance:
+</P>
+<UL>
+<LI>
+It is possible to simulate a journey that the customer normally performs
+so that fuel consumption is associated with a real-life journey in a customer's
+mind. The customer can choose a realistic start and end for a journey,
+and preferential speeds. These parameters would be applied the chosen car's
+fuel consumption parameters and realistic geographic information. The results
+could be compared to those obtained from competitor's models.
+</LI>
+<LI>
+It is possible to show performance on a racing circuit by using simulator
+games to give the customer an better idea of acceleration road holding
+possibilities.
+</LI>
+</UL>
+<P>
+The application will maintain a list of the page addresses (URLs) that
+are accesses and the order in which they are accessed; this list will be
+accumulated by MINT, and will be processed at the logical end of a transaction
+so that unnecessary or repetitive data is eliminated. The processed list
+will be saved against a customer's name or system-assigned key if the customer&iacute;s
+name is not known. The information will be available for further analysis
+by ACME or to continue a sales process that was interrupted for any reason.
+</P>
+<HR SIZE="1" COLOR="BLACK" NOSHADE>
+<TABLE BORDER=0 WIDTH="100%">
+<TR VALIGN="MIDDLE">
+<TD ALIGN="LEFT" WIDTH="20%">
+<A HREF="1_1.html" onMouseOver="press_back_to_start2 ()" onMouseOut="release_back_to_start2 ()">
+<IMG NAME="s2" SRC="images/back_to_start.gif" ALT="Back to start" WIDTH=30 HEIGHT=24 BORDER=0></A>
+<A HREF="2_5.html" onMouseOver="press_back2 ()" onMouseOut="release_back2 ()">
+<IMG NAME="b2" SRC="images/back.gif" ALT="Back" WIDTH=30 HEIGHT=24 BORDER=0></A>
+</TD>
+<TD ALIGN="CENTER" WIDTH="70%">
+<A HREF="about.html" onMouseOver="press_copy ()" onMouseOut="release_copy ()">
+<IMG NAME="cp" SRC="images/copyright.gif" ALT="Copyright 1997 INC. InterNet Consult GmbH / CSC PLOENZKE AG" WIDTH=246 HEIGHT=24 BORDER=0></A>
+</TD>
+<TD ALIGN="RIGHT" WIDTH="10%">
+<A HREF="3_2.html" onMouseOver="press_forward2 ()" onMouseOut="release_forward2 ()">
+<IMG NAME="f2" SRC="images/forward.gif" ALT="Forward" WIDTH=30 HEIGHT=24 BORDER=0></A>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

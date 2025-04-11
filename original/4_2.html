@@ -1,0 +1,240 @@
+<HTML>
+<LINK REL="stylesheet" TYPE="text/css" HREF="mintstyle.css">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+if (top && top.WeAreHere) {
+	top.WeAreHere = "4_2.html";
+	top.setCookie ("Location", top.WeAreHere);
+}
+var BrowserSucks = "yes";
+var ActiveX = "disabled";
+var FlashPlugin = "disabled";
+if (navigator.appName.indexOf("Microsoft") != -1 && parseInt (navigator.appVersion) >= 2) {
+	ActiveX = "enabled";
+	if (parseInt (navigator.appVersion) >= 4) BrowserSucks = "no";
+}
+if (navigator.appName.indexOf("Netscape") != -1 && parseInt (navigator.appVersion) >= 3) {
+	BrowserSucks = "no";
+	var myPlugin = navigator.plugins["Shockwave Flash 2.0"];
+	if (myPlugin)
+		var myType = myPlugin["application/x-shockwave-flash"];
+	if (myType && myType.enabledPlugin == myPlugin)
+		FlashPlugin = "enabled";
+}
+function press_back_to_start () {
+	if (BrowserSucks == "no") {
+		document.images ["s1"].src="images/back_to_start_up.gif";
+	}
+}
+function press_back_to_start2 () {
+	if (BrowserSucks == "no") {
+		document.images ["s2"].src="images/back_to_start_up.gif";
+	}
+}
+function press_back () {
+	if (BrowserSucks == "no") {
+		document.images ["b1"].src="images/back_up.gif";
+	}
+}
+function press_back2 () {
+	if (BrowserSucks == "no") {
+		document.images ["b2"].src="images/back_up.gif";
+	}
+}
+function press_copy () {
+	if (BrowserSucks == "no") {
+		document.images ["cp"].src="images/copyright_up.gif";
+	}
+}
+function press_forward () {
+	if (BrowserSucks == "no") {
+		document.images ["f1"].src="images/forward_up.gif";
+	}
+}
+function press_forward2 () {
+	if (BrowserSucks == "no") {
+		document.images ["f2"].src="images/forward_up.gif";
+	}
+}
+function release_back_to_start () {
+	if (BrowserSucks == "no") {
+		document.images ["s1"].src="images/back_to_start.gif";
+	}
+}
+function release_back_to_start2 () {
+	if (BrowserSucks == "no") {
+		document.images ["s2"].src="images/back_to_start.gif";
+	}
+}
+function release_back () {
+	if (BrowserSucks == "no") {
+		document.images ["b1"].src="images/back.gif";
+	}
+}
+function release_back2 () {
+	if (BrowserSucks == "no") {
+		document.images ["b2"].src="images/back.gif";
+	}
+}
+function release_copy () {
+	if (BrowserSucks == "no") {
+		document.images ["cp"].src="images/copyright.gif";
+	}
+}
+function release_forward () {
+	if (BrowserSucks == "no") {
+		document.images ["f1"].src="images/forward.gif";
+	}
+}
+function release_forward2 () {
+	if (BrowserSucks == "no") {
+		document.images ["f2"].src="images/forward.gif";
+	}
+}
+//-->
+</SCRIPT>
+<BODY BGCOLOR="White">
+<TABLE BORDER=0 WIDTH="100%">
+<TR VALIGN="MIDDLE">
+<TD ALIGN="LEFT" WIDTH="20%">
+<A HREF="1_1.html" onMouseOver="press_back_to_start ()" onMouseOut="release_back_to_start ()">
+<IMG NAME="s1" SRC="images/back_to_start.gif" ALT="Back to start" WIDTH=30 HEIGHT=24 BORDER=0></A>
+<A HREF="4_1.html" onMouseOver="press_back ()" onMouseOut="release_back ()">
+<IMG NAME="b1" SRC="images/back.gif" ALT="Back" WIDTH=30 HEIGHT=24 BORDER=0></A>
+</TD>
+<TD ALIGN="RIGHT" WIDTH="80%">
+<A HREF="4_3.html" onMouseOver="press_forward ()" onMouseOut="release_forward ()">
+<IMG NAME="f1" SRC="images/forward.gif" ALT="Forward" WIDTH=30 HEIGHT=24 BORDER=0></A>
+</TD>
+</TR>
+</TABLE>
+<HR SIZE="1" COLOR="BLACK" NOSHADE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+if (top && top.SiteSound && top.SiteSound == "on") {
+	document.writeln ('<EMBED SRC="sounds/4_2.wav" AUTOSTART=TRUE HIDDEN=TRUE>');
+} 
+if (FlashPlugin == "enabled") {
+   document.writeln('<EMBED SRC="title/4_2.swf" TYPE="application/x-shockwave-flash" ALIGN=CENTER WIDTH=80% HEIGHT=80%><BR CLEAR=ALL>');
+} else if (ActiveX == "enabled") {
+   document.writeln('<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=2,0,0,0" align=center width=80% height=80%><PARAM name="Movie" value="title/4_2.swf"></OBJECT><BR CLEAR=ALL>');
+} else {
+   document.writeln('<DIV><IMG SRC="title/4_2.jpg" ALT="4.2. Overview" ALIGN="LEFT" WIDTH=444 HEIGHT=167></DIV><BR CLEAR=ALL>');
+}
+//-->
+</SCRIPT>
+<NOSCRIPT>
+<IMG SRC="title/4_2.jpg" ALT="4.2. Overview" ALIGN="LEFT" WIDTH=444 HEIGHT=167>
+<BR CLEAR="ALL">
+</NOSCRIPT>
+<P>
+The MINT System described in this proposal is technically a Intranet solution,
+that fits perfectly in ACME's infrastructure. The MINT-Application is a
+scaleable open environment and can be easily extended especially over the
+Internet.
+</P>
+<P>
+The client-server architecture of the proposed solution is divided into
+four different layers. The layers are the <A HREF="4_3.html#databaselayer">database server layer</A>, the <A HREF="4_3.html#applicationlayer">Application Server layer</A>, the <A HREF="4_3.html#replicationlayer">Replication Server layer</A> that is transparent to the user, and the Client or <A HREF="4_3.html#browserlayer">Browser layer</A>.
+</P>
+<P>
+MINT works in a environment that is divided into three main areas.
+</P>
+<UL>
+<LI>
+The <A HREF="4_3.html#databaselayer">ACME world</A>, which can be accessed to obtain data (e.g. marketing packages, vehicle location, financial quotes) or to trigger functions (e.g. validate
+configuration or order new vehicle).
+</LI>
+<LI>
+The <A HREF="4_3.html#databaselayer">dealer server world</A>, which stores all dealer specific data (e.g. customer data, used vehicles) and provides some functionality similar to the ACME
+world (e.g. locate new vehicle at dealer, or in dealer group stock).
+</LI>
+<LI>
+The client world is divided into a <A HREF="4_4.html#dealermint">dealer-side area</A> and a public area.
+On the dealer side area are the client computers used by the sales consultants
+and the showroom application computers. The <A HREF="4_4.html#laptoponline">laptop</A> computers of the sales consultants are also part of this area. The dealer-side area is subject
+to specific adaptations and allows the dealer to add his own corporate
+identity. The public area contains the <A HREF="4_4.html#publickiosk">public kiosk</A> versions.
+</LI>
+</UL>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+if (FlashPlugin == "enabled") {
+   document.writeln('<DIV ALIGN=CENTER><EMBED SRC="objects/4_2.swf" TYPE="application/x-shockwave-flash" ALIGN=LEFT WIDTH=80% HEIGHT=80%></DIV><BR CLEAR=ALL>');
+} else if (ActiveX == "enabled") {
+   document.writeln('<DIV ALIGN=CENTER><OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=2,0,0,0" align=center width=80% height=80%><PARAM name="Movie" value="objects/4_2.swf"></OBJECT></DIV><BR CLEAR=ALL>');
+} else {
+   document.writeln('<DIV ALIGN=CENTER><IMG SRC="objects/4_2.jpg" ALT="Layers" ALIGN="LEFT" WIDTH=420 HEIGHT=500></DIV><BR CLEAR=ALL>');
+}
+//-->
+</SCRIPT>
+<NOSCRIPT>
+<DIV ALIGN=CENTER><IMG SRC="objects/4_2.jpg" ALT="Layers" ALIGN="LEFT" WIDTH=381 HEIGHT=248></DIV><BR CLEAR=ALL>
+</NOSCRIPT>
+
+<P>
+The upper half of the figure above (browser/client &amp; replication server)
+resides for all version on client computers at the dealer showroom or in
+public areas. The lower half is running on the dealer server or on ACME
+servers. The gray ACME-Web area can be considered as a ACME server acting
+as a central online dealer that is servicing the public kiosks system.
+This server is also reachable on the Internet as a web-site. It is the
+base for many MINT value-added services.
+</P>
+<P>
+The parts marked DS (DealerSystem) and AS (ACME-System) are the corresponding
+ACME and dealer legacy systems that are accessible by using appropriate
+middleware.
+</P>
+<P>
+The main access path for this system is marked in red. It originates
+from the client computer, which accesses the ACME or dealer data and functions
+in the course of the sales process. These functions and date, that resides
+on different systems, servers and locations are wrapped logicaly by MINT-Business
+Objects. These business objects are the key to encapsulate complex ACME
+business rules. The application server handles the logic of the process.
+The replication server remains transparent.
+</P>
+<P>
+The browser approach as well as this architecture have two major advantages
+of great importance:
+</P>
+<UL>
+<LI>
+The browser offers maximal flexibility to incorporate new developments
+in the multimedia market during the project and afterward without the need
+for additional development. This is a guarantee that the application will
+remain state-of-the-art through its foreseen lifespan.
+</LI>
+<LI>
+The browser offers the possibility of separating the creative design of
+layout and multimedia objets from the application that incorporates business
+and process rules.
+</LI>
+</UL>
+<P>
+The basic network protocol stack for communication used by all layers of
+MINT is TCP/IP, as requested by ACME. All layers will be implemented as
+32bit applications or services.
+</P>
+<HR SIZE="1" COLOR="BLACK" NOSHADE>
+<TABLE BORDER=0 WIDTH="100%">
+<TR VALIGN="MIDDLE">
+<TD ALIGN="LEFT" WIDTH="20%">
+<A HREF="1_1.html" onMouseOver="press_back_to_start2 ()" onMouseOut="release_back_to_start2 ()">
+<IMG NAME="s2" SRC="images/back_to_start.gif" ALT="Back to start" WIDTH=30 HEIGHT=24 BORDER=0></A>
+<A HREF="4_1.html" onMouseOver="press_back2 ()" onMouseOut="release_back2 ()">
+<IMG NAME="b2" SRC="images/back.gif" ALT="Back" WIDTH=30 HEIGHT=24 BORDER=0></A>
+</TD>
+<TD ALIGN="CENTER" WIDTH="70%">
+<A HREF="about.html" onMouseOver="press_copy ()" onMouseOut="release_copy ()">
+<IMG NAME="cp" SRC="images/copyright.gif" ALT="Copyright 1997 INC. InterNet Consult GmbH / CSC PLOENZKE AG" WIDTH=246 HEIGHT=24 BORDER=0></A>
+</TD>
+<TD ALIGN="RIGHT" WIDTH="10%">
+<A HREF="4_3.html" onMouseOver="press_forward2 ()" onMouseOut="release_forward2 ()">
+<IMG NAME="f2" SRC="images/forward.gif" ALT="Forward" WIDTH=30 HEIGHT=24 BORDER=0></A>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

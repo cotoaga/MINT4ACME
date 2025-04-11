@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+	<TITLE>Frameset_3</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function initPage()	{
+	top.CurrentFrameset = 3;
+	top.FrameSet = 3;
+	top.setCookie ("Frame", top.FrameSet);
+	top.CONTENT.MAINFRAME.location.href = top.WeAreHere;
+}
+// -->
+</SCRIPT>
+</HEAD>
+
+<FRAMESET COLS="1,*" BORDER="0" FRAMESPACING="0" FRAMEBORDER="0" onLoad="initPage()">
+	<FRAME NAME="EXPLORER" SCROLLING="AUTO">
+	<FRAMESET ROWS="*,75" BORDER="0" FRAMESPACING="0" FRAMEBORDER="0">
+		<FRAME NAME="MAINFRAME" SRC="blank.html" SCROLLING="AUTO">
+		<FRAME NAME="COLLECTION" SRC="collection.html" SCROLLING="NO">
+	</FRAMESET>
+</FRAMESET>
+
+</HTML>

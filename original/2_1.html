@@ -1,0 +1,187 @@
+<HTML>
+<LINK REL="stylesheet" TYPE="text/css" HREF="mintstyle.css">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+if (top && top.WeAreHere) {
+	top.WeAreHere = "2_1.html";
+	top.setCookie ("Location", top.WeAreHere);
+}
+var BrowserSucks = "yes";
+var ActiveX = "disabled";
+var FlashPlugin = "disabled";
+if (navigator.appName.indexOf("Microsoft") != -1 && parseInt (navigator.appVersion) >= 2) {
+	ActiveX = "enabled";
+	if (parseInt (navigator.appVersion) >= 4) BrowserSucks = "no";
+}
+if (navigator.appName.indexOf("Netscape") != -1 && parseInt (navigator.appVersion) >= 3) {
+	BrowserSucks = "no";
+	var myPlugin = navigator.plugins["Shockwave Flash 2.0"];
+	if (myPlugin)
+		var myType = myPlugin["application/x-shockwave-flash"];
+	if (myType && myType.enabledPlugin == myPlugin)
+		FlashPlugin = "enabled";
+}
+function press_back_to_start () {
+	if (BrowserSucks == "no") {
+		document.images ["s1"].src="images/back_to_start_up.gif";
+	}
+}
+function press_back_to_start2 () {
+	if (BrowserSucks == "no") {
+		document.images ["s2"].src="images/back_to_start_up.gif";
+	}
+}
+function press_back () {
+	if (BrowserSucks == "no") {
+		document.images ["b1"].src="images/back_up.gif";
+	}
+}
+function press_back2 () {
+	if (BrowserSucks == "no") {
+		document.images ["b2"].src="images/back_up.gif";
+	}
+}
+function press_copy () {
+	if (BrowserSucks == "no") {
+		document.images ["cp"].src="images/copyright_up.gif";
+	}
+}
+function press_forward () {
+	if (BrowserSucks == "no") {
+		document.images ["f1"].src="images/forward_up.gif";
+	}
+}
+function press_forward2 () {
+	if (BrowserSucks == "no") {
+		document.images ["f2"].src="images/forward_up.gif";
+	}
+}
+function release_back_to_start () {
+	if (BrowserSucks == "no") {
+		document.images ["s1"].src="images/back_to_start.gif";
+	}
+}
+function release_back_to_start2 () {
+	if (BrowserSucks == "no") {
+		document.images ["s2"].src="images/back_to_start.gif";
+	}
+}
+function release_back () {
+	if (BrowserSucks == "no") {
+		document.images ["b1"].src="images/back.gif";
+	}
+}
+function release_back2 () {
+	if (BrowserSucks == "no") {
+		document.images ["b2"].src="images/back.gif";
+	}
+}
+function release_copy () {
+	if (BrowserSucks == "no") {
+		document.images ["cp"].src="images/copyright.gif";
+	}
+}
+function release_forward () {
+	if (BrowserSucks == "no") {
+		document.images ["f1"].src="images/forward.gif";
+	}
+}
+function release_forward2 () {
+	if (BrowserSucks == "no") {
+		document.images ["f2"].src="images/forward.gif";
+	}
+}
+//-->
+</SCRIPT>
+<BODY BGCOLOR="White">
+<TABLE BORDER=0 WIDTH="100%">
+<TR VALIGN="MIDDLE">
+<TD ALIGN="LEFT" WIDTH="20%">
+<A HREF="1_1.html" onMouseOver="press_back_to_start ()" onMouseOut="release_back_to_start ()">
+<IMG NAME="s1" SRC="images/back_to_start.gif" ALT="Back to start" WIDTH=30 HEIGHT=24 BORDER=0></A>
+<A HREF="1_3.html" onMouseOver="press_back ()" onMouseOut="release_back ()">
+<IMG NAME="b1" SRC="images/back.gif" ALT="Back" WIDTH=30 HEIGHT=24 BORDER=0></A>
+</TD>
+<TD ALIGN="RIGHT" WIDTH="80%">
+<A HREF="2_2.html" onMouseOver="press_forward ()" onMouseOut="release_forward ()">
+<IMG NAME="f1" SRC="images/forward.gif" ALT="Forward" WIDTH=30 HEIGHT=24 BORDER=0></A>
+</TD>
+</TR>
+</TABLE>
+<HR SIZE="1" COLOR="BLACK" NOSHADE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+if (top && top.SiteSound && top.SiteSound == "on") {
+	document.writeln ('<EMBED SRC="sounds/2_1.wav" AUTOSTART=TRUE HIDDEN=TRUE>');
+} 
+if (FlashPlugin == "enabled") {
+   document.writeln('<EMBED SRC="title/2_1.swf" TYPE="application/x-shockwave-flash" ALIGN=CENTER WIDTH=80% HEIGHT=80%><BR CLEAR=ALL>');
+} else if (ActiveX == "enabled") {
+   document.writeln('<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=2,0,0,0" align=center width=80% height=80%><PARAM name="Movie" value="title/2_1.swf"></OBJECT><BR CLEAR=ALL>');
+} else {
+   document.writeln('<DIV><IMG SRC="title/2_1.jpg" ALT="2.1. General Approach" ALIGN="LEFT" WIDTH=444 HEIGHT=167></DIV><BR CLEAR=ALL>');
+}
+//-->
+</SCRIPT>
+<NOSCRIPT>
+<IMG SRC="title/2_1.jpg" ALT="2.1. General Approach" ALIGN="LEFT" WIDTH=444 HEIGHT=167>
+<BR CLEAR="ALL">
+</NOSCRIPT>
+<P>
+The development of a solution like the MINT-Application requires very careful
+consideration of three main issues:
+</P>
+<DL>
+<DT>
+<B>User Interface</B>
+</DT>
+<DD>
+The application is going to be used by ACME dealers of varying sizes
+in many countries, with the implied language, cultural and working habit
+differences. As a consequence the man-machine interface must be capable
+of supporting high levels of intuition, but still be within the capabilities
+of the specified hardware configurations.
+</DD>
+<DT>
+<B>User Constituency</B>
+</DT>
+<DD>
+Car salesmen are notoriously reluctant to employ sales aids unless
+they can see a clear advantage to themselves in the support of the selling
+process, and still see information as power. MINT must clearly supply to
+them features that are seen as beneficial while at the same time informing
+the customer without seeming to detract from the position of the salesman
+as supplier of information.
+</DD>
+<DT>
+<B>Productization</B>
+</DT>
+<DD>
+MINT is going to be distributed to a high number of ACME dealers who
+will confidently expect from MINT the same level of quality that they are
+accustomed to in shrink-wrapped packages. As a consequence, the development
+of MINT should not be treated as a normal development of a bespoke application,
+but instead as the development of a commercial product.
+</DD>
+</DL>
+<HR SIZE="1" COLOR="BLACK" NOSHADE>
+<TABLE BORDER=0 WIDTH="100%">
+<TR VALIGN="MIDDLE">
+<TD ALIGN="LEFT" WIDTH="20%">
+<A HREF="1_1.html" onMouseOver="press_back_to_start2 ()" onMouseOut="release_back_to_start2 ()">
+<IMG NAME="s2" SRC="images/back_to_start.gif" ALT="Back to start" WIDTH=30 HEIGHT=24 BORDER=0></A>
+<A HREF="1_3.html" onMouseOver="press_back2 ()" onMouseOut="release_back2 ()">
+<IMG NAME="b2" SRC="images/back.gif" ALT="Back" WIDTH=30 HEIGHT=24 BORDER=0></A>
+</TD>
+<TD ALIGN="CENTER" WIDTH="70%">
+<A HREF="about.html" onMouseOver="press_copy ()" onMouseOut="release_copy ()">
+<IMG NAME="cp" SRC="images/copyright.gif" ALT="Copyright 1997 INC. InterNet Consult GmbH / CSC PLOENZKE AG" WIDTH=246 HEIGHT=24 BORDER=0></A>
+</TD>
+<TD ALIGN="RIGHT" WIDTH="10%">
+<A HREF="2_2.html" onMouseOver="press_forward2 ()" onMouseOut="release_forward2 ()">
+<IMG NAME="f2" SRC="images/forward.gif" ALT="Forward" WIDTH=30 HEIGHT=24 BORDER=0></A>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

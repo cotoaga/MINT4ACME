@@ -1,0 +1,192 @@
+<HTML>
+<LINK REL="stylesheet" TYPE="text/css" HREF="mintstyle.css">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+if (top && top.WeAreHere) {
+	top.WeAreHere = "5_1.html";
+	top.setCookie ("Location", top.WeAreHere);
+}
+var BrowserSucks = "yes";
+var ActiveX = "disabled";
+var FlashPlugin = "disabled";
+if (navigator.appName.indexOf("Microsoft") != -1 && parseInt (navigator.appVersion) >= 2) {
+	ActiveX = "enabled";
+	if (parseInt (navigator.appVersion) >= 4) BrowserSucks = "no";
+}
+if (navigator.appName.indexOf("Netscape") != -1 && parseInt (navigator.appVersion) >= 3) {
+	BrowserSucks = "no";
+	var myPlugin = navigator.plugins["Shockwave Flash 2.0"];
+	if (myPlugin)
+		var myType = myPlugin["application/x-shockwave-flash"];
+	if (myType && myType.enabledPlugin == myPlugin)
+		FlashPlugin = "enabled";
+}
+function press_back_to_start () {
+	if (BrowserSucks == "no") {
+		document.images ["s1"].src="images/back_to_start_up.gif";
+	}
+}
+function press_back_to_start2 () {
+	if (BrowserSucks == "no") {
+		document.images ["s2"].src="images/back_to_start_up.gif";
+	}
+}
+function press_back () {
+	if (BrowserSucks == "no") {
+		document.images ["b1"].src="images/back_up.gif";
+	}
+}
+function press_back2 () {
+	if (BrowserSucks == "no") {
+		document.images ["b2"].src="images/back_up.gif";
+	}
+}
+function press_copy () {
+	if (BrowserSucks == "no") {
+		document.images ["cp"].src="images/copyright_up.gif";
+	}
+}
+function press_forward () {
+	if (BrowserSucks == "no") {
+		document.images ["f1"].src="images/forward_up.gif";
+	}
+}
+function press_forward2 () {
+	if (BrowserSucks == "no") {
+		document.images ["f2"].src="images/forward_up.gif";
+	}
+}
+function release_back_to_start () {
+	if (BrowserSucks == "no") {
+		document.images ["s1"].src="images/back_to_start.gif";
+	}
+}
+function release_back_to_start2 () {
+	if (BrowserSucks == "no") {
+		document.images ["s2"].src="images/back_to_start.gif";
+	}
+}
+function release_back () {
+	if (BrowserSucks == "no") {
+		document.images ["b1"].src="images/back.gif";
+	}
+}
+function release_back2 () {
+	if (BrowserSucks == "no") {
+		document.images ["b2"].src="images/back.gif";
+	}
+}
+function release_copy () {
+	if (BrowserSucks == "no") {
+		document.images ["cp"].src="images/copyright.gif";
+	}
+}
+function release_forward () {
+	if (BrowserSucks == "no") {
+		document.images ["f1"].src="images/forward.gif";
+	}
+}
+function release_forward2 () {
+	if (BrowserSucks == "no") {
+		document.images ["f2"].src="images/forward.gif";
+	}
+}
+//-->
+</SCRIPT>
+<BODY BGCOLOR="White">
+<TABLE BORDER=0 WIDTH="100%">
+<TR VALIGN="MIDDLE">
+<TD ALIGN="LEFT" WIDTH="20%">
+<A HREF="1_1.html" onMouseOver="press_back_to_start ()" onMouseOut="release_back_to_start ()">
+<IMG NAME="s1" SRC="images/back_to_start.gif" ALT="Back to start" WIDTH=30 HEIGHT=24 BORDER=0></A>
+<A HREF="4_9.html" onMouseOver="press_back ()" onMouseOut="release_back ()">
+<IMG NAME="b1" SRC="images/back.gif" ALT="Back" WIDTH=30 HEIGHT=24 BORDER=0></A>
+</TD>
+<TD ALIGN="RIGHT" WIDTH="80%">
+<A HREF="5_2.html" onMouseOver="press_forward ()" onMouseOut="release_forward ()">
+<IMG NAME="f1" SRC="images/forward.gif" ALT="Forward" WIDTH=30 HEIGHT=24 BORDER=0></A>
+</TD>
+</TR>
+</TABLE>
+<HR SIZE="1" COLOR="BLACK" NOSHADE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+if (top && top.SiteSound && top.SiteSound == "on") {
+	document.writeln ('<EMBED SRC="sounds/5_1.wav" AUTOSTART=TRUE HIDDEN=TRUE>');
+} 
+if (FlashPlugin == "enabled") {
+   document.writeln('<EMBED SRC="title/5_1.swf" TYPE="application/x-shockwave-flash" ALIGN=CENTER WIDTH=80% HEIGHT=80%><BR CLEAR=ALL>');
+} else if (ActiveX == "enabled") {
+   document.writeln('<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=2,0,0,0" align=center width=80% height=80%><PARAM name="Movie" value="title/5_1.swf"></OBJECT><BR CLEAR=ALL>');
+} else {
+   document.writeln('<DIV><IMG SRC="title/5_1.jpg" ALT="5.1. Project Plan" ALIGN="LEFT" WIDTH=444 HEIGHT=167></DIV><BR CLEAR=ALL>');
+}
+//-->
+</SCRIPT>
+<NOSCRIPT>
+<IMG SRC="title/5_1.jpg" ALT="5.1. Project Plan" ALIGN="LEFT" WIDTH=444 HEIGHT=167>
+<BR CLEAR="ALL">
+</NOSCRIPT>
+<P>
+We will use a <A HREF="2_1.html">browser based approach</A> to develop the MINT-Application as
+a flexible state-of-the-art multimedia and network application based on standards.
+The Browser will wrap the <A HREF="2_2.html">sales process</A> visually by integrating the <A HREF="4_5.html#layout">display</A>
+and the <A HREF="4_5.html#processes">interaction</A> with <A HREF="2_3.html">business</A> and <A HREF="4_8.html">multimedia objects</A> from lower layers.
+The underlying <A HREF="4_3.html#replicationlayer">Replication</A> and <A HREF="4_3.html#applicationlayer">Application Server</A> will integrate the <A HREF="4_3.html#databaselayer">DS
+and AS applications</A> and offer <A HREF="4_4.html#laptopoffline">off-line working</A> capabilities. This will logically wrap the sales process.
+</P>
+<P>
+Due to the complexity of the <A HREF="5_2.html#technical">technical</A> and <A HREF="5_2.html#art">design</A> aspects of this project, the <A HREF="5_2.html">project
+management</A> itself must be state-of-the-art. To accomplish all mission
+objectives we propose an <B>open project environment</B> focusing on three critical
+success factors.
+</P>
+<DL>
+<DT>
+<A NAME="quality"></A>
+<B>Quality</B>
+</DT>
+<DD>
+Three aspects must be carefully considered to achieve a high overall quality in
+the MINT-project. Quality in therms of <A HREF="3_1.html">business functionality</A>; this aspect is covered by an dedicated <A HREF="5_2.html#functional">functional manager</A> with excellent knowledge of the automotive industry, their dealerships and business process engineering. Quality in therms of design; this aspect is covered by a dedicated <A HREF="5_2.html#art">art manager</A>. The third aspect is the quality of the technical solution, which is covered by an dedicated <A HREF="5_2.html#technical">technical manager</A>. The overall aspects of quality
+are finally assured by the independent <A HREF="5_2.html#quality">quallity manager</A>.
+</DD>
+<DT>
+<A NAME="usability"></A>
+<B>Usability</B>
+</DT>
+<DD>
+This aspect is covered by the <B>open project environment</B> where the usability lab plays
+an important role. ACME and their dealers will be integrated at a <A HREF="5_3.html#prototyping">very early point</A> in the project. This will help to raise the acceptance as well as to ensure the proper
+functionality and usability.
+</DD>
+<DT>
+<A NAME="dynamic"></A>
+<B>Dynamic Cooperation</B>
+</DT>
+<DD>
+Due to the tremendous speed of development in the area of internet and multimedia technology
+there must be a way to quickly adapt the application to new possibilities. The traditional change request approach is far to slow and expensive for both partners. Therefore, the MINT project will be implemented using the <B>Time Boxing</B> method.
+</DD>
+</DL>
+<HR SIZE="1" COLOR="BLACK" NOSHADE>
+<TABLE BORDER=0 WIDTH="100%">
+<TR VALIGN="MIDDLE">
+<TD ALIGN="LEFT" WIDTH="20%">
+<A HREF="1_1.html" onMouseOver="press_back_to_start2 ()" onMouseOut="release_back_to_start2 ()">
+<IMG NAME="s2" SRC="images/back_to_start.gif" ALT="Back to start" WIDTH=30 HEIGHT=24 BORDER=0></A>
+<A HREF="4_9.html" onMouseOver="press_back2 ()" onMouseOut="release_back2 ()">
+<IMG NAME="b2" SRC="images/back.gif" ALT="Back" WIDTH=30 HEIGHT=24 BORDER=0></A>
+</TD>
+<TD ALIGN="CENTER" WIDTH="70%">
+<A HREF="about.html" onMouseOver="press_copy ()" onMouseOut="release_copy ()">
+<IMG NAME="cp" SRC="images/copyright.gif" ALT="Copyright 1997 INC. InterNet Consult GmbH / CSC PLOENZKE AG" WIDTH=246 HEIGHT=24 BORDER=0></A>
+</TD>
+<TD ALIGN="RIGHT" WIDTH="10%">
+<A HREF="5_2.html" onMouseOver="press_forward2 ()" onMouseOut="release_forward2 ()">
+<IMG NAME="f2" SRC="images/forward.gif" ALT="Forward" WIDTH=30 HEIGHT=24 BORDER=0></A>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

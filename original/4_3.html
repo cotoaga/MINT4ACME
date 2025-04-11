@@ -1,0 +1,417 @@
+<HTML>
+<LINK REL="stylesheet" TYPE="text/css" HREF="mintstyle.css">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+if (top && top.WeAreHere) {
+	top.WeAreHere = "4_3.html";
+	top.setCookie ("Location", top.WeAreHere);
+}
+var BrowserSucks = "yes";
+var ActiveX = "disabled";
+var FlashPlugin = "disabled";
+if (navigator.appName.indexOf("Microsoft") != -1 && parseInt (navigator.appVersion) >= 2) {
+	ActiveX = "enabled";
+	if (parseInt (navigator.appVersion) >= 4) BrowserSucks = "no";
+}
+if (navigator.appName.indexOf("Netscape") != -1 && parseInt (navigator.appVersion) >= 3) {
+	BrowserSucks = "no";
+	var myPlugin = navigator.plugins["Shockwave Flash 2.0"];
+	if (myPlugin)
+		var myType = myPlugin["application/x-shockwave-flash"];
+	if (myType && myType.enabledPlugin == myPlugin)
+		FlashPlugin = "enabled";
+}
+function press_back_to_start () {
+	if (BrowserSucks == "no") {
+		document.images ["s1"].src="images/back_to_start_up.gif";
+	}
+}
+function press_back_to_start2 () {
+	if (BrowserSucks == "no") {
+		document.images ["s2"].src="images/back_to_start_up.gif";
+	}
+}
+function press_back () {
+	if (BrowserSucks == "no") {
+		document.images ["b1"].src="images/back_up.gif";
+	}
+}
+function press_back2 () {
+	if (BrowserSucks == "no") {
+		document.images ["b2"].src="images/back_up.gif";
+	}
+}
+function press_copy () {
+	if (BrowserSucks == "no") {
+		document.images ["cp"].src="images/copyright_up.gif";
+	}
+}
+function press_forward () {
+	if (BrowserSucks == "no") {
+		document.images ["f1"].src="images/forward_up.gif";
+	}
+}
+function press_forward2 () {
+	if (BrowserSucks == "no") {
+		document.images ["f2"].src="images/forward_up.gif";
+	}
+}
+function release_back_to_start () {
+	if (BrowserSucks == "no") {
+		document.images ["s1"].src="images/back_to_start.gif";
+	}
+}
+function release_back_to_start2 () {
+	if (BrowserSucks == "no") {
+		document.images ["s2"].src="images/back_to_start.gif";
+	}
+}
+function release_back () {
+	if (BrowserSucks == "no") {
+		document.images ["b1"].src="images/back.gif";
+	}
+}
+function release_back2 () {
+	if (BrowserSucks == "no") {
+		document.images ["b2"].src="images/back.gif";
+	}
+}
+function release_copy () {
+	if (BrowserSucks == "no") {
+		document.images ["cp"].src="images/copyright.gif";
+	}
+}
+function release_forward () {
+	if (BrowserSucks == "no") {
+		document.images ["f1"].src="images/forward.gif";
+	}
+}
+function release_forward2 () {
+	if (BrowserSucks == "no") {
+		document.images ["f2"].src="images/forward.gif";
+	}
+}
+//-->
+</SCRIPT>
+<BODY BGCOLOR="White">
+<TABLE BORDER=0 WIDTH="100%">
+<TR VALIGN="MIDDLE">
+<TD ALIGN="LEFT" WIDTH="20%">
+<A HREF="1_1.html" onMouseOver="press_back_to_start ()" onMouseOut="release_back_to_start ()">
+<IMG NAME="s1" SRC="images/back_to_start.gif" ALT="Back to start" WIDTH=30 HEIGHT=24 BORDER=0></A>
+<A HREF="4_2.html" onMouseOver="press_back ()" onMouseOut="release_back ()">
+<IMG NAME="b1" SRC="images/back.gif" ALT="Back" WIDTH=30 HEIGHT=24 BORDER=0></A>
+</TD>
+<TD ALIGN="RIGHT" WIDTH="80%">
+<A HREF="4_4.html" onMouseOver="press_forward ()" onMouseOut="release_forward ()">
+<IMG NAME="f1" SRC="images/forward.gif" ALT="Forward" WIDTH=30 HEIGHT=24 BORDER=0></A>
+</TD>
+</TR>
+</TABLE>
+<HR SIZE="1" COLOR="BLACK" NOSHADE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+if (top && top.SiteSound && top.SiteSound == "on") {
+	document.writeln ('<EMBED SRC="sounds/4_3.wav" AUTOSTART=TRUE HIDDEN=TRUE>');
+} 
+if (FlashPlugin == "enabled") {
+   document.writeln('<EMBED SRC="title/4_3.swf" TYPE="application/x-shockwave-flash" ALIGN=CENTER WIDTH=80% HEIGHT=80%><BR CLEAR=ALL>');
+} else if (ActiveX == "enabled") {
+   document.writeln('<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=2,0,0,0" align=center width=80% height=80%><PARAM name="Movie" value="title/4_3.swf"></OBJECT><BR CLEAR=ALL>');
+} else {
+   document.writeln('<DIV><IMG SRC="title/4_3.jpg" ALT="4.3. MINT Layers" ALIGN="LEFT" WIDTH=444 HEIGHT=167></DIV><BR CLEAR=ALL>');
+}
+//-->
+</SCRIPT>
+<NOSCRIPT>
+<IMG SRC="title/4_3.jpg" ALT="4.3. MINT Layers" ALIGN="LEFT" WIDTH=444 HEIGHT=167>
+<BR CLEAR="ALL">
+</NOSCRIPT>
+<A NAME="browserlayer"></A>
+<H3>
+4.3.1. Browser (Client)
+</H3>
+<P>
+The Browser (client layer) is the only visible top layer for all classes
+of users. The lower layers are always transparent to all users. This assures
+that the system is viewed by everyone and at every time as one logical
+device. The Browser visually wraps (look &amp; feel) the different systems
+that are available to the customer or to the sales consultant. The display
+and layout is designed to be totally customer facing.
+</P>
+<P>
+The browser behaves at the same time as an environment manager and as
+a business application. It offers the proposed key capabilities:
+</P>
+<UL>
+<LI>
+Single point of access to distributed systems
+</LI>
+<LI>
+Application selection based on data
+</LI>
+<LI>
+Intuitive GUI
+</LI>
+<LI>
+Integrated help system
+</LI>
+<LI>
+Transparent integration of Microsoft/Unix applications
+</LI>
+</UL>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+if (FlashPlugin == "enabled") {
+   document.writeln('<DIV ALIGN=CENTER><EMBED SRC="objects/4_3b.swf" TYPE="application/x-shockwave-flash" ALIGN=LEFT WIDTH=80% HEIGHT=80%></DIV><BR CLEAR=ALL>');
+} else if (ActiveX == "enabled") {
+   document.writeln('<DIV ALIGN=CENTER><OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=2,0,0,0" align=center width=80% height=80%><PARAM name="Movie" value="objects/4_3b.swf"></OBJECT></DIV><BR CLEAR=ALL>');
+} else {
+   document.writeln('<DIV ALIGN=CENTER><IMG SRC="objects/4_3b.jpg" ALT="Browser & Client" ALIGN="LEFT" WIDTH=381 HEIGHT=248></DIV><BR CLEAR=ALL>');
+}
+//-->
+</SCRIPT>
+<NOSCRIPT>
+<DIV ALIGN=CENTER><IMG SRC="objects/4_3b.jpg" ALT="Browser & Client" ALIGN="LEFT" WIDTH=381 HEIGHT=248></DIV><BR CLEAR=ALL>
+</NOSCRIPT>
+<P>
+The Browser uses <A HREF="http://www.w3.org/Protocols/Activity.html" TARGET="_blank">HTTP (Hyper Text Transfer Protocol)</A> and TCP/IP to access lower layers. The normal access (left hand side) goes through the <A HREF="#replicationlayer">replication server</A> to the <A HREF="#applicationlayer">application server</A>. This way is relevant for the Dealer-MINT, the
+<A HREF="4_4.html#laptoponline">Laptop-MINT version in online mode</A> and for the <A HREF="4_4.html#publickiosk">Kiosk-MINT version</A>. The second way 
+is a direct public access to the dealer system from the Internet. The third way (right hand side)
+is a direct public access from the Internet or public kiosks to the <A HREF="#acmeweblayer">ACME-Web</A>. All components of the MINT multi-tier architecture are sharing TCP/IP and HTTP as the common protocols.
+</P>
+<P>
+The requested features that are visible to users are
+</P>
+<UL>
+<LI>
+ease of use,
+</LI>
+<LI>
+integrated sales process,
+</LI>
+<LI>
+a state-of-the-art multimedia display,
+</LI>
+<LI>
+different layout and branding for different countries,
+</LI>
+<LI>
+partial layout configuration (dealer or dealer group).
+</LI>
+</UL>
+<P>
+It is possible to use the <A HREF="http://www.microsoft.com/ie/" TARGET="_blank">Internet Explorer</A> from <A HREF="http://www.microsoft.com/" TARGET="_blank">Microsoft</A> as well as the
+<A HREF="http://www.netscape.com" TARGET="_blank">Netscape Communicator</A> that are both available for Windows95 and Windows NT. These easy-to-use applications already have most of the required features and capabilities:
+</P>
+<UL>
+<LI>
+The display is controlled by structural layout done with HTML (Hyper Text
+Markup Language). This widely used new document standard is derived from
+SGML (Structured General Markup Language). It is the standard for Internet
+documents and makes different branding and layout in different countries
+possible and easy.
+</LI>
+<LI>
+It offers a flexible handling of multimedia content. This includes: built-in
+display abilities for all requested <A HREF="4_8.html">multimedia objects</A> (MMO) types, alternative
+displays if the specified MMOs are not available, dynamic re-sizing and
+adaptation of the layout depending on the available display area and easy
+adaptation to new MMO types by adding the necessary new ActiveX controls
+or <A HREF="help.html#plugins">Plug-ins</A>.
+</LI>
+<LI>
+The browser can be configured for different use cases like the <A HREF="4_4.html#dealermint">Dealer-MINT</A> or the <A HREF="4_4.html#publickiosk">Kiosk-MINT version</A>.
+</LI>
+<LI>
+At the end of the configuration process the browser can print a quotation
+containing pictures and the complete breakdown of costs and financing options.
+</LI>
+<LI>
+The browser is perfectly suited for reuse of existing multimedia objects,
+advertising content and design that has already been done by other creative
+companies. This material can be distributed centrally by ACME.
+</LI>
+<LI>
+The Browser acts as a pure <A HREF="4_5.html#layout">display utility</A> (screen &amp; printer) without any business-specific logic. It encapsulates no process logic and is free
+of complex business rules owned by ACME.
+</LI>
+<LI>
+The Browser has a low impact on hardware or software requirements.
+</LI>
+<LI>
+Due to the wide spread use of browsers, it offers all users the same GUI
+for the different <A HREF="4_4.html">versions</A> of the MINT-Application independent of the current
+location.</LI>
+</UL>
+<A NAME="replicationlayer"></A>
+<H3>
+4.3.2. Replication Server
+</H3>
+<P>
+The Replication Server is a transparent layer between the <A HREF="#browserlayer">client</A> and <A HREF="#applicationlayer">application layer</A> hiding the complex problem of working off-line to the client layer.
+</P>
+<P>
+It also reduces network traffic, increases access speed for large <A HREF="4_8.html">multimedia
+objects (MMO)</A> and supports the distribution and maintenance of the different
+layout &amp; <A HREF="4_4.html">MMOs versions</A> throughout the ACME dealer area.
+</P>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+if (FlashPlugin == "enabled") {
+   document.writeln('<DIV ALIGN=CENTER><EMBED SRC="objects/4_3c.swf" TYPE="application/x-shockwave-flash" ALIGN=LEFT WIDTH=80% HEIGHT=80%></DIV><BR CLEAR=ALL>');
+} else if (ActiveX == "enabled") {
+   document.writeln('<DIV ALIGN=CENTER><OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=2,0,0,0" align=center width=80% height=80%><PARAM name="Movie" value="objects/4_3c.swf"></OBJECT></DIV><BR CLEAR=ALL>');
+} else {
+   document.writeln('<DIV ALIGN=CENTER><IMG SRC="objects/4_3c.jpg" ALT="Replication Server" ALIGN="LEFT" WIDTH=381 HEIGHT=248></DIV><BR CLEAR=ALL>');
+}
+//-->
+</SCRIPT>
+<NOSCRIPT>
+<DIV ALIGN=CENTER><IMG SRC="objects/4_3c.jpg" ALT="Replication Server" ALIGN="LEFT" WIDTH=381 HEIGHT=248></DIV><BR CLEAR=ALL>
+</NOSCRIPT>
+<P>
+The Replication Server is an intelligent cache server that is fully
+integrated in the system. The main difference to ordinary cache servers
+is that it is not only meant to optimize the information flow in one direction.
+It can be triggered from the client and also from the server side. When
+it is triggered from the Application Server it flushes cached orders and
+access statistics. When it is triggered from ACME side it starts updating
+its own database by fetching new versions of the objects. The Replication
+Server helps reducing network load by updating only new versions.
+</P>
+<P>
+The Replication Server is a Win95/WinNT service and uses HTTP and TCP/IP
+for the communication with other parts of the system. It is based on the <A HREF="help.html#javabooster">Java BOOSTER technology</A>. Some of the operations (user or operator triggered) of the replication server are:
+</P>
+<UL>
+<LI>
+Unconditional updating of the entire cache. It would be part of system
+management function executed by a telnet access to the dealer server.
+</LI>
+<LI>
+Loading pre-configured vehicles in stock
+</LI>
+<LI>
+Loading historic configurations of selected customers
+</LI>
+<LI>
+Loading marketing offers
+</LI>
+<LI>
+Retrieving statistical data on the most frequently used areas and pages
+</LI>
+</UL>
+<A NAME="applicationlayer"></A>
+<H3>
+4.3.3. Application Server
+</H3>
+<P>
+The Application Server is the integrating shell that logically wraps the
+different systems. This layer steers the identified <A HREF="2_3.html">Business Objects</A> through
+the <A HREF="2_2.html">sales process</A> acquiring more and more data. The application server
+retrieves this information by directly accessing ACME or dealer data through
+the <A HREF="#databaselayer">proposed interfaces</A>. The Application server can be installed on both
+<A HREF="http://www.microsoft.com/winnt" TARGET="_blank">WindowsNT</A> and Unix platforms.
+</P>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+if (FlashPlugin == "enabled") {
+   document.writeln('<DIV ALIGN=CENTER><EMBED SRC="objects/4_3d.swf" TYPE="application/x-shockwave-flash" ALIGN=LEFT WIDTH=80% HEIGHT=80%></DIV><BR CLEAR=ALL>');
+} else if (ActiveX == "enabled") {
+   document.writeln('<DIV ALIGN=CENTER><OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=2,0,0,0" align=center width=80% height=80%><PARAM name="Movie" value="objects/4_3d.swf"></OBJECT></DIV><BR CLEAR=ALL>');
+} else {
+   document.writeln('<DIV ALIGN=CENTER><IMG SRC="objects/4_3d.jpg" ALT="Application Server" ALIGN="LEFT" WIDTH=381 HEIGHT=248></DIV><BR CLEAR=ALL>');
+}
+//-->
+</SCRIPT>
+<NOSCRIPT>
+<DIV ALIGN=CENTER><IMG SRC="objects/4_3d.jpg" ALT="Application Server" ALIGN="LEFT" WIDTH=381 HEIGHT=248></DIV><BR CLEAR=ALL>
+</NOSCRIPT>
+<P>
+The Application Server maps the relevant <A HREF="2_2.html">business processes</A> directly
+into HTML-documents that can be displayed by the <A HREF="#browserlayer">Browser</A>. The Application
+Server is the owner of the <A HREF="2_3.html#vehicle">vehicle</A> configuration data assigned to <A HREF="2_3.html#customer">customers</A> and the statistical information which is also stored on the <A HREF="2_3.html#dealer">dealer server</A>. It also accumulates the statistical data obtained by the <A HREF="#replicationlayer">Replication Server</A>
+on the different client computers.
+</P>
+<P>
+The Application Server caches orders that are given in <A HREF="4_4.html#laptopoffline">off-line mode</A> and forwards them to <A HREF="2_3.html#acme">ACME</A> when the network is available (when the Replication Server can be reached from the Application Server).
+</P>
+<P>
+Some of the operations (user-triggered) of the application server are:
+</P>
+<UL>
+<LI>
+Uploading of off-line orders when the network connection from the dealer
+server to the laptop clients is available.
+</LI>
+<LI>
+Uploading of accumulated <A HREF="4_7.html">statistical data</A> that can be retrieved from ACME.
+</LI>
+<LI>
+Accessing dealer data from ACME.
+</LI>
+</UL>
+<A NAME="acmeweblayer"></A>
+<H3>
+4.3.4. ACME-Web (special Application Server)
+</H3>
+<P>
+This component is the requested public kiosk. It is implemented as a special
+version of the <A HREF="#applicationlayer">Application Server</A> and offers dealer showroom MINT functions. Ideally, this is a country specific ACME-Web Server acting as a central
+online dealer. The main difference to the <A HREF="4_4.html#dealermint">Dealer versions</A> may be the amount and type of data that will be used. Normal customers still do not have
+enough bandwidth to get data intensive MMOs like MPEGs that also require
+special devices to play back fast enough, but this limitation is likely
+to disappear in the future.
+</P>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+if (FlashPlugin == "enabled") {
+   document.writeln('<DIV ALIGN=CENTER><EMBED SRC="objects/4_3e.swf" TYPE="application/x-shockwave-flash" ALIGN=LEFT WIDTH=80% HEIGHT=80%></DIV><BR CLEAR=ALL>');
+} else if (ActiveX == "enabled") {
+   document.writeln('<DIV ALIGN=CENTER><OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=2,0,0,0" align=center width=80% height=80%><PARAM name="Movie" value="objects/4_3e.swf"></OBJECT></DIV><BR CLEAR=ALL>');
+} else {
+   document.writeln('<DIV ALIGN=CENTER><IMG SRC="objects/4_3e.jpg" ALT="ACME-Web" ALIGN="LEFT" WIDTH=381 HEIGHT=248></DIV><BR CLEAR=ALL>');
+}
+//-->
+</SCRIPT>
+<NOSCRIPT>
+<DIV ALIGN=CENTER><IMG SRC="objects/4_3e.jpg" ALT="ACME-Web" ALIGN="LEFT" WIDTH=381 HEIGHT=248></DIV><BR CLEAR=ALL>
+</NOSCRIPT>
+<P>
+The ACME-Web version can also be installed as a <A HREF="4_4.html#publickiosk">public kiosk version</A>. It can be controlled remote from ACME. Just as the central ACME-Web its data can be used and forwarded to selected dealers to take contact to leads or prospects.
+</P>
+<A NAME="databaselayer"></A>
+<H3>
+4.3.5. Database Layer
+</H3>
+<P>
+This layer represents all interfaces to ACME and dealer data that are available
+on the dealer server. The data is accessed from the Application Server
+by using <B>ACME-Systems (AS)</B> or <B>Dealer-Systems (DS)</B> functions.
+</P>
+<P>
+The database layers encapsulate data and functions of AS and DS. MINT
+must rely on functions provided by those systems.
+</P>
+<HR SIZE="1" COLOR="BLACK" NOSHADE>
+<TABLE BORDER=0 WIDTH="100%">
+<TR VALIGN="MIDDLE">
+<TD ALIGN="LEFT" WIDTH="20%">
+<A HREF="1_1.html" onMouseOver="press_back_to_start2 ()" onMouseOut="release_back_to_start2 ()">
+<IMG NAME="s2" SRC="images/back_to_start.gif" ALT="Back to start" WIDTH=30 HEIGHT=24 BORDER=0></A>
+<A HREF="4_2.html" onMouseOver="press_back2 ()" onMouseOut="release_back2 ()">
+<IMG NAME="b2" SRC="images/back.gif" ALT="Back" WIDTH=30 HEIGHT=24 BORDER=0></A>
+</TD>
+<TD ALIGN="CENTER" WIDTH="70%">
+<A HREF="about.html" onMouseOver="press_copy ()" onMouseOut="release_copy ()">
+<IMG NAME="cp" SRC="images/copyright.gif" ALT="Copyright 1997 INC. InterNet Consult GmbH / CSC PLOENZKE AG" WIDTH=246 HEIGHT=24 BORDER=0></A>
+</TD>
+<TD ALIGN="RIGHT" WIDTH="10%">
+<A HREF="4_4.html" onMouseOver="press_forward2 ()" onMouseOut="release_forward2 ()">
+<IMG NAME="f2" SRC="images/forward.gif" ALT="Forward" WIDTH=30 HEIGHT=24 BORDER=0></A>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

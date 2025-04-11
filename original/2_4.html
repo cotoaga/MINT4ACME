@@ -1,0 +1,238 @@
+<HTML>
+<LINK REL="stylesheet" TYPE="text/css" HREF="mintstyle.css">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+if (top && top.WeAreHere) {
+	top.WeAreHere = "2_4.html";
+	top.setCookie ("Location", top.WeAreHere);
+}
+var BrowserSucks = "yes";
+var ActiveX = "disabled";
+var FlashPlugin = "disabled";
+if (navigator.appName.indexOf("Microsoft") != -1 && parseInt (navigator.appVersion) >= 2) {
+	ActiveX = "enabled";
+	if (parseInt (navigator.appVersion) >= 4) BrowserSucks = "no";
+}
+if (navigator.appName.indexOf("Netscape") != -1 && parseInt (navigator.appVersion) >= 3) {
+	BrowserSucks = "no";
+	var myPlugin = navigator.plugins["Shockwave Flash 2.0"];
+	if (myPlugin)
+		var myType = myPlugin["application/x-shockwave-flash"];
+	if (myType && myType.enabledPlugin == myPlugin)
+		FlashPlugin = "enabled";
+}
+function press_back_to_start () {
+	if (BrowserSucks == "no") {
+		document.images ["s1"].src="images/back_to_start_up.gif";
+	}
+}
+function press_back_to_start2 () {
+	if (BrowserSucks == "no") {
+		document.images ["s2"].src="images/back_to_start_up.gif";
+	}
+}
+function press_back () {
+	if (BrowserSucks == "no") {
+		document.images ["b1"].src="images/back_up.gif";
+	}
+}
+function press_back2 () {
+	if (BrowserSucks == "no") {
+		document.images ["b2"].src="images/back_up.gif";
+	}
+}
+function press_copy () {
+	if (BrowserSucks == "no") {
+		document.images ["cp"].src="images/copyright_up.gif";
+	}
+}
+function press_forward () {
+	if (BrowserSucks == "no") {
+		document.images ["f1"].src="images/forward_up.gif";
+	}
+}
+function press_forward2 () {
+	if (BrowserSucks == "no") {
+		document.images ["f2"].src="images/forward_up.gif";
+	}
+}
+function release_back_to_start () {
+	if (BrowserSucks == "no") {
+		document.images ["s1"].src="images/back_to_start.gif";
+	}
+}
+function release_back_to_start2 () {
+	if (BrowserSucks == "no") {
+		document.images ["s2"].src="images/back_to_start.gif";
+	}
+}
+function release_back () {
+	if (BrowserSucks == "no") {
+		document.images ["b1"].src="images/back.gif";
+	}
+}
+function release_back2 () {
+	if (BrowserSucks == "no") {
+		document.images ["b2"].src="images/back.gif";
+	}
+}
+function release_copy () {
+	if (BrowserSucks == "no") {
+		document.images ["cp"].src="images/copyright.gif";
+	}
+}
+function release_forward () {
+	if (BrowserSucks == "no") {
+		document.images ["f1"].src="images/forward.gif";
+	}
+}
+function release_forward2 () {
+	if (BrowserSucks == "no") {
+		document.images ["f2"].src="images/forward.gif";
+	}
+}
+//-->
+</SCRIPT>
+<BODY BGCOLOR="White">
+<TABLE BORDER=0 WIDTH="100%">
+<TR VALIGN="MIDDLE">
+<TD ALIGN="LEFT" WIDTH="20%">
+<A HREF="1_1.html" onMouseOver="press_back_to_start ()" onMouseOut="release_back_to_start ()">
+<IMG NAME="s1" SRC="images/back_to_start.gif" ALT="Back to start" WIDTH=30 HEIGHT=24 BORDER=0></A>
+<A HREF="2_3.html" onMouseOver="press_back ()" onMouseOut="release_back ()">
+<IMG NAME="b1" SRC="images/back.gif" ALT="Back" WIDTH=30 HEIGHT=24 BORDER=0></A>
+</TD>
+<TD ALIGN="RIGHT" WIDTH="80%">
+<A HREF="2_5.html" onMouseOver="press_forward ()" onMouseOut="release_forward ()">
+<IMG NAME="f1" SRC="images/forward.gif" ALT="Forward" WIDTH=30 HEIGHT=24 BORDER=0></A>
+</TD>
+</TR>
+</TABLE>
+<HR SIZE="1" COLOR="BLACK" NOSHADE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+if (top && top.SiteSound && top.SiteSound == "on") {
+	document.writeln ('<EMBED SRC="sounds/2_4.wav" AUTOSTART=TRUE HIDDEN=TRUE>');
+} 
+if (FlashPlugin == "enabled") {
+   document.writeln('<EMBED SRC="title/2_4.swf" TYPE="application/x-shockwave-flash" ALIGN=CENTER WIDTH=80% HEIGHT=80%><BR CLEAR=ALL>');
+} else if (ActiveX == "enabled") {
+   document.writeln('<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=2,0,0,0" align=center width=80% height=80%><PARAM name="Movie" value="title/2_4.swf"></OBJECT><BR CLEAR=ALL>');
+} else {
+   document.writeln('<DIV><IMG SRC="title/2_4.jpg" ALT="2.4. Framework Structure" ALIGN="LEFT" WIDTH=444 HEIGHT=167></DIV><BR CLEAR=ALL>');
+}
+//-->
+</SCRIPT>
+<NOSCRIPT>
+<IMG SRC="title/2_4.jpg" ALT="2.4. Framework Structure" ALIGN="LEFT" WIDTH=444 HEIGHT=167>
+<BR CLEAR="ALL">
+</NOSCRIPT>
+<P>
+Since the mid-1990s, trends such as continuous process improvement, and
+business-process reengineering have underscored the need for flexible,
+open business applications that can be deployed into a continuously evolving
+matrix of businesses, partnerships, customers and technology. To meet these
+demands, modern IT applications must be able to run on a variety of different
+hardware and software platforms while being instantly deployable and maintainable
+across an increasingly decentralized IT infrastructure that covers central
+data warehouses and mainframes, departmental servers, desktop and mobile
+computers, as well as special-purpose or next-generation equipment.
+</P>
+<P>
+For the MINT-Application we see the following further requirements:
+</P>
+<UL>
+<LI>
+low overall cost of implementation and ownership, as well as use commodity
+technologies and skill sets;
+</LI>
+<LI>
+use open standards so that they are flexible enough to co-operate with
+existing applications from different vendors today and in the future;
+</LI>
+<LI>
+leverage existing infrastructure investments in desktop computers, servers,
+mainframes, databases, applications, and networks;
+</LI>
+<LI>
+scale seamlessly from the LAN to the WAN, enabling the exposure of business
+processes through the corporate firewall to connect business applications
+directly to customers, suppliers, and partners;
+</LI>
+<LI>
+be deployed and managed centrally from a server rather than requiring costly
+updates to static, individual LANs, desktops or laptops;
+</LI>
+<LI>
+support component reusability, increasing ACME's ability to assemble new
+applications rapidly from existing services.
+</LI>
+</UL>
+<P>
+These requirements are best satisfied by the use of <B>Internet technologies</B>
+and standards, which are currently leading one of the most remarkable software
+revolutions for IT departments since the introduction of the personal computer.
+Internet standards are becoming an important development environment for
+a host of new enterprise applications. From its genesis as an open, information-sharing
+medium, the Internet is evolving into a full application development platform,
+fostering a transformation in application design and implementation that
+is as significant as the shift from host-based application development
+to the desktop-centric paradigm offered by the client-server model. This
+new class of platform-independent applications, called <B>network-centric
+applications</B>, combines the advantages of central control and administration
+with the power and flexibility of distributed applications.
+</P>
+<A NAME="frameworkpic"></A>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+if (FlashPlugin == "enabled") {
+   document.writeln('<DIV ALIGN=CENTER><EMBED SRC="objects/2_4.swf" TYPE="application/x-shockwave-flash" ALIGN=LEFT WIDTH=80% HEIGHT=80%></DIV><BR CLEAR=ALL>');
+} else if (ActiveX == "enabled") {
+   document.writeln('<DIV ALIGN=CENTER><OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=2,0,0,0" align=center width=80% height=80%><PARAM name="Movie" value="objects/2_4.swf"></OBJECT></DIV><BR CLEAR=ALL>');
+} else {
+   document.writeln('<DIV ALIGN=CENTER><IMG SRC="objects/2_4.jpg" ALT="Framework Structure" ALIGN="LEFT" WIDTH=420 HEIGHT=500></DIV><BR CLEAR=ALL>');
+}
+//-->
+</SCRIPT>
+<NOSCRIPT>
+<DIV ALIGN=CENTER><IMG SRC="objects/2_4.jpg" ALT="Framework Structure" ALIGN="LEFT" WIDTH=420 HEIGHT=500></DIV><BR CLEAR=ALL>
+</NOSCRIPT>
+<P>
+We will develop MINT as a network-centric, browser-based application
+consisting of a series of ActiveX controls or Java Applets and different
+Plug-ins. These Controls will be used to represent business objects, processes
+and sub-processes, database tables and multimedia information streams.
+</P>
+<P>
+The controls will be held together by a glue that will initially be
+either the <A HREF="http://www.microsoft.com/ie" TARGET="_blank">Microsoft Internet Explorer</A> or <A HREF="http://www.netscape.com" TARGET="_blank">Netscape Communicator</A> but may
+later be just a part of the operating system once Microsoft releases its
+HTML-enabled Windows desktop.
+</P>
+<P>
+The controls will display <A HREF="4_8.html">multimedia objects</A> of various types and interact
+with the underlying systems. The maintenance and the process logic will
+be provided by an <A HREF="4_3.html#applicationlayer">Application</A> and a <A HREF="4_3.html#replicationlayer">Replication Server</A>. These server systems
+provide the encapsulated <A HREF="4_5.html#processes">business logic</A>.
+</P>
+<HR SIZE="1" COLOR="BLACK" NOSHADE>
+<TABLE BORDER=0 WIDTH="100%">
+<TR VALIGN="MIDDLE">
+<TD ALIGN="LEFT" WIDTH="20%">
+<A HREF="1_1.html" onMouseOver="press_back_to_start2 ()" onMouseOut="release_back_to_start2 ()">
+<IMG NAME="s2" SRC="images/back_to_start.gif" ALT="Back to start" WIDTH=30 HEIGHT=24 BORDER=0></A>
+<A HREF="2_3.html" onMouseOver="press_back2 ()" onMouseOut="release_back2 ()">
+<IMG NAME="b2" SRC="images/back.gif" ALT="Back" WIDTH=30 HEIGHT=24 BORDER=0></A>
+</TD>
+<TD ALIGN="CENTER" WIDTH="70%">
+<A HREF="about.html" onMouseOver="press_copy ()" onMouseOut="release_copy ()">
+<IMG NAME="cp" SRC="images/copyright.gif" ALT="Copyright 1997 INC. InterNet Consult GmbH / CSC PLOENZKE AG" WIDTH=246 HEIGHT=24 BORDER=0></A>
+</TD>
+<TD ALIGN="RIGHT" WIDTH="10%">
+<A HREF="2_5.html" onMouseOver="press_forward2 ()" onMouseOut="release_forward2 ()">
+<IMG NAME="f2" SRC="images/forward.gif" ALT="Forward" WIDTH=30 HEIGHT=24 BORDER=0></A>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

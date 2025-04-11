@@ -1,0 +1,246 @@
+<HTML>
+<HEAD>
+<TITLE>MINT for ACME</TITLE>
+</HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function makearray(n) {
+         this.length = n;
+         for(var i = 1; i <= n; i++)
+             this[i] = 0;
+         return this;
+     }
+
+     hexa = new makearray(16);
+     for(var i = 0; i < 10; i++)
+         hexa[i] = i;
+
+     hexa[10]="a"; hexa[11]="b"; hexa[12]="c";
+     hexa[13]="d"; hexa[14]="e"; hexa[15]="f";
+
+     function hex(i) {
+         if (i < 0)
+             return "00";
+         else if (i > 255)
+             return "ff";
+         else
+             return "" + hexa[Math.floor(i/16)] + hexa[i%16];
+     }
+
+     function setbgColor(r, g, b) {
+         var hr = hex(r); var hg = hex(g); var hb = hex(b);
+         document.bgColor = "#"+hr+hg+hb;
+     }
+
+     function fade(sr, sg, sb, er, eg, eb, step) {
+         for(var i = 0; i <= step; i++) {
+             setbgColor(
+             Math.floor(sr * ((step-i)/step) + er * (i/step)),
+             Math.floor(sg * ((step-i)/step) + eg * (i/step)),
+             Math.floor(sb * ((step-i)/step) + eb * (i/step)));
+         }
+     }
+
+fade(0,0,0, 255,255,255, 30);
+
+var CurrentBrowser = "unknown";
+var CurrentPageIdx = 1;
+var CurrentCollectionNo = 0;
+
+var CurrentFrameset
+// CurrentFrameset = 0 : Only Main Window
+// CurrentFrameset = 1 : Explorer Window and Collection Browser
+// CurrentFrameset = 2 : Only Explorer Window
+// CurrentFrameset = 3 : Only Collection Browser
+
+var Framesets = new Array()
+	Framesets[0] = "frameset_0.html"	// Only Main Window
+	Framesets[1] = "frameset_1.html"	// Explorer Window and Collection Browser
+	Framesets[2] = "frameset_2.html"	// Only Explorer Window
+	Framesets[3] = "frameset_3.html"	// Only Collection Browser
+
+function WebPage(url, title)	{
+	this.url = url;
+	this.title = title;
+}
+
+FullCollection = new Array()
+	FullCollection[0] = new WebPage("home.html", "Homepage")
+	FullCollection[1] = new WebPage("1_1.html", "Introduction")
+	FullCollection[2] = new WebPage("1_2.html", "Objectives")
+	FullCollection[3] = new WebPage("1_3.html", "Problem Definition")
+	FullCollection[4] = new WebPage("2_1.html", "General Approach")
+	FullCollection[5] = new WebPage("2_2.html", "Business Processes")
+	FullCollection[6] = new WebPage("2_3.html", "Business Objects")
+	FullCollection[7] = new WebPage("2_4.html", "Framework Structure")
+	FullCollection[8] = new WebPage("2_5.html", "Benefits")
+	FullCollection[9] = new WebPage("3_1.html", "Business Functionality")
+	FullCollection[10] = new WebPage("3_2.html", "Benefits")
+	FullCollection[11] = new WebPage("4_1.html", "Technical Environment")
+	FullCollection[12] = new WebPage("4_2.html", "Overview")
+	FullCollection[13] = new WebPage("4_3.html", "MINT Layers")
+	FullCollection[14] = new WebPage("4_4.html", "MINT Versions")
+	FullCollection[15] = new WebPage("4_5.html", "Display")
+	FullCollection[16] = new WebPage("4_6.html", "Security")
+	FullCollection[17] = new WebPage("4_7.html", "Statistical Information")
+	FullCollection[18] = new WebPage("4_8.html", "Multimedia Objects")
+	FullCollection[19] = new WebPage("4_9.html", "Help")
+	FullCollection[20] = new WebPage("5_1.html", "Project Plan")
+	FullCollection[21] = new WebPage("5_2.html", "Project Team")
+	FullCollection[22] = new WebPage("5_3.html", "Working Packages")
+
+TechnicalCollection = new Array()
+	TechnicalCollection[0] = FullCollection[1]
+	TechnicalCollection[1] = FullCollection[2]
+	TechnicalCollection[2] = FullCollection[7]
+	TechnicalCollection[3] = FullCollection[11]
+	TechnicalCollection[4] = FullCollection[12]
+	TechnicalCollection[5] = FullCollection[13]
+	TechnicalCollection[6] = FullCollection[14]
+	TechnicalCollection[7] = FullCollection[15]
+	TechnicalCollection[8] = FullCollection[16]
+	TechnicalCollection[9] = FullCollection[17]
+	TechnicalCollection[9] = FullCollection[18]
+	TechnicalCollection[10] = FullCollection[19]
+
+BusinessCollection = new Array()
+	BusinessCollection[0] = FullCollection[1]
+	BusinessCollection[1] = FullCollection[2]
+	BusinessCollection[2] = FullCollection[4]
+	BusinessCollection[3] = FullCollection[5]
+	BusinessCollection[4] = FullCollection[6]
+	BusinessCollection[5] = FullCollection[7]
+	BusinessCollection[6] = FullCollection[8]
+	BusinessCollection[7] = FullCollection[9]
+	BusinessCollection[8] = FullCollection[10]
+	BusinessCollection[9] = FullCollection[20]
+	BusinessCollection[10] = FullCollection[21]
+	BusinessCollection[11] = FullCollection[22]
+
+QuickCollection = new Array()
+	QuickCollection[0] = FullCollection[1]
+	QuickCollection[1] = FullCollection[5]
+	QuickCollection[2] = FullCollection[6]
+	QuickCollection[3] = FullCollection[7]
+	QuickCollection[4] = FullCollection[13]
+	QuickCollection[5] = FullCollection[14]
+	QuickCollection[6] = FullCollection[15]
+	QuickCollection[7] = FullCollection[18]
+
+Collections = new Array()
+	Collections[0] = FullCollection
+	Collections[1] = QuickCollection
+	Collections[2] = TechnicalCollection
+	Collections[3] = BusinessCollection
+
+function getCookie(name)	{
+	var search = name + "=";
+	if (document.cookie.length > 0)	{						// if there are any cookies
+		offset = document.cookie.indexOf(search) 
+		if (offset != -1)	{								// if cookie exists
+			offset += search.length;						// set index of beginning of value
+			end = document.cookie.indexOf(";", offset);		// set index of end of cookie value
+			if (end == -1)	{
+				end = document.cookie.length;
+			}
+			return unescape(document.cookie.substring(offset, end));
+		}
+	}
+}
+
+function setCookie(name, value, expire)	{	// "expire" is optional (default is +6 months)
+	var DefaultExpiry = new Date();
+	DefaultExpiry.setMonth(DefaultExpiry.getMonth()+6);
+	document.cookie = name + "=" + escape(value) + ((expire == null) ? ("; expires=" + DefaultExpiry) : ("; expires=" + expire.toGMTString()));
+}
+
+function switchSound(value)	{
+	if (SiteSound == "on")	{
+		SiteSound = "off";
+		top.CONTROL.document.images[5].src = "images/sound_off.gif";
+	}
+	else	{
+		SiteSound = "on";
+		top.CONTROL.document.images[5].src = "images/sound_on.gif";
+	}
+	setCookie("Sound", SiteSound);
+}
+
+function giveCollection()	{
+	return Collections[CurrentCollectionNo];
+}
+
+function fullHelp(HelpHead,HelpBody)	{
+	HelpWin=window.open('blank.html', '', 'resizable,height=350,width=350');
+	HelpWin.document.clear();
+	HelpWin.document.writeln("<HTML><HEAD><TITLE>Help Window</TITLE>");
+	HelpWin.document.writeln("<LINK REL='stylesheet' TYPE='text/css' HREF='mintstyle.css'>");
+	HelpWin.document.writeln("</HEAD><BODY><H3>" + HelpHead + "</H3>");
+	HelpWin.document.writeln("<P>" + HelpBody + "</P><FORM><CENTER>");
+	HelpWin.document.writeln("<INPUT TYPE='BUTTON' VALUE='OK'onClick='window.close()'>");
+	HelpWin.document.writeln("</CENTER></FORM></BODY></HTML>");
+}
+
+function bubbleHelp(HelpTxt)	{
+	bHelpWin=window.open('blank.html', '', 'resizable,height=200,width=300');
+	bHelpWin.document.clear();
+	bHelpWin.document.writeln("<HTML><HEAD><TITLE>Help Window</TITLE>");
+	bHelpWin.document.writeln("<LINK REL='stylesheet' TYPE='text/css' HREF='mintstyle.css'>");
+	bHelpWin.document.writeln("<SCRIPT LANGUAGE='JavaScript'>");
+	bHelpWin.document.writeln("setTimeout('self.close()', 10000)");
+	bHelpWin.document.writeln("</SCRIPT></HEAD><BODY><P>" + HelpTxt + "</P></BODY></HTML>");
+}
+
+function checkBrowser()	{
+	if (navigator.appName.indexOf("Netscape") != -1 && parseInt (navigator.appVersion) >= 4) {
+		CurrentBrowser = "NS4";
+	} else if (navigator.appName.indexOf("Microsoft") != -1 && parseInt (navigator.appVersion) >= 4) {
+		CurrentBrowser = "IE4";
+	} else if (navigator.appName.indexOf("Microsoft") != -1 && parseInt (navigator.appVersion) < 4) {
+		CurrentBrowser = "IE3";
+		window.alert("Sorry, but your Web browser is outdated!\nSophisticated navigational items and animations have been disabled.")
+		window.location.href = "1_1.html";
+	}
+}
+
+var WeAreHere = "home.html";
+var FrameSet = -1;
+var SiteSound = "off";
+
+checkBrowser ();
+
+SiteSound = getCookie("Sound");
+if (!SiteSound) SiteSound = "on";
+FrameSet = getCookie ("Frame");
+if (!FrameSet)	{
+	FrameSet = 1;
+}
+
+WeAreHere = getCookie ("Location");
+if (!WeAreHere) WeAreHere = "home.html";
+
+if (FrameSet && FrameSet == 0) {
+	document.writeln('<FRAMESET ROWS="45,*" BORDER="0" FRAMESPACING="0" FRAMEBORDER="0"> <FRAME NAME="CONTROL" SRC="control.html" SCROLLING="NO" MARGINWIDTH="2" MARGINHEIGHT="2"> <FRAME NAME="CONTENT" SRC="frameset_0.html" SCROLLING="AUTO"> </FRAMESET>');
+} else if (FrameSet && FrameSet == 2) {
+	document.writeln('<FRAMESET ROWS="45,*" BORDER="0" FRAMESPACING="0" FRAMEBORDER="0"> <FRAME NAME="CONTROL" SRC="control.html" SCROLLING="NO" MARGINWIDTH="2" MARGINHEIGHT="2"> <FRAME NAME="CONTENT" SRC="frameset_2.html" SCROLLING="AUTO"> </FRAMESET>');
+} else if (FrameSet && FrameSet == 3) {
+	document.writeln('<FRAMESET ROWS="45,*" BORDER="0" FRAMESPACING="0" FRAMEBORDER="0"> <FRAME NAME="CONTROL" SRC="control.html" SCROLLING="NO" MARGINWIDTH="2" MARGINHEIGHT="2"> <FRAME NAME="CONTENT" SRC="frameset_3.html" SCROLLING="AUTO"> </FRAMESET>');
+} else {
+	FrameSet = 1;
+	setCookie ("Frame", FrameSet);
+	document.writeln('<FRAMESET ROWS="45,*" BORDER="0" FRAMESPACING="0" FRAMEBORDER="0"> <FRAME NAME="CONTROL" SRC="control.html" SCROLLING="NO" MARGINWIDTH="2" MARGINHEIGHT="2"> <FRAME NAME="CONTENT" SRC="frameset_1.html" SCROLLING="AUTO"> </FRAMESET>');
+}
+
+CurrentFrameset = FrameSet;
+//-->
+</SCRIPT>
+<NOSCRIPT>
+<META HTTP-EQUIV="Refresh" CONTENT="1;URL=1_1.html">
+</NOSCRIPT>
+<!--
+<FRAMESET onLoad="initPage()" ROWS="50,*" BORDER="0" FRAMESPACING="0" FRAMEBORDER="0">
+	<FRAME NAME="CONTROL" SRC="control.html" SCROLLING="NO" MARGINWIDTH="2" MARGINHEIGHT="2">
+	<FRAME NAME="CONTENT" SRC="frameset_1.html" SCROLLING="AUTO">
+</FRAMESET>
+-->
+</HTML>

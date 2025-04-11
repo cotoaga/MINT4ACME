@@ -1,0 +1,55 @@
+	BODY	{
+			margin-left: 10pt;
+			margin-right: 10pt;
+			color: Black;
+			font-family: Helvetica, Arial, sans-serif;
+		}
+
+	P	{
+			margin-left: 10pt;
+			margin-right: 10pt;
+			font size: 12pt;
+			line-height: 14pt;
+		}
+
+	H1, H2, H3 {
+			color: Black;
+			font-family: Helvetica, Arial, sans-serif;
+			text-align: Left;
+		}
+	H1	{
+			line-height: 50pt;
+			font-size: 40pt;
+		}
+	H2	{
+			line-height: 40pt;
+			font-size: 30pt;
+		}
+	H3	{
+			line-height: 30pt;
+			font-size: 20pt;
+		}
+
+	UL, OL	{
+			margin-left: 40pt;
+			margin-right: 30pt;
+		}
+
+	DL	{
+			margin-left: 40pt;
+			margin-right: 30pt;
+		}
+
+	A	{
+			text-decoration: Underline;
+			font-weight: Bold;
+		}
+	A:link	{
+			color: #CE0029;
+		}
+	A:visited	{
+			color: #007B7B;
+		}
+	A:active	{
+			color: #007B7B;
+		}

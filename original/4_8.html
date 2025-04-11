@@ -1,0 +1,357 @@
+<HTML>
+<LINK REL="stylesheet" TYPE="text/css" HREF="mintstyle.css">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+if (top && top.WeAreHere) {
+	top.WeAreHere = "4_8.html";
+	top.setCookie ("Location", top.WeAreHere);
+}
+var BrowserSucks = "yes";
+var ActiveX = "disabled";
+var FlashPlugin = "disabled";
+if (navigator.appName.indexOf("Microsoft") != -1 && parseInt (navigator.appVersion) >= 2) {
+	ActiveX = "enabled";
+	if (parseInt (navigator.appVersion) >= 4) BrowserSucks = "no";
+}
+if (navigator.appName.indexOf("Netscape") != -1 && parseInt (navigator.appVersion) >= 3) {
+	BrowserSucks = "no";
+	var myPlugin = navigator.plugins["Shockwave Flash 2.0"];
+	if (myPlugin)
+		var myType = myPlugin["application/x-shockwave-flash"];
+	if (myType && myType.enabledPlugin == myPlugin)
+		FlashPlugin = "enabled";
+}
+function press_back_to_start () {
+	if (BrowserSucks == "no") {
+		document.images ["s1"].src="images/back_to_start_up.gif";
+	}
+}
+function press_back_to_start2 () {
+	if (BrowserSucks == "no") {
+		document.images ["s2"].src="images/back_to_start_up.gif";
+	}
+}
+function press_back () {
+	if (BrowserSucks == "no") {
+		document.images ["b1"].src="images/back_up.gif";
+	}
+}
+function press_back2 () {
+	if (BrowserSucks == "no") {
+		document.images ["b2"].src="images/back_up.gif";
+	}
+}
+function press_copy () {
+	if (BrowserSucks == "no") {
+		document.images ["cp"].src="images/copyright_up.gif";
+	}
+}
+function press_forward () {
+	if (BrowserSucks == "no") {
+		document.images ["f1"].src="images/forward_up.gif";
+	}
+}
+function press_forward2 () {
+	if (BrowserSucks == "no") {
+		document.images ["f2"].src="images/forward_up.gif";
+	}
+}
+function release_back_to_start () {
+	if (BrowserSucks == "no") {
+		document.images ["s1"].src="images/back_to_start.gif";
+	}
+}
+function release_back_to_start2 () {
+	if (BrowserSucks == "no") {
+		document.images ["s2"].src="images/back_to_start.gif";
+	}
+}
+function release_back () {
+	if (BrowserSucks == "no") {
+		document.images ["b1"].src="images/back.gif";
+	}
+}
+function release_back2 () {
+	if (BrowserSucks == "no") {
+		document.images ["b2"].src="images/back.gif";
+	}
+}
+function release_copy () {
+	if (BrowserSucks == "no") {
+		document.images ["cp"].src="images/copyright.gif";
+	}
+}
+function release_forward () {
+	if (BrowserSucks == "no") {
+		document.images ["f1"].src="images/forward.gif";
+	}
+}
+function release_forward2 () {
+	if (BrowserSucks == "no") {
+		document.images ["f2"].src="images/forward.gif";
+	}
+}
+function openQ1 () {
+	H1Win=window.open('blank.html', '1', 'resizable,height=250,width=350');
+	H1Win.document.clear();
+	H1Win.document.writeln("<HTML><HEAD><TITLE>QuickTime VR</TITLE>");
+	H1Win.document.writeln("</HEAD><BODY BGCOLOR='Black'>");
+	H1Win.document.writeln("<DIV ALIGN=CENTER><EMBED SRC='objects/bmwinterior.mov' HEIGHT=200 WIDTH=300 CONTROLLER=FALSE LOOP=FALSE></DIV><BR CLEAR=ALL></BODY></HTML>");
+}
+function openQ2 () {
+	H2Win=window.open('blank.html', '2', 'resizable,height=230,width=430');
+	H2Win.document.clear();
+	H2Win.document.writeln("<HTML><HEAD><TITLE>QuickTime VR</TITLE>");
+	H2Win.document.writeln("</HEAD><BODY BGCOLOR='Black'>");
+	H2Win.document.writeln("<DIV ALIGN=CENTER><EMBED SRC='objects/bmwexterior.mov' HEIGHT=180 WIDTH=390 CONTROLLER=FALSE LOOP=FALSE></DIV><BR CLEAR=ALL></BODY></HTML>");
+}
+function openQ3 () {
+	H3Win=window.open('blank.html', '3', 'resizable,height=210,width=170');
+	H3Win.document.clear();
+	H3Win.document.writeln("<HTML><HEAD><TITLE>QuickTime</TITLE>");
+	H3Win.document.writeln("</HEAD><BODY BGCOLOR='Black'>");
+	H3Win.document.writeln("<DIV ALIGN=CENTER><EMBED SRC='objects/vec_ad.mov' HEIGHT=160 WIDTH=120 CONTROLLER=TRUE LOOP=TRUE AUTOPLAY=TRUE></DIV><BR CLEAR=ALL></BODY></HTML>");
+}
+function openSW () {
+	H4Win=window.open('blank.html', '4', 'resizable,height=220,width=400');
+	H4Win.document.clear();
+	H4Win.document.writeln("<HTML><HEAD><TITLE>ShockWave</TITLE>");
+	H4Win.document.writeln("</HEAD><BODY BGCOLOR='Black'>");
+	H4Win.document.writeln("<DIV ALIGN=CENTER><EMBED SRC='objects/BMW1.dcr' WIDTH=384 HEIGHT=200 align= middle PALETTE=ground BGCOLOR=color PLUGINSPAGE='http://www.macromedia.com/shockwave' TEXTFOCUS=onStart></DIV><BR CLEAR=ALL></BODY></HTML>");
+}
+function openVRML1 () {
+	H5Win=window.open('blank.html', '5', 'resizable,height=340,width=440');
+	H5Win.document.clear();
+	H5Win.document.writeln("<HTML><HEAD><TITLE>VRML</TITLE>");
+	H5Win.document.writeln("</HEAD><BODY BGCOLOR='Black'>");
+	H5Win.document.writeln("<DIV ALIGN=CENTER><EMBED SRC='objects/vw_wrl.gz' TYPE='model/vrml' WIDTH=400 HEIGHT=300></DIV><BR CLEAR=ALL></BODY></HTML>");
+}
+function openVRML2 () {
+	H7Win=window.open('blank.html', '5', 'resizable,height=340,width=440');
+	H7Win.document.clear();
+	H7Win.document.writeln("<HTML><HEAD><TITLE>VRML</TITLE>");
+	H7Win.document.writeln("</HEAD><BODY BGCOLOR='Black'>");
+	H7Win.document.writeln("<DIV ALIGN=CENTER><EMBED SRC='objects/porsche_wrl.gz' TYPE='model/vrml' WIDTH=400 HEIGHT=300></DIV><BR CLEAR=ALL></BODY></HTML>");
+}
+function openMIDI () {
+	H6Win=window.open('blank.html', '6', 'resizable,height=110,width=110');
+	H6Win.document.clear();
+	H6Win.document.writeln("<HTML><HEAD><TITLE>MIDI</TITLE>");
+	H6Win.document.writeln("</HEAD><BODY BGCOLOR='White'>");
+	H6Win.document.writeln("<DIV ALIGN=CENTER><IMG SRC='images/audiovideo.gif' WIDTH=86 HEIGHT=66 BORDER=0><EMBED SRC='sounds/mission.mid' TYPE='audio/midi' AUTOPLAY=TRUE HIDDEN=TRUE></DIV><BR CLEAR=ALL></BODY></HTML>");
+}
+//-->
+</SCRIPT>
+<BODY BGCOLOR="White">
+<TABLE BORDER=0 WIDTH="100%">
+<TR VALIGN="MIDDLE">
+<TD ALIGN="LEFT" WIDTH="20%">
+<A HREF="1_1.html" onMouseOver="press_back_to_start ()" onMouseOut="release_back_to_start ()">
+<IMG NAME="s1" SRC="images/back_to_start.gif" ALT="Back to start" WIDTH=30 HEIGHT=24 BORDER=0></A>
+<A HREF="4_7.html" onMouseOver="press_back ()" onMouseOut="release_back ()">
+<IMG NAME="b1" SRC="images/back.gif" ALT="Back" WIDTH=30 HEIGHT=24 BORDER=0></A>
+</TD>
+<TD ALIGN="RIGHT" WIDTH="80%">
+<A HREF="4_9.html" onMouseOver="press_forward ()" onMouseOut="release_forward ()">
+<IMG NAME="f1" SRC="images/forward.gif" ALT="Forward" WIDTH=30 HEIGHT=24 BORDER=0></A>
+</TD>
+</TR>
+</TABLE>
+<HR SIZE="1" COLOR="BLACK" NOSHADE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+if (top && top.SiteSound && top.SiteSound == "on") {
+	document.writeln ('<EMBED SRC="sounds/4_8.wav" AUTOSTART=TRUE HIDDEN=TRUE>');
+} 
+if (FlashPlugin == "enabled") {
+   document.writeln('<EMBED SRC="title/4_8.swf" TYPE="application/x-shockwave-flash" ALIGN=CENTER WIDTH=80% HEIGHT=80%><BR CLEAR=ALL>');
+} else if (ActiveX == "enabled") {
+   document.writeln('<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=2,0,0,0" align=center width=80% height=80%><PARAM name="Movie" value="title/4_8.swf"></OBJECT><BR CLEAR=ALL>');
+} else {
+   document.writeln('<DIV><IMG SRC="title/4_8.jpg" ALT="4.8. Multimedia Objects" ALIGN="LEFT" WIDTH=444 HEIGHT=167></DIV><BR CLEAR=ALL>');
+}
+//-->
+</SCRIPT>
+<NOSCRIPT>
+<IMG SRC="title/4_8.jpg" ALT="4.8. Multimedia Objects" ALIGN="LEFT" WIDTH=444 HEIGHT=167>
+<BR CLEAR="ALL">
+</NOSCRIPT>
+<P>
+These objects are managed centrally by ACME and are flowing in only one
+direction from ACME to the dealer (or public kiosk). ACME can provide creative
+material and multimedia objects manufactured by advertising agencies. The
+objects are distributed by triggering the replication server to fetch new
+objects. All the types of MMOs that follow can be supported. However, it
+is expected that there will be a focus on some types because the underlying
+technologies are sometimes substitutive.
+</P>
+<A NAME="java"></A>
+<H3>
+4.8.1. Java Simulator
+</H3>
+<P>
+Java Applets can be implemented as simulators to explain difficult or abstract
+contexts. Those small applications could be used for performance, economy
+and finance simulation. The main advantages of the <A HREF="http://java.sun.com" TARGET="_blank">Java technology</A> are easy distribution and platform independence. Java scales well and can be
+used even for big applications.
+</P>
+<DIV ALIGN="CENTER">
+<applet code=AnimatePLUS27.class width=350 height=280>
+<param name=COPYRIGHT value="AnimatePLUS applet, Copyright 1996 Sun Microsystems, Inc., all rights reserved.">
+<param name=DOCUMENTATION value="Documentation found at: http://www.xm.com/cafe/">
+<param name=FRAMES value="objects/4_8pic1.jpg | objects/4_8pic2.jpg | objects/4_8pic3.jpg | objects/4_8pic4.jpg | objects/4_8pic5.jpg | objects/4_8pic6.jpg | objects/4_8pic7.jpg | objects/4_8pic8.jpg ">
+<param name=BORDERCOLORS value="200,200,200">
+<param name=BORDERSIZES value=4>
+<param name=TRANSITIONSTEPS value=10>
+<param name=TRANSITIONRATES value=100>
+<param name=TRANSITIONS value="random">
+<param name=URLS value=null>
+<param name=PAUSES value=3000>
+</applet>
+</DIV><BR CLEAR=ALL>
+<A NAME="shockwave"></A>
+<H3>
+4.8.2. Macromedia ShockWave/Flash
+</H3>
+<P>
+<A HREF="http://www.macromedia.com" TARGET="_blank">Macromedia</A> ShockWave objects can be an alternative to Java Simulation objects. ShockWave as a multimedia solution executes faster and can also be distributed over TCP/IP networks. However it is a proprietary technology targeted
+only at multimedia application development.
+</P>
+<DIV ALIGN="CENTER">
+<img src="images/shockhr.gif" border=0 alt="Shockwave Example">
+</DIV><BR CLEAR=ALL>
+<DIV ALIGN="CENTER">
+<A HREF="javascript:openSW()"><IMG SRC="objects/4_8a.jpg" WIDTH=384 HEIGHT=200 BORDER=0 ALT="ShockWave"></A>
+</DIV><BR CLEAR=ALL>
+<P>
+Click on the image above to open the ShockWave object in a new window where you can explore its features. You need the ShockWave <A HREF="help.html#plugins">Plug-in</A> for this example. The original page can be found at <a href="http://www.bmwusa.com" TARGET="_blank">http://www.bmwusa.com</a>.
+</P>
+<A NAME="activex"></A>
+<H3>
+4.8.3. ActiveX Controls
+</H3>
+<P>
+<A HREF="http://www.microsoft.com/activex" TARGET="_blank">ActiveX</A> controls are essential for some sophisticated display and interaction functions but can be also used as an alternative to Java or ShockWave.
+From a technical point of view ActiveX controls are distributed OLE controls
+and can be executed as fast as normal applications. However, the development
+efforts are also higher than those for Java or ShockWave. ActiveX can be
+distributed over TCP/IP networks but are restricted to Intel platforms.
+Another main disatvantage of ActiveX solutions are the system intrinsic
+security risks. Visit the <A HREF="http://carpoint.msn.com/Gallery" TARGET="_blank">CapPoint</A> Web-Site from Microsoft for surround video examples using ActiveX technology.
+</P>
+<A NAME="pictures"></A>
+<H3>
+4.8.4. Pictures
+</H3>
+<P>
+Pictures of the GIF or JPEG types are displayed by the Browser. The type
+of the object is recognized at run-time. If the referenced object is not
+available, a text string can be displayed. Other types of pictures can
+also be supported.
+</P>
+<TABLE ALIGN="CENTER" BORDER=0 CELLSPACING=5 CELLPADDING=5 VALIGN="MIDDLE" BGCOLOR="Gray">
+<TR>
+<TD>
+<IMG SRC="objects/pic_ext.jpg" WIDTH=435 HEIGHT=218 BORDER=0 ALT="Exterior">
+</TD>
+</TR>
+<TR>
+<TD>
+<IMG SRC="objects/pic_int.jpg" WIDTH=425 HEIGHT=230 BORDER=0 ALT="Interior">
+</TD>
+</TR>
+</TABLE>
+<A NAME="videos"></A>
+<H3>
+4.8.5. Videos, Animations and Surround Pictures
+</H3>
+<P>
+Animated GIFs, MPEG, Quicktime, QuicktimeVR, MS Surround Video or MS AVIs are displayed
+by the Browser.
+</P>
+<TABLE ALIGN="CENTER" CELLSPACING=5 CELLPADDING=5 BORDER=0 VALIGN="MIDDLE" BGCOLOR="Gray">
+<TR ALIGN="CENTER" VALIGN="MIDDLE">
+<TD COLSPAN=2 ALIGN="CENTER" VALIGN="MIDDLE">
+<A HREF="javascript:openQ2()"><IMG SRC="objects/4_8c.jpg" WIDTH=375 HEIGHT=150 BORDER=0 ALT="Exterior View"></A>
+</TD>
+</TR>
+<TR ALIGN="CENTER" VALIGN="MIDDLE">
+<TD>
+<A HREF="javascript:openQ1()"><IMG SRC="objects/4_8b.jpg" WIDTH=280 HEIGHT=180 BORDER=0 ALT="Interior View"></A>
+</TD>
+<TD>
+<A HREF="javascript:openQ3()"><IMG SRC="objects/4_8d.jpg" WIDTH=160 HEIGHT=120 BORDER=0 ALT="Video"></A>
+</TD>
+</TR>
+<TD COLSPAN=2 ALIGN="CENTER" VALIGN="MIDDLE">
+<A HREF="http://www.mercedes-benz.de" TARGET="_blank"><IMG SRC="objects/mbenz_anim.gif" WIDTH=225 HEIGHT=175 BORDER=0 ALT="Mercedes Benz AD"></A>
+</TD>
+</TR>
+</TABLE>
+<P>
+Quicktime VR can be used to take a look at the interior and the exterior of a vehicle by rotating the observer's point of view. You need a <a href="help.html#plugins">Quicktime plug-in</a> for this example.
+</P>
+<A NAME="vrml"></A>
+<H3>
+4.8.6. 3D Objects
+</H3>
+<P>
+Three dimensional objects can be embedded within the client layout as <A HREF="http://www.vrml.org" TARGET="_blank">VRML-objects</A>, which can be zoomed, rotated and interfaced to with a mouse. The display task is solved by the browser. The data can be converted directly from
+CAD-data.
+</P>
+<DIV ALIGN="CENTER">
+<img src="images/vrmlhr.gif" border=0 alt="VRML">
+</DIV><BR CLEAR=ALL>
+<TABLE ALIGN="CENTER" BORDER=0 CELLSPACING=5 CELLPADDING=5 VALIGN="MIDDLE" BGCOLOR="Gray">
+<TR>
+<TD>
+<A HREF="javascript:openVRML1()"><IMG SRC="objects/4_8e.jpg" WIDTH=400 HEIGHT=300 BORDER=0 ALT="VW 80kB"></A>
+</TD>
+</TR>
+<TR>
+<TD>
+<A HREF="javascript:openVRML2()"><IMG SRC="objects/4_8f.jpg" WIDTH=400 HEIGHT=248 BORDER=0 ALT="Porsche 200kB"></A>
+</TD>
+</TR>
+</TABLE>
+<A NAME="sound"></A>
+<H3>
+4.8.7. Sound and Music
+</H3>
+<P>
+WAV and AIFF files for sound or speech can be used. The playback is done by the
+browser.
+</P>
+<DIV ALIGN="CENTER">
+<!--
+<A HREF="javascript:openMIDI()"><IMG SRC="images/audiovideo.gif" WIDTH=86 HEIGHT=66 BORDER=0 ALT="MIDI"></A>
+<A HREF="4_8b.html#sound"><IMG SRC="images/audiovideo.gif" WIDTH=86 HEIGHT=66 BORDER=0 ALT="MIDI"></A>
+-->
+<A HREF="sounds/mission.mid"><IMG SRC="images/audiovideo.gif" WIDTH=86 HEIGHT=66 BORDER=0 ALT="Sound"></A>
+</DIV><BR CLEAR=ALL>
+<P>
+MIDI files for background music can be used. The playback is done by the
+browser. However, without a wavetable soundcard MIDI files do not sound
+well.
+</P>
+<HR SIZE="1" COLOR="BLACK" NOSHADE>
+<TABLE BORDER=0 WIDTH="100%">
+<TR VALIGN="MIDDLE">
+<TD ALIGN="LEFT" WIDTH="20%">
+<A HREF="1_1.html" onMouseOver="press_back_to_start2 ()" onMouseOut="release_back_to_start2 ()">
+<IMG NAME="s2" SRC="images/back_to_start.gif" ALT="Back to start" WIDTH=30 HEIGHT=24 BORDER=0></A>
+<A HREF="4_7.html" onMouseOver="press_back2 ()" onMouseOut="release_back2 ()">
+<IMG NAME="b2" SRC="images/back.gif" ALT="Back" WIDTH=30 HEIGHT=24 BORDER=0></A>
+</TD>
+<TD ALIGN="CENTER" WIDTH="70%">
+<A HREF="about.html" onMouseOver="press_copy ()" onMouseOut="release_copy ()">
+<IMG NAME="cp" SRC="images/copyright.gif" ALT="Copyright 1997 INC. InterNet Consult GmbH / CSC PLOENZKE AG" WIDTH=246 HEIGHT=24 BORDER=0></A>
+</TD>
+<TD ALIGN="RIGHT" WIDTH="10%">
+<A HREF="4_9.html" onMouseOver="press_forward2 ()" onMouseOut="release_forward2 ()">
+<IMG NAME="f2" SRC="images/forward.gif" ALT="Forward" WIDTH=30 HEIGHT=24 BORDER=0></A>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>
