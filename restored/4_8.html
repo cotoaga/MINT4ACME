@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINT for ACME - Multimedia Objects</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/title-animation.css">
+    <script src="js/title-animation.js" defer></script>
+    <script src="js/slideshow.js" defer></script>
+</head>
+<body>
+    <div class="content-container">
+        <div class="navigation">
+            <div class="left">
+                <a href="4_7.html" class="nav-link">
+                    <span class="nav-arrow">⬅️</span>
+                    <span>Back: Statistical Information</span>
+                </a>
+            </div>
+            <div class="right">
+                <a href="4_9.html" class="nav-link">
+                    <span class="nav-arrow">➡️</span>
+                    <span>Next: Interfacing</span>
+                </a>
+            </div>
+        </div>
+        
+        <hr>
+        
+        <div class="audio-control">
+            <audio controls>
+                <source src="../original/sounds/4_8.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+            <span>Original audio narration</span>
+        </div>
+        
+        <h1 class="title-text">4.8. Multimedia Objects</h1>
+        
+        <div class="content">
+            <p>
+                These objects are managed centrally by ACME and are flowing in only one
+                direction from ACME to the dealer (or public kiosk). ACME can provide creative
+                material and multimedia objects manufactured by advertising agencies. The
+                objects are distributed by triggering the replication server to fetch new
+                objects. All the types of MMOs that follow can be supported. However, it
+                is expected that there will be a focus on some types because the underlying
+                technologies are sometimes substitutive.
+            </p>
+            
+            <div id="java" class="multimedia-section">
+                <div class="multimedia-badge">Java</div>
+                <h3>4.8.1. Java Simulator</h3>
+                
+                <p>
+                    Java Applets can be implemented as simulators to explain difficult or abstract
+                    contexts. Those small applications could be used for performance, economy
+                    and finance simulation. The main advantages of the <a href="http://java.sun.com" target="_blank">Java technology</a> 
+                    are easy distribution and platform independence. Java scales well and can be
+                    used even for big applications.
+                </p>
+                
+                <div class="historical-context">
+                    <h4>Java in 1997</h4>
+                    <p>
+                        When this document was created in 1997, Java was still a relatively new technology, 
+                        having been officially released by Sun Microsystems in 1995. The key selling points 
+                        of "write once, run anywhere" and easy distribution over the web made it revolutionary 
+                        for creating interactive elements on websites.
+                    </p>
+                    <p>
+                        The original page featured a Java applet slideshow demonstrating vehicle configurations. 
+                        Java applets have since been deprecated and are no longer supported by modern browsers.
+                    </p>
+                </div>
+                
+                <div class="media-gallery">
+                    <figure class="media-item">
+                        <div id="java-slideshow"></div>
+                    </figure>
+                </div>
+                
+                <div class="tech-note">
+                    <strong>Technical Note:</strong> The original page featured a Java applet slideshow that 
+                    cycled through vehicle configuration images. Modern browsers no longer support Java applets 
+                    for security reasons. This slideshow has been recreated using JavaScript to preserve the original functionality.
+                    <div class="java-applet-style">Java.Slideshow v1.0 - HTML5/JS Replacement for APPLET:VehicleConfig.class</div>
+                </div>
+            </div>
+            
+            <div id="shockwave" class="multimedia-section">
+                <div class="multimedia-badge">Flash</div>
+                <h3>4.8.2. Macromedia ShockWave/Flash</h3>
+                
+                <p>
+                    <a href="http://www.macromedia.com" target="_blank">Macromedia</a> ShockWave objects can be an alternative to Java Simulation objects. 
+                    ShockWave as a multimedia solution executes faster and can also be distributed over TCP/IP networks. 
+                    However it is a proprietary technology targeted only at multimedia application development.
+                </p>
+                
+                <div class="historical-context">
+                    <h4>Flash/ShockWave in 1997</h4>
+                    <p>
+                        In 1997, Macromedia Flash (later acquired by Adobe) was emerging as a powerful tool for 
+                        creating interactive animations and experiences. Flash and ShockWave were considered cutting-edge 
+                        technologies that enabled rich multimedia experiences in web browsers.
+                    </p>
+                    <p>
+                        Flash was widely used for automotive sites in the late 1990s and 2000s, providing immersive 
+                        vehicle configurators, animations, and interactive demonstrations that weren't possible with 
+                        HTML alone. Flash support was discontinued in all modern browsers by January 2021.
+                    </p>
+                </div>
+                
+                <div class="media-gallery">
+                    <figure class="media-item">
+                        <img src="../original/objects/4_8a.jpg" alt="ShockWave Demo" width="384" height="200">
+                        <figcaption>BMW interactive demonstration (originally in ShockWave format)</figcaption>
+                    </figure>
+                </div>
+            </div>
+            
+            <div id="activex" class="multimedia-section">
+                <div class="multimedia-badge">ActiveX</div>
+                <h3>4.8.3. ActiveX Controls</h3>
+                
+                <p>
+                    <a href="http://www.microsoft.com/activex" target="_blank">ActiveX</a> controls are essential for some sophisticated display and interaction functions but can be also used as an alternative to Java or ShockWave.
+                    From a technical point of view ActiveX controls are distributed OLE controls
+                    and can be executed as fast as normal applications. However, the development
+                    efforts are also higher than those for Java or ShockWave. ActiveX can be
+                    distributed over TCP/IP networks but are restricted to Intel platforms.
+                    Another main disadvantage of ActiveX solutions are the system intrinsic
+                    security risks. Visit the <a href="http://carpoint.msn.com/Gallery" target="_blank">CarPoint</a> Web-Site from Microsoft for surround video examples using ActiveX technology.
+                </p>
+                
+                <div class="historical-context">
+                    <h4>ActiveX in 1997</h4>
+                    <p>
+                        ActiveX was Microsoft's response to Java and browser plugins, allowing Windows software 
+                        components to be embedded in web pages. While powerful, ActiveX controls were limited to 
+                        Internet Explorer on Windows platforms, and posed significant security concerns because 
+                        they had deep access to the operating system.
+                    </p>
+                    <p>
+                        Microsoft CarPoint (mentioned in the original document) was one of the first automotive 
+                        websites to use ActiveX for advanced vehicle visualization features. ActiveX has since 
+                        been deprecated due to security concerns and the move toward cross-platform web standards.
+                    </p>
+                </div>
+            </div>
+            
+            <div id="pictures" class="multimedia-section">
+                <div class="multimedia-badge">Images</div>
+                <h3>4.8.4. Pictures</h3>
+                
+                <p>
+                    Pictures of the GIF or JPEG types are displayed by the Browser. The type
+                    of the object is recognized at run-time. If the referenced object is not
+                    available, a text string can be displayed. Other types of pictures can
+                    also be supported.
+                </p>
+                
+                <div class="media-gallery">
+                    <figure class="media-item">
+                        <img src="../original/objects/pic_ext.jpg" alt="Vehicle Exterior" width="435" height="218" onerror="this.src='../original/title/4_8.jpg'; this.style.opacity='0.7';">
+                        <figcaption>Vehicle Exterior</figcaption>
+                    </figure>
+                    <figure class="media-item">
+                        <img src="../original/objects/pic_int.jpg" alt="Vehicle Interior" width="425" height="230" onerror="this.src='../original/title/4_8.jpg'; this.style.opacity='0.7';">
+                        <figcaption>Vehicle Interior</figcaption>
+                    </figure>
+                </div>
+            </div>
+            
+            <div id="videos" class="multimedia-section">
+                <div class="multimedia-badge">Video</div>
+                <h3>4.8.5. Videos, Animations and Surround Pictures</h3>
+                
+                <p>
+                    Animated GIFs, MPEG, Quicktime, QuicktimeVR, MS Surround Video or MS AVIs are displayed
+                    by the Browser.
+                </p>
+                
+                <div class="historical-context">
+                    <h4>Video Technology in 1997</h4>
+                    <p>
+                        In 1997, video on the web was still in its early stages. QuickTime VR was a groundbreaking 
+                        technology that allowed users to view panoramic images with interactive navigation, creating 
+                        an early form of virtual reality experience. It was particularly useful for showing car interiors.
+                    </p>
+                    <p>
+                        The original page featured QuickTime VR demonstrations of BMW vehicle interiors and exteriors, 
+                        which would open in new windows. These required special plugins that are no longer supported in 
+                        modern browsers.
+                    </p>
+                </div>
+                
+                <div class="media-gallery">
+                    <figure class="media-item">
+                        <img src="../original/objects/4_8c.jpg" alt="Exterior QuickTime VR" width="375" height="150" onerror="this.src='../original/title/4_8.jpg'; this.style.opacity='0.7';">
+                        <figcaption>QuickTime VR - Exterior View (originally interactive)</figcaption>
+                    </figure>
+                    <figure class="media-item">
+                        <img src="../original/objects/4_8b.jpg" alt="Interior QuickTime VR" width="280" height="180" onerror="this.src='../original/title/4_8.jpg'; this.style.opacity='0.7';">
+                        <figcaption>QuickTime VR - Interior View (originally interactive)</figcaption>
+                    </figure>
+                    <figure class="media-item">
+                        <img src="../original/objects/4_8d.jpg" alt="Video Demo" width="160" height="120" onerror="this.src='../original/title/4_8.jpg'; this.style.opacity='0.7';">
+                        <figcaption>QuickTime Video (originally interactive)</figcaption>
+                    </figure>
+                    <figure class="media-item">
+                        <img src="../original/objects/mbenz_anim.gif" alt="Mercedes Benz Animation" width="225" height="175" onerror="this.src='../original/title/4_8.jpg'; this.style.opacity='0.7';">
+                        <figcaption>Animated GIF - Mercedes Benz Demo</figcaption>
+                    </figure>
+                </div>
+            </div>
+            
+            <div id="vrml" class="multimedia-section">
+                <div class="multimedia-badge">3D</div>
+                <h3>4.8.6. 3D Objects</h3>
+                
+                <p>
+                    Three dimensional objects can be embedded within the client layout as <a href="http://www.vrml.org" target="_blank">VRML-objects</a>, 
+                    which can be zoomed, rotated and interfaced to with a mouse. The display task is solved by the browser. The data can be converted directly from
+                    CAD-data.
+                </p>
+                
+                <div class="historical-context">
+                    <h4>VRML in 1997</h4>
+                    <p>
+                        Virtual Reality Modeling Language (VRML) was the first standard for representing 3D interactive 
+                        vector graphics on the web. In 1997, it was considered revolutionary for allowing users to interact 
+                        with 3D models of vehicles directly in the browser.
+                    </p>
+                    <p>
+                        The original page featured VRML models of a Volkswagen and a Porsche that could be rotated and 
+                        examined in 3D. VRML required special browser plugins and has since been superseded by technologies 
+                        like WebGL and Three.js.
+                    </p>
+                </div>
+                
+                <div class="media-gallery">
+                    <figure class="media-item">
+                        <img src="../original/objects/4_8e.jpg" alt="VW VRML Model" width="400" height="300" onerror="this.src='../original/title/4_8.jpg'; this.style.opacity='0.7';">
+                        <figcaption>Volkswagen 3D Model (originally in VRML format)</figcaption>
+                    </figure>
+                    <figure class="media-item">
+                        <img src="../original/objects/4_8f.jpg" alt="Porsche VRML Model" width="400" height="248" onerror="this.src='../original/title/4_8.jpg'; this.style.opacity='0.7';">
+                        <figcaption>Porsche 3D Model (originally in VRML format)</figcaption>
+                    </figure>
+                </div>
+                
+                <div class="tech-note">
+                    <strong>Modern Alternative:</strong> Today, 3D vehicle models would typically be implemented using 
+                    WebGL or Three.js, which are supported natively in modern browsers without plugins. These technologies 
+                    provide similar functionality to VRML but with better performance and compatibility.
+                </div>
+            </div>
+            
+            <div id="sound" class="multimedia-section">
+                <div class="multimedia-badge">Audio</div>
+                <h3>4.8.7. Sound and Music</h3>
+                
+                <p>
+                    WAV and AIFF files for sound or speech can be used. The playback is done by the
+                    browser.
+                </p>
+                
+                <p>
+                    MIDI files for background music can be used. The playback is done by the
+                    browser. However, without a wavetable soundcard MIDI files do not sound
+                    well.
+                </p>
+                
+                <div class="historical-context">
+                    <h4>Audio on the Web in 1997</h4>
+                    <p>
+                        In 1997, audio on the web primarily consisted of WAV files (for sound effects and voice), 
+                        and MIDI files (for music). MIDI files were particularly popular because of their small file 
+                        size—critical in the era of dial-up connections.
+                    </p>
+                    <p>
+                        The reference to "wavetable soundcards" reflects the hardware limitations of the time. Without 
+                        specialized sound hardware, MIDI playback would use basic FM synthesis, resulting in lower quality audio.
+                    </p>
+                </div>
+                
+                <div class="media-gallery">
+                    <figure class="media-item">
+                        <audio controls>
+                            <source src="../original/sounds/mission.mid" type="audio/midi">
+                            Your browser does not support the audio element.
+                        </audio>
+                        <figcaption>Example MIDI Background Music (may not play in modern browsers)</figcaption>
+                    </figure>
+                </div>
+                
+                <div class="tech-note">
+                    <strong>Technical Note:</strong> Most modern browsers no longer support MIDI playback natively. 
+                    Today, audio on the web primarily uses MP3, AAC, or OGG formats with the HTML5 audio element, 
+                    which offers better quality and broader compatibility.
+                </div>
+            </div>
+            
+            <div class="work-in-progress">
+                <p>This section is in development as part of the digital archaeology restoration project.</p>
+                <p>Future updates may include modern equivalents or emulators for some of the original interactive elements.</p>
+            </div>
+        </div>
+        
+        <div class="archaeology-note">
+    <strong>Digital Archaeology Note:</strong> This is a modern restoration of a 1997 web application. 
+    The original used Flash animations, auto-playing WAV files, frames, and obsolete web technologies. 
+    These have been replaced with HTML5 equivalents while preserving the original look and navigation structure. 
+    Background images are now more visible, and redundant copyright footers have been removed.
+</div>
+        
+        <hr>
+        
+        <div class="footer">
+            <div class="left">
+                <a href="4_7.html" class="nav-link">
+                    <span class="nav-arrow">⬅️</span>
+                    <span>Back: Statistical Information</span>
+                </a>
+            </div>
+            <div class="right">
+                <a href="4_9.html" class="nav-link">
+                    <span class="nav-arrow">➡️</span>
+                    <span>Next: Interfacing</span>
+                </a>
+            </div>
+        
+    
+</div>
+</div>
+
+    <script>
+        // Store the current page location for navigation
+        if (window.parent && window.parent.updateCurrentPage) {
+            window.parent.updateCurrentPage("4_8.html");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINT for ACME - Business Objects</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/title-animation.css">
+    <script src="js/title-animation.js" defer></script></head>
+<body>
+    <div class="content-container">
+        <div class="navigation">
+            <div class="left">
+                <a href="2_2.html" class="nav-link">
+                    <span class="nav-arrow">⬅️</span>
+                    <span>Back: Business Processes</span>
+                </a>
+            </div>
+            <div class="right">
+                <a href="2_4.html" class="nav-link">
+                    <span class="nav-arrow">➡️</span>
+                    <span>Next: Framework Structure</span>
+                </a>
+            </div>
+        </div>
+        
+        <hr>
+        
+        <div class="audio-control">
+            <audio controls>
+                <source src="../original/sounds/2_3.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+            <span>Original audio narration</span>
+        </div>
+        
+        <h1 class="title-text">2.3. Business Objects</h1>
+        
+        <div class="content">
+            <p>
+                The MINT framework employs a robust business object model to represent the key entities in the 
+                automotive sales domain. These objects form the foundation for the business processes described 
+                in the previous section, providing a consistent data model across the application.
+            </p>
+            
+            <div class="objects-diagram">
+                <img src="../original/objects/2_3.jpg" alt="MINT Business Objects Diagram" width="600">
+                <figcaption>MINT Business Objects Model</figcaption>
+            </div>
+            
+            <p>
+                Business objects in the MINT framework are designed to bridge the gap between the business domain 
+                (vehicles, customers, dealers) and the technical implementation. Each object encapsulates specific 
+                business rules and behaviors, ensuring consistency across different parts of the application.
+            </p>
+            
+            <div class="object-description">
+                <h3>Vehicle</h3>
+                <p>
+                    The Vehicle object represents automotive products available for sale. It encapsulates all 
+                    information about vehicle models, options, features, and configurations.
+                </p>
+                <div class="object-attributes">
+                    <h4>Key Attributes</h4>
+                    <ul>
+                        <li><strong>Model:</strong> The vehicle's model designation</li>
+                        <li><strong>Series:</strong> Production series or generation</li>
+                        <li><strong>Configuration:</strong> Specific configuration of options and features</li>
+                        <li><strong>Technical Specifications:</strong> Engine, transmission, dimensions, etc.</li>
+                        <li><strong>Visual Assets:</strong> Images, videos, and 3D models</li>
+                        <li><strong>Pricing:</strong> Base price and option pricing</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="object-description">
+                <h3>Customer</h3>
+                <p>
+                    The Customer object represents individuals or organizations interested in purchasing vehicles. 
+                    It maintains customer information, preferences, and interaction history.
+                </p>
+                <div class="object-attributes">
+                    <h4>Key Attributes</h4>
+                    <ul>
+                        <li><strong>Contact Information:</strong> Name, address, phone, email, etc.</li>
+                        <li><strong>Preferences:</strong> Vehicle preferences and requirements</li>
+                        <li><strong>Interaction History:</strong> Record of previous interactions</li>
+                        <li><strong>Purchase History:</strong> Previously purchased vehicles</li>
+                        <li><strong>Status:</strong> Prospect, active customer, etc.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="object-description">
+                <h3>Dealer</h3>
+                <p>
+                    The Dealer object represents authorized ACME dealerships. It contains information about 
+                    dealership locations, inventory, and capabilities.
+                </p>
+                <div class="object-attributes">
+                    <h4>Key Attributes</h4>
+                    <ul>
+                        <li><strong>Identification:</strong> Dealer code, name, and location</li>
+                        <li><strong>Inventory:</strong> Available vehicles and demonstration models</li>
+                        <li><strong>Capabilities:</strong> Service offerings and specializations</li>
+                        <li><strong>Personnel:</strong> Sales staff and technical experts</li>
+                        <li><strong>Sales Territory:</strong> Geographic sales area</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="object-description">
+                <h3>Configuration</h3>
+                <p>
+                    The Configuration object represents a specific vehicle build with selected options and features. 
+                    It links vehicle models with customer-selected options.
+                </p>
+                <div class="object-attributes">
+                    <h4>Key Attributes</h4>
+                    <ul>
+                        <li><strong>Base Model:</strong> The underlying vehicle model</li>
+                        <li><strong>Options:</strong> Selected optional equipment and features</li>
+                        <li><strong>Validation Rules:</strong> Rules ensuring valid option combinations</li>
+                        <li><strong>Pricing Calculation:</strong> Total price based on selections</li>
+                        <li><strong>Visualization Data:</strong> Information for visual rendering</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="object-description">
+                <h3>Order</h3>
+                <p>
+                    The Order object represents a customer's vehicle purchase order. It tracks the status of orders 
+                    from creation through delivery.
+                </p>
+                <div class="object-attributes">
+                    <h4>Key Attributes</h4>
+                    <ul>
+                        <li><strong>Order Number:</strong> Unique identifier</li>
+                        <li><strong>Customer:</strong> The ordering customer</li>
+                        <li><strong>Dealer:</strong> The selling dealer</li>
+                        <li><strong>Configuration:</strong> The ordered vehicle configuration</li>
+                        <li><strong>Status:</strong> Current order status</li>
+                        <li><strong>Timeline:</strong> Order dates and delivery schedule</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <p>
+                These business objects form the core data model of the MINT framework. The 
+                <a href="2_4.html">framework structure</a> provides the technical implementation of these objects, 
+                while the <a href="4_3.html">MINT layers</a> describe how these objects are distributed across 
+                the application architecture.
+            </p>
+        </div>
+        
+        <div class="archaeology-note">
+    <strong>Digital Archaeology Note:</strong> This is a modern restoration of a 1997 web application. 
+    The original used Flash animations, auto-playing WAV files, frames, and obsolete web technologies. 
+    These have been replaced with HTML5 equivalents while preserving the original look and navigation structure. 
+    Background images are now more visible, and redundant copyright footers have been removed.
+</div>
+        
+        <hr>
+        
+        <div class="footer">
+            <div class="left">
+                <a href="2_2.html" class="nav-link">
+                    <span class="nav-arrow">⬅️</span>
+                    <span>Back: Business Processes</span>
+                </a>
+            </div>
+            <div class="right">
+                <a href="2_4.html" class="nav-link">
+                    <span class="nav-arrow">➡️</span>
+                    <span>Next: Framework Structure</span>
+                </a>
+            </div>
+        
+    
+</div>
+</div>
+
+    <script>
+        // Store the current page location for navigation
+        if (window.parent && window.parent.updateCurrentPage) {
+            window.parent.updateCurrentPage("2_3.html");
+        }
+    </script>
+
+</body>
+</html>

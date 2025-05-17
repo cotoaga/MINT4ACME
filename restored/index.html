@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINT for ACME - Archaeological Restoration</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/title-animation.css">
+    <script src="js/title-animation.js" defer></script></head>
+<body>
+    <!-- Disclaimer overlay - mimics the original disclaimer.html -->
+    <div class="disclaimer" id="disclaimer">
+        <img src="../original/images/mint4acme.jpg" alt="MINT for ACME" class="logo">
+        <h1>Welcome to the Archaeological Restoration</h1>
+        <p>This is a modern HTML5 restoration of the original MINT for ACME application from 1997.</p>
+        <p>The original application required Internet Explorer 4.0, Netscape Navigator 4.0, Flash, QuickTime, and VRML plugins.</p>
+        <p>This version preserves the original navigation structure, images, and content while replacing obsolete technologies.</p>
+        <p class="note">Original © 1997 CSC PLOENZKE AG and INC. InterNet Consult GmbH</p>
+        <div class="vintage-logos">
+            <p>Original required plugins and browsers:</p>
+            <div class="logo-grid">
+                <img src="../original/images/fastcup.gif" alt="fastcup" class="vintage-logo">
+                <img src="../original/images/cosmoplayer.gif" alt="cosmoplayer" class="vintage-logo">
+                <img src="../original/images/get_shockwave.gif" alt="get_shockwave" class="vintage-logo">
+                <img src="../original/images/ie_spotlight.gif" alt="ie_spotlight" class="vintage-logo">
+                <img src="../original/images/ie_standardanimated.gif" alt="ie_standardanimated" class="vintage-logo">
+                <img src="../original/images/netnow4.gif" alt="netnow4" class="vintage-logo">
+                <img src="../original/images/optimized.gif" alt="optimized" class="vintage-logo">
+                <img src="../original/images/qtlogo2.gif" alt="qtlogo2" class="vintage-logo">
+                <img src="../original/images/quicktimelogo.gif" alt="quicktimelogo" class="vintage-logo">
+                <img src="../original/images/shockwave_flash.gif" alt="shockwave_flash" class="vintage-logo">
+                <img src="../original/images/tuneup.gif" alt="tuneup" class="vintage-logo">
+            </div>
+        </div>
+
+        <button class="btn" id="startButton">Start Restoration</button>
+    </div>
+
+    <!-- Main application container - replaces frameset -->
+    <div class="container" style="display:none;" id="mainContainer">
+        <div class="header">
+            <a href="../index.html" title="Restart" class="nav-button">
+                <span class="emoji">🔄</span>
+                <span>Restart</span>
+            </a>
+            <a href="home.html" target="mainFrame" title="Home" class="nav-button">
+                <span class="emoji">🏠</span>
+                <span>Home</span>
+            </a>
+            <a href="sitemap.html" target="mainFrame" title="Interactive Sitemap" class="nav-button">
+                <span class="emoji">🗺️</span>
+                <span>Sitemap</span>
+            </a>
+
+            <div class="header-controls">
+                <label for="perspective" class="perspective-label">Perspective:</label>
+                <select id="perspective" onchange="changePerspective(this.value)">
+                    <option value="full">Complete</option>
+                    <option value="business">Business</option>
+                    <option value="technical">Technology</option>
+                    <option value="quick">Quick</option>
+                </select>
+
+                <a href="help.html" target="mainFrame" title="Help" class="nav-button">
+                    <span class="emoji">❓</span>
+                    <span>Help</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="explorer" id="explorer">
+                <!-- Tree structure will be loaded here dynamically -->
+                <div class="loading">Loading explorer...</div>
+            </div>
+            
+            <div class="main-content">
+                <iframe name="mainFrame" id="mainFrame" class="main-frame" src="blank.html"></iframe>
+                <!-- Collection area removed completely -->
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="footer-towers">
+                <div class="tower">
+                    <h4>MINT4ACME</h4>
+                    <ul>
+                        <li><a href="home.html" target="mainFrame">Home</a></li>
+                        <li><a href="1_1.html" target="mainFrame">Proposal</a></li>
+                    </ul>
+                </div>
+                <div class="tower">
+                    <h4>Examples</h4>
+                    <ul>
+                        <li><a href="examples.html" target="mainFrame">Technology Changes</a></li>
+                    </ul>
+                </div>
+                <div class="tower">
+                    <h4>Guided Tour</h4>
+                    <ul>
+                        <li><a href="guided_tour.html" target="mainFrame">Perspective Navigation</a></li>
+                    </ul>
+                </div>
+                <div class="tower">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="info.html" target="mainFrame">Vision & Concept</a></li>
+                        <li><a href="sitemap.html" target="mainFrame">Sitemap</a></li>
+                        <li><a href="help.html" target="mainFrame">Help</a></li>
+                        <li><a href="about.html" target="mainFrame">Copyright</a></li>
+                    </ul>
+                </div>
+                <div class="tower">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../original/disclaimer.html" target="_blank">Original Version</a></li>
+                        <li><a href="archaeology_notes.html" target="mainFrame">Preservation Notes</a></li>
+                        <li><a href="credits.html" target="mainFrame">Credits</a></li>
+                        <li><a href="../index.html">Project Home</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+    </div>
+
+    <script>
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle disclaimer
+            const disclaimer = document.getElementById('disclaimer');
+            const mainContainer = document.getElementById('mainContainer');
+            const startButton = document.getElementById('startButton');
+            
+            startButton.addEventListener('click', function() {
+                disclaimer.classList.add('fade-out');
+                setTimeout(() => {
+                    disclaimer.style.display = 'none';
+                    mainContainer.style.display = 'flex';
+                    initializeApplication();
+                }, 1000);
+            });
+            
+            // Auto-start after 10 seconds, just like the original
+            setTimeout(() => {
+                if (!disclaimer.classList.contains('fade-out')) {
+                    startButton.click();
+                }
+            }, 10000);
+        });
+        
+        // Main application initialization
+        function initializeApplication() {
+            loadExplorer();
+
+            // Set initial content
+            const mainFrame = document.getElementById('mainFrame');
+            mainFrame.src = 'home.html';
+        }
+
+        // Note: Explorer always visible, sound controlled by HTML5 audio controls
+        
+        // Tree data structure - matches the original in frameset_1.html
+        const FolderTree = [
+            {
+                name: "Homepage",
+                isOpen: false,
+                children: [
+                    {
+                        name: "Proposal",
+                        isOpen: false,
+                        children: [
+                            {
+                                name: "Introduction",
+                                isOpen: false,
+                                documents: [
+                                    { name: "Introduction", link: "1_1.html" },
+                                    { name: "Objectives", link: "1_2.html" },
+                                    { name: "Problem Definition", link: "1_3.html" }
+                                ]
+                            },
+                            {
+                                name: "General Approach",
+                                isOpen: false,
+                                documents: [
+                                    { name: "General Approach", link: "2_1.html" },
+                                    { name: "Business Processes", link: "2_2.html" },
+                                    { name: "Business Objects", link: "2_3.html" },
+                                    { name: "Framework Structure", link: "2_4.html" },
+                                    { name: "Benefits", link: "2_5.html" }
+                                ]
+                            },
+                            {
+                                name: "Business Functionality",
+                                isOpen: false,
+                                documents: [
+                                    { name: "Business Functionality", link: "3_1.html" },
+                                    { name: "Benefits", link: "3_2.html" }
+                                ]
+                            },
+                            {
+                                name: "Technical Environment",
+                                isOpen: false,
+                                documents: [
+                                    { name: "Technical Environment", link: "4_1.html" },
+                                    { name: "Overview", link: "4_2.html" },
+                                    { name: "MINT Layers", link: "4_3.html" },
+                                    { name: "MINT Versions", link: "4_4.html" },
+                                    { name: "Display", link: "4_5.html" },
+                                    { name: "Security", link: "4_6.html" },
+                                    { name: "Statistical Information", link: "4_7.html" },
+                                    { name: "Multimedia Objects", link: "4_8.html" },
+                                    { name: "Help", link: "4_9.html" }
+                                ]
+                            },
+                            {
+                                name: "Project Plan",
+                                isOpen: false,
+                                documents: [
+                                    { name: "Project Plan", link: "5_1.html" },
+                                    { name: "Project Team", link: "5_2.html" },
+                                    { name: "Working Packages", link: "5_3.html" }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ];
+        
+        // Perspective definitions - recreates the collections from the original
+        const Perspectives = {
+            full: FolderTree, // Full tree
+            technical: createTechnicalPerspective(),
+            business: createBusinessPerspective(),
+            quick: createQuickTourPerspective()
+        };
+
+        // Create filtered tree for technical perspective
+        function createTechnicalPerspective() {
+            // Deep clone the tree
+            const technicalTree = JSON.parse(JSON.stringify(FolderTree));
+
+            // Filter for technical sections
+            const proposal = technicalTree[0].children[0];
+
+            // Keep Introduction (partial), General Approach (partial), and Technical Environment (full)
+            const introSection = proposal.children[0];
+            introSection.documents = introSection.documents.slice(0, 2); // Just Introduction and Objectives
+
+            const generalSection = proposal.children[1];
+            generalSection.documents = [generalSection.documents[3]]; // Just Framework Structure
+
+            // Keep all Technical Environment sections
+            const technicalSection = proposal.children[3];
+
+            // Restructure the tree with just these sections
+            proposal.children = [introSection, generalSection, technicalSection];
+
+            return technicalTree;
+        }
+
+        // Create filtered tree for business perspective
+        function createBusinessPerspective() {
+            // Deep clone the tree
+            const businessTree = JSON.parse(JSON.stringify(FolderTree));
+
+            // Filter for business sections
+            const proposal = businessTree[0].children[0];
+
+            // Keep Introduction, General Approach, Business Functionality, and Project Plan
+            const introSection = proposal.children[0];
+            const generalSection = proposal.children[1];
+            const businessSection = proposal.children[2];
+            const projectSection = proposal.children[4];
+
+            // Restructure the tree with just these sections
+            proposal.children = [introSection, generalSection, businessSection, projectSection];
+
+            return businessTree;
+        }
+
+        // Create filtered tree for quick tour
+        function createQuickTourPerspective() {
+            // Deep clone the tree
+            const quickTree = JSON.parse(JSON.stringify(FolderTree));
+
+            // Filter for quick tour sections
+            const proposal = quickTree[0].children[0];
+
+            // Just keep key sections for a quick overview
+            const generalSection = proposal.children[1];
+            generalSection.documents = generalSection.documents.slice(0, 3); // Just General Approach, Business Processes, Business Objects
+
+            const technicalSection = proposal.children[3];
+            technicalSection.documents = [
+                technicalSection.documents[2], // MINT Layers
+                technicalSection.documents[3], // MINT Versions
+                technicalSection.documents[4], // Display
+                technicalSection.documents[7]  // Multimedia Objects
+            ];
+
+            // Restructure the tree with just these sections
+            proposal.children = [generalSection, technicalSection];
+
+            return quickTree;
+        }
+        
+        // Load the explorer with the tree structure
+        function loadExplorer() {
+            const explorer = document.getElementById('explorer');
+            const tree = buildTreeHTML(FolderTree);
+            explorer.innerHTML = tree;
+            
+            // Add event listeners for tree interaction
+            addTreeEventListeners();
+        }
+        
+        // Build HTML for the tree structure
+        function buildTreeHTML(treeData) {
+            let html = '<div class="tree"><ul>';
+
+            // Process top level - Homepage
+            const homepage = treeData[0];
+            html += `<li>
+                <div class="folder">
+                    <span class="folder-icon" data-folder="${homepage.name}">📁</span>
+                    <span>${homepage.name}</span>
+                </div>
+                <ul style="display:none;">`;
+            
+            // Process children of Homepage
+            homepage.children.forEach(child => {
+                html += buildNodeHTML(child);
+            });
+            
+            html += '</ul></li></ul></div>';
+            return html;
+        }
+        
+        // Build HTML for a tree node (recursive)
+        function buildNodeHTML(node) {
+            let html = '';
+
+            if (node.children) {
+                // This is a folder with subfolders
+                html += `<li>
+                    <div class="folder">
+                        <span class="folder-icon" data-folder="${node.name}">📁</span>
+                        <span>${node.name}</span>
+                    </div>
+                    <ul style="display:none;">`;
+
+                node.children.forEach(child => {
+                    html += buildNodeHTML(child);
+                });
+
+                html += '</ul></li>';
+            } else if (node.documents) {
+                // This is a leaf node with documents
+                html += `<li>
+                    <div class="folder">
+                        <span class="folder-icon" data-folder="${node.name}">📁</span>
+                        <span>${node.name}</span>
+                    </div>
+                    <ul style="display:none;">`;
+
+                node.documents.forEach(doc => {
+                    if (doc.external) {
+                        html += `<li>
+                            <div class="document">
+                                <span class="doc-icon">🔗</span>
+                                <a href="${doc.link}" target="_blank">${doc.name}</a>
+                            </div>
+                        </li>`;
+                    } else {
+                        html += `<li>
+                            <div class="document">
+                                <span class="doc-icon">📄</span>
+                                <a href="${doc.link}" target="mainFrame">${doc.name}</a>
+                            </div>
+                        </li>`;
+                    }
+                });
+
+                html += '</ul></li>';
+            }
+
+            return html;
+        }
+        
+        // Add event listeners for tree interaction
+        function addTreeEventListeners() {
+            const folderIcons = document.querySelectorAll('.folder-icon');
+
+            folderIcons.forEach(icon => {
+                icon.addEventListener('click', function() {
+                    const folderName = this.getAttribute('data-folder');
+                    const folderItem = this.closest('li');
+                    const subList = folderItem.querySelector('ul');
+
+                    if (subList) {
+                        // Toggle folder open/close
+                        if (subList.style.display === 'none') {
+                            subList.style.display = 'block';
+                            this.textContent = '📂'; // Open folder emoji
+                        } else {
+                            subList.style.display = 'none';
+                            this.textContent = '📁'; // Closed folder emoji
+                        }
+                    }
+
+                    // If this is Homepage, load home.html when clicked
+                    if (folderName === 'Homepage' && subList.style.display === 'none') {
+                        document.getElementById('mainFrame').src = 'home.html';
+                    }
+                });
+            });
+        }
+        
+        // Collection area removed completely
+        
+        // Change the perspective (content filter)
+        function changePerspective(perspective) {
+            // Update the explorer with the selected perspective
+            const explorer = document.getElementById('explorer');
+            const tree = buildTreeHTML(Perspectives[perspective]);
+            explorer.innerHTML = tree;
+            
+            // Add event listeners for the new tree
+            addTreeEventListeners();
+        }
+        
+        // Current page tracking for navigation context
+        function updateCurrentPage(page) {
+            window.currentPage = page;
+
+            // Highlight the current page in the explorer tree
+            if (window.currentPage) {
+                highlightCurrentPageInExplorer(window.currentPage);
+            }
+        }
+
+        // Highlight the current page in the explorer tree
+        function highlightCurrentPageInExplorer(pagePath) {
+            // Reset all document links
+            const allLinks = document.querySelectorAll('#explorer a');
+            allLinks.forEach(link => {
+                link.style.fontWeight = 'normal';
+                link.style.color = '';
+            });
+
+            // Find and highlight current page link
+            const currentLink = document.querySelector(`#explorer a[href="${pagePath}"]`);
+            if (currentLink) {
+                currentLink.style.fontWeight = 'bold';
+                currentLink.style.color = 'var(--primary)';
+
+                // Expand parent folders if needed
+                let parent = currentLink.closest('li').parentElement;
+                while (parent && parent.tagName === 'UL') {
+                    if (parent.style.display === 'none') {
+                        parent.style.display = 'block';
+                        const folderIcon = parent.previousElementSibling.querySelector('.folder-icon');
+                        if (folderIcon) {
+                            folderIcon.src = '../original/images/openfolder.gif';
+                        }
+                    }
+                    parent = parent.parentElement.parentElement;
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

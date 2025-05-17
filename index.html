@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MINT for ACME - Web Innovation from 1997</title>
+    <title>MINT for ACME - Digital Archaeology Project</title>
     <style>
         :root {
             --primary: #CE0029;
             --secondary: #007B7B;
             --dark: #333;
             --light: #fff;
-            --gray: #f4f4f4;
-            --gray-dark: #666;
             --border: #ddd;
         }
         
@@ -22,23 +20,17 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             line-height: 1.6;
             color: var(--dark);
             background-color: var(--light);
+            text-align: center;
+            padding: 2rem;
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        header {
-            background-color: var(--primary);
-            color: var(--light);
-            padding: 2rem 0;
-            margin-bottom: 2rem;
         }
         
         .logo {
@@ -47,56 +39,82 @@
             display: block;
         }
         
-        h1, h2, h3 {
-            text-align: center;
-        }
-        
         h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
+            color: var(--dark);
         }
         
-        h2 {
-            color: var(--primary);
-            margin: 2rem 0 1rem;
-            font-size: 1.8rem;
-        }
-        
-        h3 {
-            color: var(--secondary);
-            margin: 1.5rem 0 1rem;
-            font-size: 1.5rem;
+        hr {
+            border: none;
+            height: 1px;
+            background-color: var(--dark);
+            width: 50%;
+            margin: 1.5rem auto;
         }
         
         p {
-            margin-bottom: 1rem;
-        }
-        
-        .intro {
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            text-align: center;
+            margin-bottom: 1.5rem;
             font-size: 1.1rem;
         }
         
-        .card {
-            background-color: var(--light);
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            margin-bottom: 2rem;
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        .button {
+            display: inline-block;
+            margin: 1rem;
+            text-decoration: none;
         }
         
-        .card:hover {
+        .button img {
+            border: 0;
+            vertical-align: middle;
+        }
+        
+        .description {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            text-align: left;
+        }
+        
+        .description h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .description ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .version-select {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .version-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        
+        .version-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
         }
         
         .card-header {
-            padding: 1.5rem;
             background-color: var(--primary);
-            color: var(--light);
+            color: white;
+            padding: 1rem;
+            font-weight: bold;
+            font-size: 1.2rem;
         }
         
         .card-header.modern {
@@ -105,245 +123,99 @@
         
         .card-body {
             padding: 1.5rem;
+            text-align: left;
         }
         
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .button {
-            display: inline-block;
-            background-color: var(--primary);
-            color: var(--light);
-            padding: 0.75rem 1.5rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-            margin-top: 1rem;
-        }
-        
-        .button:hover {
-            background-color: #a60021;
-        }
-        
-        .button.secondary {
-            background-color: var(--secondary);
-        }
-        
-        .button.secondary:hover {
-            background-color: #005f5f;
-        }
-        
-        .button.outline {
-            background-color: transparent;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-        }
-        
-        .button.outline:hover {
-            background-color: var(--primary);
-            color: var(--light);
-        }
-        
-        .progress-section {
-            margin: 3rem 0;
-            padding: 2rem;
-            background-color: var(--gray);
-            border-radius: 8px;
-        }
-        
-        .progress-bar {
-            height: 20px;
-            background-color: #e0e0e0;
-            border-radius: 10px;
-            margin: 1rem 0 2rem;
-            overflow: hidden;
-        }
-        
-        .progress-fill {
-            height: 100%;
-            background-color: var(--secondary);
-            border-radius: 10px;
-            width: 15%; /* Adjust based on project progress */
-        }
-        
-        .status-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-        
-        .status-item {
-            background-color: var(--light);
+        .card-footer {
             padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-        }
-        
-        .status-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 0.5rem;
-        }
-        
-        .status-icon {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            margin-right: 0.5rem;
-        }
-        
-        .status-pending {
-            background-color: #FFC107;
-        }
-        
-        .status-in-progress {
-            background-color: #2196F3;
-        }
-        
-        .status-completed {
-            background-color: #4CAF50;
-        }
-        
-        footer {
-            background-color: var(--dark);
-            color: var(--light);
-            padding: 2rem 0;
-            margin-top: 3rem;
+            background: #f5f5f5;
             text-align: center;
         }
         
-        .copyright {
-            font-size: 0.9rem;
-            margin-top: 1rem;
-            opacity: 0.7;
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.6rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s;
         }
         
-        @media (max-width: 768px) {
-            .grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .status-grid {
-                grid-template-columns: 1fr;
-            }
+        .btn:hover {
+            background-color: #a60021;
+        }
+        
+        .btn.modern {
+            background-color: var(--secondary);
+        }
+        
+        .btn.modern:hover {
+            background-color: #005c5c;
+        }
+        
+        .footer {
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            color: #666;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <img src="original/images/mint_title.jpg" alt="MINT for ACME" class="logo">
-            <h1>MINT for ACME</h1>
-            <p style="text-align: center;">A web innovation from 1997 - Reborn in 2025</p>
-        </div>
-    </header>
-    
-    <main class="container">
-        <div class="intro">
-            <p>Welcome to the MINT for ACME revival project. This site preserves and modernizes a groundbreaking web application from 1997 that was years ahead of its time in both technology and methodology.</p>
-            <p><strong>M</strong>ultimedia <strong>I</strong>nformation, <strong>N</strong>egotiation and <strong>T</strong>ransaction for ACME</p>
-        </div>
+    <div class="container">
+        <img src="original/images/mint4acme.jpg" alt="MINT for ACME" class="logo">
         
-        <div class="grid">
-            <div class="card">
-                <div class="card-header">
-                    <h3>Original Version (1997)</h3>
-                </div>
-                <div class="card-body">
-                    <p>Experience the original MINT for ACME application as it was designed in 1997, with its pioneering multi-tier architecture, multimedia integration, and innovative sales approach.</p>
-                    <p><strong>Note:</strong> Some features may not work in modern browsers due to deprecated technologies like Java applets, VRML, and Flash.</p>
-                    <a href="original/index.html" class="button">Launch Original Version</a>
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header modern">
-                    <h3>Modern Version (2025)</h3>
-                </div>
-                <div class="card-body">
-                    <p>Explore our modernized version that preserves the original look and feel while updating the technology stack to use HTML5, CSS3, JavaScript, and other modern web standards.</p>
-                    <p><strong>Status:</strong> In development - Currently implementing Phase 1 (Static Content)</p>
-                    <a href="modern/index.html" class="button secondary">Explore Modern Version</a>
-                </div>
-            </div>
-        </div>
+        <h1>Welcome to <strong>MINT</strong> for <strong>ACME</strong></h1>
+        <hr>
         
-        <div class="progress-section">
-            <h2>Project Progress</h2>
-            <p>We are currently in Phase 1 of the revival project, focusing on static content restoration.</p>
-            
-            <div class="progress-bar">
-                <div class="progress-fill"></div>
-            </div>
-            
-            <div class="status-grid">
-                <div class="status-item">
-                    <div class="status-header">
-                        <div class="status-icon status-in-progress"></div>
-                        <h4>Phase 1</h4>
-                    </div>
-                    <p>Static Content Restoration</p>
-                </div>
-                
-                <div class="status-item">
-                    <div class="status-header">
-                        <div class="status-icon status-pending"></div>
-                        <h4>Phase 2</h4>
-                    </div>
-                    <p>Modern Navigation & Layout</p>
-                </div>
-                
-                <div class="status-item">
-                    <div class="status-header">
-                        <div class="status-icon status-pending"></div>
-                        <h4>Phase 3</h4>
-                    </div>
-                    <p>Multimedia Content Conversion</p>
-                </div>
-                
-                <div class="status-item">
-                    <div class="status-header">
-                        <div class="status-icon status-pending"></div>
-                        <h4>Phase 4</h4>
-                    </div>
-                    <p>Interactive Features</p>
-                </div>
-            </div>
-        </div>
+        <p>A digital archaeology project restoring and preserving a pioneering web application from 1997</p>
         
-        <section>
-            <h2>About the Project</h2>
-            <p>MINT for ACME was a revolutionary web-based automotive sales application developed in 1997 by CSC PLOENZKE AG and INC. InterNet Consult GmbH. It featured:</p>
-            
-            <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
-                <li>A four-layer architecture (Browser, Replication Server, Application Server, Database)</li>
-                <li>Offline capabilities years before Progressive Web Apps</li>
-                <li>Rich multimedia content through various plugins and technologies</li>
+        <div class="description">
+            <h2>About This Project</h2>
+            <p>MINT (Multimedia Information, Negotiation and Transaction) for ACME was a revolutionary web-based automotive sales application developed in 1997. It featured:</p>
+            <ul>
+                <li>A sophisticated four-layer architecture</li>
+                <li>Rich multimedia experiences</li>
+                <li>Offline capabilities (years before Progressive Web Apps)</li>
+                <li>Frameset-based navigation</li>
                 <li>Integration with legacy automotive systems</li>
-                <li>An iterative development approach resembling Agile methods before the Agile Manifesto</li>
             </ul>
-            
-            <p>This revival project aims to preserve this piece of web history while making it accessible to modern users through current web technologies.</p>
-            
-            <h3>The "Then vs. Now" Approach</h3>
-            <p>As we modernize each section, we'll provide side-by-side comparisons showing how the original implementation compares to modern web development practices. This will showcase both how far web technology has come and how visionary the original project was for its time.</p>
-            
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="modern/index.html" class="button outline">Explore Modern Version</a>
-            </div>
-        </section>
-    </main>
-    
-    <footer>
-        <div class="container">
-            <p>MINT for ACME Revival Project</p>
-            <p class="copyright">Original project © 1997 CSC PLOENZKE AG and INC. InterNet Consult GmbH</p>
-            <p class="copyright">Revival project © 2025 Kurt Cotoaga | <a href="https://cotoaga.net" style="color: white;">cotoaga.net</a></p>
+            <p>This digital archaeology project preserves the original application while making it accessible to modern viewers. It showcases web development practices from 1997 alongside modern equivalents.</p>
         </div>
-    </footer>
+        
+        <div class="version-select">
+            <div class="version-card">
+                <div class="card-header">Original Version (1997)</div>
+                <div class="card-body">
+                    <p>Experience the original MINT for ACME application as it was designed in 1997, with its authentic frameset structure.</p>
+                    <p><strong>Note:</strong> Some features may not work in modern browsers due to deprecated technologies like VRML and Flash.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="original/disclaimer.html" class="btn">Launch Original</a>
+                </div>
+            </div>
+
+            <div class="version-card">
+                <div class="card-header modern">Archaeological Restoration</div>
+                <div class="card-body">
+                    <p>Explore our preservation-focused restoration that maintains the original design while making it accessible in modern browsers.</p>
+                    <p><strong>Status:</strong> Basic structure available with updated navigation elements.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="restored/index.html" class="btn modern">Launch Restoration</a>
+                </div>
+            </div>
+        </div>
+        
+        <hr>
+        
+        <p>This project is an exercise in digital archaeology, preserving the look, feel, and functionality of a pioneering web application from 1997 while making it accessible to modern browsers.</p>
+        
+        <div class="footer">
+            <p>Original project © 1997 CSC PLOENZKE AG and INC. InterNet Consult GmbH</p>
+            <p>Digital archaeology project © 2025</p>
+        </div>
+    </div>
 </body>
 </html>

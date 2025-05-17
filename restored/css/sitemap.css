@@ -1,0 +1,210 @@
+/* Interactive Sitemap styles */
+.interactive-sitemap {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #fafafa;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
+.interactive-sitemap h2 {
+    color: var(--dark);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Main visual map container */
+.visual-map {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin: 30px 0;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    overflow: hidden;
+}
+
+/* SVG container for connection lines */
+.links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#connections {
+    width: 100%;
+    height: 100%;
+}
+
+#connections line {
+    stroke: #aaa;
+    stroke-width: 1.5;
+    stroke-opacity: 0.7;
+}
+
+/* Nodes in the map */
+.node {
+    position: absolute;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    color: #333;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.node:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    z-index: 3;
+}
+
+/* Section colors */
+.section-1 {
+    background-color: #FFD6D6;
+    border: 1px solid #FFBABA;
+}
+
+.section-2 {
+    background-color: #D6FFD6;
+    border: 1px solid #BAFFBA;
+}
+
+.section-3 {
+    background-color: #D6D6FF;
+    border: 1px solid #BABAFA;
+}
+
+.section-4 {
+    background-color: #FFFFD6;
+    border: 1px solid #FFFFBA;
+}
+
+.section-5 {
+    background-color: #FFD6FF;
+    border: 1px solid #FFBAFF;
+}
+
+.section-special {
+    background-color: #D6FFFF;
+    border: 1px solid #BAFFFF;
+}
+
+/* Legend for the map */
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    margin-right: 6px;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Replace VRML model display */
+.model-replacement {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.model-replacement img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.model-replacement p {
+    margin-top: 8px;
+    font-style: italic;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+/* Traditional sitemap styles */
+.sitemap {
+    margin-top: 40px;
+}
+
+.sitemap-section {
+    margin-bottom: 30px;
+}
+
+.sitemap-section h3 {
+    color: var(--dark);
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.sitemap-section .subsection {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.sitemap-section h4 {
+    color: var(--secondary);
+    margin-bottom: 10px;
+}
+
+.sitemap-section ul {
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+.sitemap-section li {
+    margin-bottom: 5px;
+}
+
+.sitemap-section a {
+    text-decoration: none;
+    color: var(--dark);
+    display: inline-flex;
+    align-items: center;
+}
+
+.sitemap-section a:hover {
+    color: var(--primary);
+}
+
+.sitemap-section img {
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+    border: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .visual-map {
+        height: 400px;
+    }
+    
+    .node {
+        font-size: 0.7rem;
+        padding: 4px 6px;
+    }
+    
+    .legend {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

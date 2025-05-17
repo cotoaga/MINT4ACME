@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINT for ACME - MINT Versions</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/title-animation.css">
+    <script src="js/title-animation.js" defer></script></head>
+<body>
+    <div class="content-container">
+        <div class="navigation">
+            <div class="left">
+                <a href="4_3.html" class="nav-link">
+                    <span class="nav-arrow">⬅️</span>
+                    <span>Back: MINT Layers</span>
+                </a>
+            </div>
+            <div class="right">
+                <a href="4_5.html" class="nav-link">
+                    <span class="nav-arrow">➡️</span>
+                    <span>Next: System Requirements</span>
+                </a>
+            </div>
+        </div>
+        
+        <hr>
+        
+        <div class="audio-control">
+            <audio controls>
+                <source src="../original/sounds/4_4.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+            <span>Original audio narration</span>
+        </div>
+
+        <h1 class="title-text">4.4. MINT Versions</h1>
+        
+        <div class="content">
+            <p>
+                The MINT application comes in several versions tailored to different use cases and 
+                deployment scenarios. Each version leverages the same core architecture but is optimized 
+                for specific operational contexts and user roles.
+            </p>
+            
+            <div id="dealermint" class="version-container">
+                <div class="version-badge">Full Version</div>
+                <h3>4.4.1. Dealer-MINT</h3>
+                
+                <div class="version-image">
+                    <img src="../original/objects/4_4a.jpg" alt="Dealer-MINT" width="510" height="370">
+                </div>
+                
+                <p>
+                    This is the full-featured version of the MINT-Application that can be used
+                    to access and configure the system.
+                </p>
+                
+                <p>
+                    To use all possibilities, the sales consultant has to log-on and
+                    identify himself. This version uses all <a href="4_3.html">layers</a>.
+                </p>
+                
+                <p>Some of the available functions are:</p>
+                
+                <ul>
+                    <li>System configuration</li>
+                    <li>User administration</li>
+                    <li>Authenticated identification (password log-on)</li>
+                    <li>Pre-configuration of vehicles</li>
+                    <li>Edit the dealer corporate identity</li>
+                    <li>Edit dealer specific accessories</li>
+                </ul>
+                
+                <p>
+                    The following sales process (<a href="2_2.html#negotiationphase">negotiation phase</a>) 
+                    describes a typical pre-sales operation: After the <a href="2_3.html#dealer">sales consultant</a> 
+                    has logged onto the system, a well-known <a href="2_3.html#customer">customer</a> asks for some information.
+                </p>
+                
+                <p>
+                    The sales consultant enters the name of the customer and reloads the
+                    last configuration, e.g. stored by the customer himself, using the showroom
+                    or <a href="#publickiosk">public kiosk version</a>. After that, the sales consultant and customer
+                    discuss and check additional accessories and features supported by the
+                    available multimedia material. The new vehicle configuration data is entered
+                    and validated by accessing the ACME system through the <a href="4_3.html#applicationlayer">Application Server</a>. 
+                    The vehicle locator reveals that the vehicle (or a similar one) is neither
+                    in stock nor on the production list in the near future, but the system
+                    has stored this request and will alert the sales consultant when this changes,
+                    so he can contact his prospect.
+                </p>
+            </div>
+            
+            <div id="laptoponline" class="version-container">
+                <div class="version-badge">Mobile Online</div>
+                <h3>4.4.2. Laptop Dealer-MINT online</h3>
+                
+                <div class="version-image">
+                    <img src="../original/objects/4_4b.jpg" alt="Laptop-MINT online" width="510" height="370">
+                </div>
+                
+                <p>
+                    This version is mostly for the <a href="2_2.html#closurephase">closure phase</a> of the sales process 
+                    and has special features to access pre-defined general or personal configurations.
+                    It offers most of the <a href="#dealermint">Dealer-MINT</a> functions and is optimized to work even
+                    with slow modem network connection. To reduce network traffic the MMOs
+                    will be accessed directly on the laptop by using the <a href="4_3.html#replicationlayer">Replication Server</a>. 
+                    The updating process of huge files can be suppressed, to speed up the sales
+                    process. When the network is available, the online laptop MINT can be used
+                    just as any other client computer at the dealer site. To connect to the
+                    dealer systems it uses SLIP or PPP capabilities of the operation system.
+                </p>
+            </div>
+            
+            <div id="laptopoffline" class="version-container">
+                <div class="version-badge">Mobile Offline</div>
+                <h3>4.4.3. Laptop Dealer-MINT off-line</h3>
+                
+                <div class="version-image">
+                    <img src="../original/objects/4_4c.jpg" alt="Laptop-MINT off-line" width="250" height="220">
+                </div>
+                
+                <p>
+                    This version is also for the <a href="2_2.html#closurephase">closure phase</a> of the sales process. 
+                    When the <a href="4_3.html#replicationlayer">Replication Server</a> cannot establish a permanent 
+                    network connection it automatically switches to off-line mode. In this mode access statistics,
+                    configurations and orders are cached within the replication server until
+                    the network is available. The process logic is controlled by
+                    a reduced <a href="4_3.html#applicationlayer">Application Server</a>, that is embedded within the 
+                    Replication Server. Orders placed in this mode are not confirmed until there is a connection
+                    to the dealer or ACME systems.
+                </p>
+                
+                <div class="version-image">
+                    <img src="../original/objects/4_4d.jpg" alt="Laptop-MINT updating" width="510" height="370">
+                </div>
+                
+                <p>
+                    When the Replication Server can reestablish a permanent network connection it flushes
+                    all data stored in off-line mode. Orders are checked and validated. Statistical
+                    information is forwarded and problems resulting from unresolvable order constraints
+                    are signaled to the dealer and ACME systems and if possible also to the customer.
+                </p>
+            </div>
+            
+            <div id="publickiosk" class="version-container">
+                <div class="version-badge">Public Access</div>
+                <h3>4.4.4. Public Kiosk-MINT</h3>
+                
+                <div class="version-image">
+                    <img src="../original/objects/4_4e.jpg" alt="Public Kiosk" width="510" height="235">
+                </div>
+                
+                <p>
+                    The public kiosk version supports the <a href="2_2.html#infophase">information phase</a> of the sales process. 
+                    It offers the same functions as the <a href="#dealermint">Dealer-MINT versions</a>, but without sophisticated 
+                    editing and negotiation features. The customer can identify himself, if
+                    he is willing to, and browse around. In case of an anonymous access, <a href="4_7.html">statistic
+                    information</a> and configurations are stored but cannot be accessed by the
+                    customer later on. The customer can get a standard non-negotiated quotation
+                    for his part-exchange vehicle. Even when the customer refuses to identify
+                    himself, the system can gather data and assign this to an anonymous default
+                    customer. This version can be used both for the dealer showroom, as for
+                    public areas or the internet.
+                </p>
+                
+                <p>
+                    For the requested public kiosk version there are two possible access
+                    ways depending on a central or distributed approach. The central approach
+                    would require an application server with reduced functionality, which makes
+                    no use of dealer data. It would be maintained centrally by ACME and would
+                    offer only the required configuration possibilities. The configuration
+                    could also be passed to a dealer for further handling of the potential
+                    customer. Another possibility would be to allow direct access from the
+                    Internet to the dealer system.
+                </p>
+                
+                <p>
+                    As, for all other versions, data is forwarded to the <a href="4_3.html#applicationlayer">Application Server</a> 
+                    as soon as possible. This assures, that the sales consultant and ACME can
+                    use the statistical information and customer data to sell more vehicles.
+                </p>
+            </div>
+            
+            <div class="work-in-progress">
+                <p>This section is in development as part of the digital archaeology restoration project.</p>
+                <p>The complete content for MINT Versions will be expanded in a future update.</p>
+            </div>
+        </div>
+        
+        <div class="archaeology-note">
+    <strong>Digital Archaeology Note:</strong> This is a modern restoration of a 1997 web application. 
+    The original used Flash animations, auto-playing WAV files, frames, and obsolete web technologies. 
+    These have been replaced with HTML5 equivalents while preserving the original look and navigation structure. 
+    Background images are now more visible, and redundant copyright footers have been removed.
+</div>
+        
+        <hr>
+        
+        <div class="footer">
+            <div class="left">
+                <a href="4_3.html" class="nav-link">
+                    <span class="nav-arrow">⬅️</span>
+                    <span>Back: MINT Layers</span>
+                </a>
+            </div>
+            <div class="right">
+                <a href="4_5.html" class="nav-link">
+                    <span class="nav-arrow">➡️</span>
+                    <span>Next: System Requirements</span>
+                </a>
+            </div>
+        
+    
+</div>
+</div>
+
+    <script>
+        // Store the current page location for navigation
+        if (window.parent && window.parent.updateCurrentPage) {
+            window.parent.updateCurrentPage("4_4.html");
+        }
+    </script>
+
+</body>
+</html>

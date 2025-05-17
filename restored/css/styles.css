@@ -1,0 +1,770 @@
+/* MINT for ACME - Main Stylesheet
+ * Centralized CSS for all pages
+ */
+
+:root {
+    --primary: #CE0029;
+    --secondary: #007B7B;
+    --dark: #333;
+    --light: #fff;
+    --border: #ddd;
+}
+
+/* Base Styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* Content page body - with padding */
+.content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Home Page */
+.home-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 100%;
+}
+
+.intro {
+    margin-bottom: 30px;
+}
+
+.sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.section-card {
+    background-color: #f9f9f9;
+    border-left: 4px solid var(--primary);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.section-card h3 {
+    color: var(--dark);
+    margin-top: 0;
+}
+
+.section-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.section-card a:hover {
+    text-decoration: underline;
+}
+
+.context-note {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 30px 0;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.navigation img {
+    border: 0;
+    margin-right: 5px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 0.85rem;
+}
+
+.nav-link:hover {
+    color: var(--primary);
+}
+
+.nav-arrow {
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #000;
+    margin: 15px 0;
+}
+
+/* Headings and Typography */
+.title-text {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--dark);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border);
+}
+
+.title-image {
+    display: block;
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Content Sections */
+.content-container .content {
+    margin-bottom: 30px;
+}
+
+.content-container .content p {
+    margin-bottom: 1rem;
+}
+
+.content-container .content a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.content-container .content a:hover {
+    text-decoration: underline;
+}
+
+/* Content Pages Footer */
+.content-container .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.content-container .footer .copyright {
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* Audio Player */
+.audio-control {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+}
+
+.audio-control audio {
+    width: 200px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* Archaeology Notes */
+.archaeology-note {
+    background-color: #f8f8f8;
+    border-left: 4px solid var(--secondary);
+    padding: 10px 15px;
+    margin: 20px 0;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* Work in Progress Indicator */
+.work-in-progress {
+    background-color: #fffacd;
+    border: 1px dashed #ffd700;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px 0;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Problem Sections */
+.problem-section {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.problem-section h3 {
+    color: var(--dark);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Benefit Items */
+.benefit-item {
+    background-color: #f9f9f9;
+    border-left: 3px solid var(--primary);
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.benefit-item h3 {
+    color: var(--dark);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Technical Components */
+.tech-stack {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.tech-stack h3 {
+    color: var(--dark);
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.tech-section {
+    margin-bottom: 15px;
+}
+
+.tech-section h4 {
+    color: var(--secondary);
+    margin-bottom: 10px;
+}
+
+.tech-section ul {
+    margin-top: 0;
+}
+
+/* Component Descriptions */
+.component-description,
+.object-description,
+.layer-description {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.component-description h3,
+.object-description h3,
+.layer-description h3 {
+    color: var(--dark);
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* Diagrams and Visualizations */
+.framework-diagram,
+.architecture-diagram,
+.tech-diagram,
+.objects-diagram,
+.stats-visualization,
+.roi-diagram {
+    margin: 25px 0;
+    text-align: center;
+}
+
+.framework-diagram img,
+.architecture-diagram img,
+.tech-diagram img,
+.objects-diagram img,
+.stats-visualization img,
+.roi-diagram img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+}
+
+.framework-diagram figcaption,
+.architecture-diagram figcaption,
+.tech-diagram figcaption,
+.objects-diagram figcaption,
+.stats-visualization figcaption,
+.roi-diagram figcaption {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* Security and Status Sections */
+.security-content,
+.stats-content {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+    position: relative;
+}
+
+.security-badge,
+.stats-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--primary);
+    color: white;
+    font-weight: bold;
+    font-size: 0.8rem;
+    padding: 3px 8px;
+    border-radius: 3px;
+}
+
+/* Historical Context */
+.historical-context {
+    background-color: #e8f4f8;
+    border-left: 4px solid #4682b4;
+    padding: 15px;
+    margin: 20px 0;
+    font-size: 0.9rem;
+}
+
+/* Help Sections */
+.help-description h3 {
+    margin: 0 0 5px;
+    color: var(--dark);
+}
+
+/* Object Attributes */
+.object-attributes {
+    background-color: #f0f0f0;
+    padding: 10px 15px;
+    margin: 10px 0;
+}
+
+.object-attributes h4 {
+    color: var(--secondary);
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.object-attributes ul {
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+/* Interactive elements */
+.interactive-demo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.interactive-demo img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+}
+
+/* Timeline and phase sections */
+.phase-section h3,
+.role-section h3 {
+    color: var(--dark);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Sitemap specific styles */
+.sitemap-section h3 {
+    color: var(--dark);
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+/* Main Application Structure (Index Page) */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--border);
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-button {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--dark);
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    margin-right: 5px;
+    border: 1px solid #ddd;
+}
+
+.nav-button:hover {
+    background-color: #e5e5e5;
+}
+
+.emoji {
+    margin-right: 5px;
+    font-size: 1.1rem;
+}
+
+.perspective-label {
+    margin-right: 5px;
+    font-size: 0.9rem;
+}
+
+/* Main Content Area */
+.container .content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.container .explorer {
+    width: 280px;
+    background-color: #f9f9f9;
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+/* Fix spacing in the explorer */
+.container .explorer .tree {
+    margin: 0;
+    padding: 0;
+}
+
+.container .main-content {
+    flex: 1;
+    overflow: hidden;
+}
+
+.container .main-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Tree Navigation */
+.tree {
+    font-size: 0.9rem;
+}
+
+.tree ul {
+    list-style-type: none;
+    padding-left: 15px;
+    margin: 0;
+}
+
+.tree > ul {
+    padding-left: 0;
+}
+
+/* Remove any extra indentation in list items */
+.tree li {
+    margin: 0;
+    padding: 0;
+}
+
+.folder, .document {
+    padding: 2px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    white-space: nowrap;
+    width: 100%;
+}
+
+/* Fix alignment for folder and document containers */
+.tree li > div.folder,
+.tree li > div.document {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.folder:hover, .document:hover {
+    background-color: #f0f0f0;
+}
+
+/* Fixed-width icon container */
+.folder-icon, .doc-icon {
+    margin-right: 5px;
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+    flex-shrink: 0;
+    display: inline-block;
+}
+
+/* Text elements */
+.folder span:not(.folder-icon), 
+.document a {
+    flex: 1;
+}
+
+.document a {
+    text-decoration: none;
+    color: var(--dark);
+    padding-left: 0;
+}
+
+.document a:hover {
+    color: var(--primary);
+}
+
+.loading {
+    padding: 20px;
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+/* Footer with Towers */
+.container .footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    border-top: 1px solid var(--border);
+    width: 100%;
+    align-items: stretch;
+}
+
+.container .footer-towers {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.container .tower {
+    flex: 1;
+    min-width: 150px;
+    max-width: 200px;
+    width: calc(20% - 30px);
+    padding: 0 15px;
+    text-align: left;
+}
+
+.container .tower h4 {
+    color: var(--dark);
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.container .tower ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.container .tower li {
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+}
+
+.container .tower a {
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 0.85rem;
+    display: inline-block;
+    text-align: left;
+}
+
+.container .tower a:hover {
+    color: var(--primary);
+}
+
+.container .copyright {
+    text-align: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    font-size: 0.8rem;
+    color: #666;
+    width: 100%;
+    display: block;
+}
+
+/* Disclaimer Overlay */
+.disclaimer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 1000;
+    text-align: center;
+}
+
+.disclaimer .logo {
+    margin-bottom: 20px;
+    max-width: 80%;
+}
+
+.disclaimer h1 {
+    color: var(--dark);
+    margin-bottom: 20px;
+}
+
+.disclaimer p {
+    margin-bottom: 10px;
+    max-width: 600px;
+}
+
+.disclaimer .note {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #b00020;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+    
+    .explorer {
+        width: 100%;
+        max-height: 300px;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+    
+    .footer-towers {
+        flex-direction: column;
+    }
+    
+    .tower {
+        margin-bottom: 20px;
+    }
+}
+/* Vintage logos in disclaimer */
+.vintage-logos {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.logo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.vintage-logo {
+    max-height: 40px;
+    margin: 5px;
+}
+
+/* Modern Copyright Section */
+.modern-copyright {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-left: 4px solid var(--secondary);
+    border-radius: 4px;
+}
+
+.modern-copyright h3 {
+    color: var(--secondary);
+    margin-top: 0;
+}
+
+.modern-copyright a {
+    color: var(--secondary);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--secondary);
+}
+
+.modern-copyright a:hover {
+    color: var(--primary);
+    border-bottom: 1px solid var(--primary);
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINT for ACME - Display</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/title-animation.css">
+    <script src="js/title-animation.js" defer></script></head>
+<body>
+    <div class="content-container">
+        <div class="navigation">
+            <div class="left">
+                <a href="4_4.html" class="nav-link">
+                    <span class="nav-arrow">⬅️</span>
+                    <span>Back: MINT Versions</span>
+                </a>
+            </div>
+            <div class="right">
+                <a href="4_6.html" class="nav-link">
+                    <span class="nav-arrow">➡️</span>
+                    <span>Next: System Configuration</span>
+                </a>
+            </div>
+        </div>
+        
+        <hr>
+        
+        <div class="audio-control">
+            <audio controls>
+                <source src="../original/sounds/4_5.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+            <span>Original audio narration</span>
+        </div>
+
+        <h1 class="title-text">4.5. Display</h1>
+        
+        <div class="content">
+            <p>
+                The previous two sections <a href="4_3.html">"Layers"</a> and <a href="4_4.html">"Versions"</a> 
+                have described the system elements of the proposed MINT solution and their interaction. However,
+                there are some aspects that are not specific for one layer or one version.
+                One of the most important aspects of the MINT system is the <span class="emphasis">separation
+                between the information technology</span> including the distribution of the application
+                and the process logic defined by ACME business rules <span class="emphasis">and the creative layout,
+                design and branding of the displayed objects</span>.
+            </p>
+            
+            <div id="layout" class="section">
+                <div class="section-badge">UI Design</div>
+                <h3>4.5.1. Layout configuration</h3>
+                
+                <p>
+                    This layout section outlines the possibilities and limits of the display
+                    capabilities of the system. The display area of the browser is controlled
+                    by HTML. HTML defines the structural layout of the content that should
+                    be displayed within the display area. It can embed <a href="4_8.html">multimedia objects</a> of
+                    very different types and even some <a href="#processes">application logic</a>.
+                </p>
+                
+                <p>
+                    HTML is the <a href="http://www.w3c.org" target="_blank">World-Wide Web</a> standard for documents 
+                    and assures world-wide acceptance and continual development and enhancement. The usage of HTML
+                    as a basic description language for the layout and design guarantees a
+                    permanent state-of-the-art MINT that can use new web-features as they become
+                    available. Another important advantage is the easy reusability of web-design
+                    already done by creative advertising agencies for ACME. HTML offers the
+                    possibility to divide creative design and application logic.
+                </p>
+                
+                <p>
+                    Each HTML page should represent an indivisible decision stage in the
+                    configuration and order process. Examples are:
+                </p>
+                
+                <ul>
+                    <li>Customer identification page</li>
+                    <li>Model introduction pages and areas</li>
+                    <li>Model selection page</li>
+                    <li>Motor selection page</li>
+                    <li>Colour selection page etc.</li>
+                </ul>
+                
+                <p>
+                    HTML offers a large set of features to control the display of the content.
+                    Some examples are:
+                </p>
+                
+                <ul>
+                    <li>Structural text layout</li>
+                    <li>Different fonts and colors</li>
+                    <li>Relative placement, which solves the problem of different display resolutions
+                        available for laptops and client computers</li>
+                    <li>Tables</li>
+                    <li><a href="4_8.html#pictures">Pictures</a>, <a href="4_8.html#sound">Sound</a> and <a href="4_8.html#video">Videos</a></li>
+                    <li><a href="4_8.html#activex">ActiveX</a>, <a href="4_8.html#java">Java</a> or <a href="4_8.html#shockwave">ShockWave</a> objects (small multimedia applications, that
+                        are distributed over the network with different technologies)</li>
+                    <li>Forms, to enter data and forward the data to a server for further processing.
+                        Forms can be composed out of the usual GUI input controls like text fields,
+                        drop down list boxes or radio buttons.</li>
+                    <li><a href="help.html#addons">Java-Script</a> (adds simple application logic)</li>
+                </ul>
+            </div>
+            
+            <div id="processes" class="section">
+                <div class="section-badge">Flow Control</div>
+                <h3>4.5.2. Process configuration</h3>
+                
+                <p>
+                    The content that is displayed in the display area is assembled by the <a href="4_3.html#applicationlayer">application
+                    server</a> from template pages, input fields and <a href="4_8.html">multimedia objects</a>. These pages
+                    can be viewed as decision stages in the <a href="2_2.html#infophase">information retrieving</a>, 
+                    <a href="2_2.html#negotiationphase">negotiation and configuration</a> or ordering process. The 
+                    <a href="2_3.html#customer">customer</a> or the <a href="2_3.html#dealer">sales consultant</a> are selecting features, 
+                    accessing hot-spots on pictures for further details, using small simulation applications to explain 
+                    difficult technical context and adding more and more data. Whenever there are no further question in
+                    a decision stage, e.g. the right power train is chosen after comparing
+                    different alternatives, this data is passed to the <a href="4_3.html#applicationlayer">Application Server</a>. 
+                    The settings determined during each decision stage are added to the configuration
+                    and the next step begins by passing the added values and selections to
+                    the application server. The application server reacts by answering with
+                    the next page suited to refine the configuration.
+                </p>
+                
+                <p>
+                    If interactive actions are required at any decision stage, like price
+                    updating, this is solved by embedded Java-Script that is executed as part
+                    of the document.
+                </p>
+                
+                <p>
+                    The <span class="emphasis">process logic</span> (the order in which data is passed from one application
+                    to the next) is embedded in the <a href="4_3.html#applicationlayer">Application Server</a>.
+                </p>
+                
+                <p>
+                    Since the order of execution of the process logic is subject to human
+                    vagaries (a customer might want to know the trade-in value of his car at
+                    the beginning, in the middle or at the end of a sales process etc.) the
+                    <a href="4_3.html#applicationlayer">Application Server</a> needs to be able to operate with non-complete sets of information; 
+                    this will be done by default assumptions where possible, and
+                    by requesting specific information where needed.
+                </p>
+            </div>
+            
+            <div class="work-in-progress">
+                <p>This section is in development as part of the digital archaeology restoration project.</p>
+                <p>The complete content for Display will be expanded in a future update.</p>
+            </div>
+        </div>
+        
+        <div class="archaeology-note">
+    <strong>Digital Archaeology Note:</strong> This is a modern restoration of a 1997 web application. 
+    The original used Flash animations, auto-playing WAV files, frames, and obsolete web technologies. 
+    These have been replaced with HTML5 equivalents while preserving the original look and navigation structure. 
+    Background images are now more visible, and redundant copyright footers have been removed.
+</div>
+        
+        <hr>
+        
+        <div class="footer">
+            <div class="left">
+                <a href="4_4.html" class="nav-link">
+                    <span class="nav-arrow">⬅️</span>
+                    <span>Back: MINT Versions</span>
+                </a>
+            </div>
+            <div class="right">
+                <a href="4_6.html" class="nav-link">
+                    <span class="nav-arrow">➡️</span>
+                    <span>Next: System Configuration</span>
+                </a>
+            </div>
+        
+    
+</div>
+</div>
+
+    <script>
+        // Store the current page location for navigation
+        if (window.parent && window.parent.updateCurrentPage) {
+            window.parent.updateCurrentPage("4_5.html");
+        }
+    </script>
+
+</body>
+</html>

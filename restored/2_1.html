@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINT for ACME - General Approach</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/title-animation.css">
+    <script src="js/title-animation.js" defer></script></head>
+<body>
+    <div class="content-container">
+        <div class="navigation">
+            <div class="left">
+                <a href="1_3.html" class="nav-link">
+                    <span class="nav-arrow">⬅️</span>
+                    <span>Back: Problem Definition</span>
+                </a>
+            </div>
+            <div class="right">
+                <a href="2_2.html" class="nav-link">
+                    <span class="nav-arrow">➡️</span>
+                    <span>Next: Business Processes</span>
+                </a>
+            </div>
+        </div>
+        
+        <hr>
+        
+        <div class="audio-control">
+            <audio controls>
+                <source src="../original/sounds/2_1.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+            <span>Original audio narration</span>
+        </div>
+        
+        <h1 class="title-text">2.1. General Approach</h1>
+        
+        <div class="content">
+            <p>
+                The MINT framework represents a significant paradigm shift in automotive sales applications. 
+                Rather than creating an isolated sales tool, MINT establishes a comprehensive ecosystem that 
+                integrates across the entire vehicle sales lifecycle.
+            </p>
+            
+            <p>
+                Our approach is rooted in four fundamental principles that guide the design and implementation 
+                of the MINT framework:
+            </p>
+            
+            <div class="key-points">
+                <h3>MINT Framework Principles</h3>
+                <ul>
+                    <li><strong>Integration-First Design:</strong> MINT is built to integrate seamlessly with existing 
+                    dealer management systems and manufacturer databases, rather than replacing them.</li>
+                    
+                    <li><strong>Business Process Orientation:</strong> The framework is structured around key business 
+                    processes in the automotive sales lifecycle, ensuring that technology serves business needs.</li>
+                    
+                    <li><strong>Layered Architecture:</strong> A four-layer architecture separates presentation, business 
+                    logic, data access, and infrastructure concerns, creating maximum flexibility.</li>
+                    
+                    <li><strong>Media-Rich Experience:</strong> Multimedia assets are treated as first-class citizens within 
+                    the framework, with sophisticated management and presentation capabilities.</li>
+                </ul>
+            </div>
+            
+            <p>
+                The MINT framework is implemented as a <a href="4_3.html">four-layer architecture</a>, with each layer responsible 
+                for specific aspects of the application. This separation of concerns allows for maximum flexibility 
+                in deployment and customization:
+            </p>
+            
+            <ol>
+                <li><strong>Presentation Layer:</strong> Handles user interface, multimedia presentation, and interactive 
+                elements using web technologies and multimedia plugins.</li>
+                
+                <li><strong>Business Logic Layer:</strong> Implements core functionality, business rules, and process 
+                workflows that drive the application.</li>
+                
+                <li><strong>Data Access Layer:</strong> Manages data retrieval, storage, and synchronization between 
+                local and remote systems.</li>
+                
+                <li><strong>Infrastructure Layer:</strong> Provides foundational services like networking, security, 
+                and system integration capabilities.</li>
+            </ol>
+            
+            <p>
+                This layered approach enables MINT to operate effectively in both <a href="4_4.html">online and offline modes</a>, 
+                with sophisticated synchronization mechanisms ensuring data consistency across all installations.
+            </p>
+            
+            <p>
+                The resulting framework provides ACME and its dealers with a powerful platform for vehicle sales 
+                that can adapt to changing business requirements and technological capabilities. The next sections 
+                will explore the <a href="2_2.html">business processes</a>, <a href="2_3.html">business objects</a>, and 
+                <a href="2_4.html">framework structure</a> in greater detail.
+            </p>
+        </div>
+        
+        <div class="archaeology-note">
+    <strong>Digital Archaeology Note:</strong> This is a modern restoration of a 1997 web application. 
+    The original used Flash animations, auto-playing WAV files, frames, and obsolete web technologies. 
+    These have been replaced with HTML5 equivalents while preserving the original look and navigation structure. 
+    Background images are now more visible, and redundant copyright footers have been removed.
+</div>
+        
+        <hr>
+        
+        <div class="footer">
+            <div class="left">
+                <a href="1_3.html" class="nav-link">
+                    <span class="nav-arrow">⬅️</span>
+                    <span>Back: Problem Definition</span>
+                </a>
+            </div>
+            <div class="right">
+                <a href="2_2.html" class="nav-link">
+                    <span class="nav-arrow">➡️</span>
+                    <span>Next: Business Processes</span>
+                </a>
+            </div>
+        
+    
+</div>
+</div>
+
+    <script>
+        // Store the current page location for navigation
+        if (window.parent && window.parent.updateCurrentPage) {
+            window.parent.updateCurrentPage("2_1.html");
+        }
+    </script>
+
+</body>
+</html>

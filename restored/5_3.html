@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINT for ACME - Working Packages</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/title-animation.css">
+    <script src="js/title-animation.js" defer></script></head>
+<body>
+    <div class="content-container">
+        <div class="navigation">
+            <div class="left">
+                <a href="5_2.html" class="nav-link">
+                    <span class="nav-arrow">⬅️</span>
+                    <span>Back: Project Team</span>
+                </a>
+            </div>
+            <div class="right">
+                <!-- No forward link as this is the last page -->
+                &nbsp;
+            </div>
+        </div>
+        
+        <hr>
+        
+        <div class="audio-control">
+            <audio controls>
+                <source src="../original/sounds/5_3.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+            <span>Original audio narration</span>
+        </div>
+
+        <h1 class="title-text">5.3. Working Packages</h1>
+        
+        <div class="content">
+            <p>
+                The development process is divided into many prototypes that are delivered
+                and tested until the final development phase begins. This will offer enough
+                possibilities for fine tuning and adaptation to user needs. The prototypes
+                will be accessible via Internet and made available to ACME and to selected
+                dealers as part of the User Lab function, that is part of our offer and
+                available from the beginning of 1998 until the end of the project.
+            </p>
+            
+            <div id="prototyping" class="phase-section">
+                <div class="phase-badge">Phase A</div>
+                <h3>5.3.1. Prototyping A (GUI and multimedia objects)</h3>
+                
+                <p>
+                    The first prototype will be a <span class="emphasis">pure GUI prototype</span> to give a first impression
+                    of the look &amp; feel and the display capabilities of the application.
+                    The processes will be hard wired and there will be no traditional application
+                    logic to encapsulate business processes from ACME. However this prototype
+                    will show basic processes for system configuration, common vehicle information
+                    and vehicle configuration. It will display and interact with most of the
+                    <a href="4_8.html">multimedia object</a> types of the final version. This includes pictures of
+                    different types, sounds, (surround) videos and even 3D objects. The simulation
+                    applications for economic, performance and financial contexts will also
+                    be available.
+                </p>
+                
+                <p>
+                    This first prototype will focus on one car type and offer for this one
+                    most of the future configuration and browsing capabilities. However, the
+                    final design will be refined from prototype to the final development phase.
+                </p>
+                
+                <p>
+                    With this phase we open our <span class="emphasis">MINT User Lab</span>. This is the core of the open
+                    project environment and will assure the integration of ACME, dealer systems
+                    manufacturers, dealers and selected users over the entire project.
+                </p>
+            </div>
+            
+            <div class="phase-section">
+                <div class="phase-badge">Phase B</div>
+                <h3>5.3.2. Prototype B (<a href="4_3.html#applicationlayer">Application Server</a>)</h3>
+                
+                <p>
+                    The second prototype will use the first build of the <a href="4_3.html#applicationlayer">Application Server</a> to encapsulate the <a href="2_2.html">business process</a> logic and to directly access <a href="4_3.html#databaselayer">DS and AS data</a>. The Application Server will largely expand the flexibility of MINT, e.g. by storing customer configurations. As for all following prototype
+                    and development phases the client side is extended and the <a href="4_9.html">system is documented</a>.
+                </p>
+            </div>
+            
+            <div class="phase-section">
+                <div class="phase-badge">Phase C</div>
+                <h3>5.3.3. Prototype C (<a href="4_3.html#replicationlayer">Replication Server</a>)</h3>
+                
+                <p>
+                    The third prototype will be the first version that offers <a href="4_4.html#laptopoffline">off-line</a> working functionality. It will use the first build of the Replication Server and
+                    the second build of the Application Server. The Replication Server will
+                    also embed a version of the Application Server with reduced functionality
+                    to enable the sales consultant to go through the sales process even when
+                    he has no access to the network. The second build of the Application Server
+                    will offer a richer set of functions e.g. <a href="4_7.html">data tracking</a> to identify frequently
+                    used areas and authenticated user identification. As for all previous prototypes,
+                    Prototype C is followed by an own testing and evaluation phase in the User
+                    Lab.
+                </p>
+            </div>
+            
+            <div class="phase-section">
+                <div class="phase-badge">Final</div>
+                <h3>5.3.4. Final Development</h3>
+                
+                <p>
+                    The final development phase will include the third build of the Application
+                    Server and the second build of the Replication Server. The development
+                    will include considerations from the test phases of the prototypes and
+                    the suggestions from the User Lab.
+                </p>
+            </div>
+            
+            <div class="phase-section">
+                <div class="phase-badge">Testing 1</div>
+                <h3>5.3.5. Approval of the core system</h3>
+                
+                <p>
+                    The test and approval of the core system (MINT itself) will include deep thorough tests
+                    for the consistency, the functions and the interfaces of the Application
+                    Server, the Replication Server, the embedded ActiveX, Java or ShockWave
+                    Applications and the HTML-documents.
+                </p>
+                
+                <p>
+                    Due to the previous test phases for the prototypes we are confident
+                    to keep the efforts for this phase relatively low.
+                </p>
+            </div>
+            
+            <div class="phase-section">
+                <div class="phase-badge">Testing 2</div>
+                <h3>5.3.6. Approval of the system integration</h3>
+                
+                <p>
+                    This final test phase will assure that the MINT-System will perform the
+                    requested functions and fits in the specified system environment. The integration
+                    test will stress especially network interaction by TCP/IP and HTTP, direct
+                    RDBMS access, the APIs to the <a href="4_3.html#databaselayer">DS and AS systems</a> and ActiveX services to validate the interoperability of the system elements. The testing of installation,
+                    delivery and maintenance procedures are also part of this final test phase.
+                </p>
+                
+                <p>
+                    Due to the previous test phases for the prototypes we are confident
+                    to keep the efforts for this phase also relatively low.
+                </p>
+            </div>
+            
+            <div id="piloting" class="phase-section">
+                <div class="phase-badge">Deployment</div>
+                <h3>5.3.7. Piloting</h3>
+                
+                <p>
+                    We are confident that from the beginning of the pilot phase MINT could
+                    be delivered parallel in all ACME countries. The necessary installation
+                    files can be deployed by existing file broadcasting system and easily be
+                    installed. Due to the extensive usability tests, the intuitive help system and the user acceptance efforts we expect very low training efforts.
+                </p>
+            </div>
+            
+            <div class="historical-context">
+                <h4>Development Methodology in 1997</h4>
+                <p>
+                    This section outlines what would now be recognized as an early iterative development 
+                    approach, which was relatively progressive for 1997. The traditional waterfall model 
+                    was still dominant at this time, but this proposal embraces concepts of early user 
+                    testing, iterative prototyping, and continuous refinement that foreshadowed modern 
+                    agile methodologies.
+                </p>
+                <p>
+                    The "User Lab" concept described here was ahead of its time, anticipating the 
+                    user research labs and usability testing facilities that would become standard 
+                    in software development over the following decade. The emphasis on early and 
+                    continuous user involvement throughout the development process reflects modern 
+                    user-centered design principles.
+                </p>
+            </div>
+            
+            <div class="work-in-progress">
+                <p>This section is in development as part of the digital archaeology restoration project.</p>
+                <p>The complete content for Working Packages will be expanded in a future update.</p>
+            </div>
+        </div>
+        
+        <div class="archaeology-note">
+    <strong>Digital Archaeology Note:</strong> This is a modern restoration of a 1997 web application. 
+    The original used Flash animations, auto-playing WAV files, frames, and obsolete web technologies. 
+    These have been replaced with HTML5 equivalents while preserving the original look and navigation structure. 
+    Background images are now more visible, and redundant copyright footers have been removed.
+</div>
+        
+        <hr>
+        
+        <div class="footer">
+            <div class="left">
+                <a href="5_2.html" class="nav-link">
+                    <span class="nav-arrow">⬅️</span>
+                    <span>Back: Project Team</span>
+                </a>
+            </div>
+            <div class="right">
+                <!-- No forward link as this is the last page -->
+                &nbsp;
+            </div>
+        
+    
+</div>
+</div>
+
+    <script>
+        // Store the current page location for navigation
+        if (window.parent && window.parent.updateCurrentPage) {
+            window.parent.updateCurrentPage("5_3.html");
+        }
+    </script>
+
+</body>
+</html>

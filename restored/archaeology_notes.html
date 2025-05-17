@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINT for ACME - Digital Archaeology Notes</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/title-animation.css">
+    <script src="js/title-animation.js" defer></script></head>
+<body>
+    <div class="content-container">
+        <div class="navigation">
+            <div class="left">
+                <a href="javascript:history.back()">
+                    <img src="../original/images/back.gif" alt="Back" width="30" height="24">
+                </a>
+            </div>
+            <div class="right">
+                <!-- No forward button on archaeology notes page -->
+            </div>
+        </div>
+        
+        <hr>
+        
+        <h1>Digital Archaeology Preservation Notes</h1>
+        
+        <div class="content">
+            <p>This project represents an exercise in digital archaeology—the study, preservation, and restoration of early digital artifacts. The MINT for ACME application from 1997 provides a fascinating glimpse into early commercial web development practices.</p>
+            
+            <h2>Preservation Philosophy</h2>
+            
+            <p>Our archaeological approach follows specific principles to ensure that the historical significance of the original application is maintained while making it accessible to modern users:</p>
+            
+            <div class="preservation-principle">
+                <h4>Principle 1: Maximum Preservation</h4>
+                <p>Preserve as much of the original code, media, and functionality as possible. Where elements still function in modern browsers (such as GIF icons and basic HTML), they are kept intact.</p>
+            </div>
+            
+            <div class="preservation-principle">
+                <h4>Principle 2: Minimal Intervention</h4>
+                <p>Replace only technologies that no longer function in modern browsers, such as Flash, VRML, and framesets, with their closest modern equivalents.</p>
+            </div>
+            
+            <div class="preservation-principle">
+                <h4>Principle 3: Historical Context</h4>
+                <p>Provide explanatory notes about the original technologies and their historical significance to educate users about web development history.</p>
+            </div>
+            
+            <div class="preservation-principle">
+                <h4>Principle 4: Authentic Experience</h4>
+                <p>Maintain the original user experience, navigation patterns, and visual design while making them function in modern browsers.</p>
+            </div>
+            
+            <h2>Technical Implementation</h2>
+            
+            <h3>Frameset Replacement</h3>
+            
+            <p>One of the most significant challenges was replacing the original frameset-based layout with modern HTML5 and CSS:</p>
+            
+            <div class="comparison">
+                <div class="comparison-col original">
+                    <h4>Original (1997)</h4>
+                    <div class="code-block">&lt;FRAMESET COLS="200,*" BORDER="0" FRAMESPACING="0" FRAMEBORDER="0"&gt;
+  &lt;FRAME NAME="EXPLORER" SRC="explorer_loading.html" SCROLLING="AUTO"&gt;
+  &lt;FRAMESET ROWS="*,75" BORDER="0" FRAMESPACING=0 FRAMEBORDER="NO"&gt;
+    &lt;FRAME NAME="MAINFRAME" SRC="blank.html" SCROLLING="AUTO"&gt;
+    &lt;FRAME NAME="COLLECTION" SRC="collection.html" SCROLLING="NO"&gt;
+  &lt;/FRAMESET&gt;
+&lt;/FRAMESET&gt;</div>
+                </div>
+                <div class="comparison-col restored">
+                    <h4>Restoration (2025)</h4>
+                    <div class="code-block">&lt;div class="content"&gt;
+  &lt;div class="explorer" id="explorer"&gt;
+    &lt;!-- Explorer content --&gt;
+  &lt;/div&gt;
+  &lt;div class="main-content"&gt;
+    &lt;iframe name="mainFrame" id="mainFrame" class="main-frame" src="blank.html"&gt;&lt;/iframe&gt;
+    &lt;div class="collection" id="collection"&gt;
+      &lt;!-- Collection browser --&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</div>
+                </div>
+            </div>
+            
+            <h3>Explorer Tree Navigation</h3>
+            
+            <p>The original used a sophisticated JavaScript tree structure for navigation. We've preserved the same structure while implementing it with modern DOM manipulation techniques:</p>
+            
+            <div class="comparison">
+                <div class="comparison-col original">
+                    <h4>Original (1997)</h4>
+                    <div class="code-block">function generateTree() {
+  var aux1, aux2, aux3, aux4;
+
+  foldersTree = folderNode("Homepage")
+    aux1 = appendChild(foldersTree, folderNode("Proposal"))
+      aux2 = appendChild(aux1, leafNode("Introduction"))
+        appendChild(aux2, generateDocEntry(0, "Introduction", "1_1.html"))
+        // More entries...
+}</div>
+                </div>
+                <div class="comparison-col restored">
+                    <h4>Restoration (2025)</h4>
+                    <div class="code-block">const FolderTree = [
+  {
+    name: "Homepage",
+    isOpen: false,
+    children: [
+      {
+        name: "Proposal",
+        isOpen: false,
+        children: [
+          {
+            name: "Introduction",
+            isOpen: false,
+            documents: [
+              { name: "Introduction", link: "1_1.html" },
+              // More entries...
+            ]
+          },
+          // More sections...
+        ]
+      },
+      // More top-level sections...
+    ]
+  }
+];</div>
+                </div>
+            </div>
+            
+            <h3>Multimedia Replacements</h3>
+            
+            <p>Several obsolete multimedia technologies required replacements:</p>
+            
+            <table class="comparison-table">
+                <tr>
+                    <th>Original Element</th>
+                    <th>Replacement</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>Flash animations</td>
+                    <td>Static JPEG fallback images</td>
+                    <td>Title banners (1_1.swf → 1_1.jpg)</td>
+                </tr>
+                <tr>
+                    <td>Auto-playing WAV</td>
+                    <td>HTML5 &lt;audio&gt; with controls</td>
+                    <td>Section narrations (1_1.wav)</td>
+                </tr>
+                <tr>
+                    <td>VRML 3D models</td>
+                    <td>Screenshots with notes</td>
+                    <td>Sitemap 3D navigation</td>
+                </tr>
+                <tr>
+                    <td>QuickTime movies</td>
+                    <td>HTML5 &lt;video&gt;</td>
+                    <td>Vehicle presentations</td>
+                </tr>
+            </table>
+            
+            <div class="image-comparison">
+                <img src="../original/title/1_1.jpg" alt="Title Image Example">
+                <p class="caption">Example: Original Flash title image fallback (1_1.jpg) preserved in the restoration</p>
+            </div>
+            
+            <h2>Challenges & Solutions</h2>
+            
+            <h3>Browser Compatibility</h3>
+            
+            <p>The original application was specifically designed for Netscape Navigator 4.0 and Internet Explorer 4.0, with extensive browser detection code. Our restoration is designed to work across all modern browsers without requiring this detection.</p>
+            
+            <h3>State Management</h3>
+            
+            <p>The original used cookies for session management and to remember navigation state. Our restoration uses localStorage and session variables for the same purpose while maintaining the same navigation patterns.</p>
+            
+            <h3>Missing Resources</h3>
+            
+            <p>Some original resources may have been lost or damaged over time. In these cases, we've created placeholder content that explains what would have been displayed in the original.</p>
+            
+            <h2>Future Work</h2>
+            
+            <p>This archaeological restoration is an ongoing project. Future enhancements may include:</p>
+            
+            <ul>
+                <li>Three.js implementation of the original VRML sitemap</li>
+                <li>Reconstructions of missing Flash animations</li>
+                <li>Audio transcriptions of the WAV narrations</li>
+                <li>Documented comparison of the framework architecture with modern web application approaches</li>
+            </ul>
+            
+            <p>Digital archaeology offers important insights into the history of computing and web development. By preserving applications like MINT for ACME, we can better understand the evolution of web technologies and the innovative approaches that preceded current practices.</p>
+        
+        <div class="archaeology-note">
+    <strong>Digital Archaeology Note:</strong> This is a modern restoration of a 1997 web application. 
+    The original used Flash animations, auto-playing WAV files, frames, and obsolete web technologies. 
+    These have been replaced with HTML5 equivalents while preserving the original look and navigation structure. 
+    Background images are now more visible, and redundant copyright footers have been removed.
+</div>
+    </div>
+        
+        <hr>
+        
+        <div class="footer">
+            <p>Archaeological restoration © 2025</p>
+        
+    
+</div>
+</div>
+
+    </body>
+</html>

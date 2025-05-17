@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINT for ACME - Technical Overview</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/title-animation.css">
+    <script src="js/title-animation.js" defer></script></head>
+<body>
+    <div class="content-container">
+        <div class="navigation">
+            <div class="left">
+                <a href="4_1.html" class="nav-link">
+                    <span class="nav-arrow">⬅️</span>
+                    <span>Back: Technical Environment</span>
+                </a>
+            </div>
+            <div class="right">
+                <a href="4_3.html" class="nav-link">
+                    <span class="nav-arrow">➡️</span>
+                    <span>Next: MINT Layers</span>
+                </a>
+            </div>
+        </div>
+        
+        <hr>
+        
+        <div class="audio-control">
+            <audio controls>
+                <source src="../original/sounds/4_2.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+            <span>Original audio narration</span>
+        </div>
+        
+        <h1 class="title-text">4.2. Overview</h1>
+        
+        <div class="content">
+            <p>
+                This section provides a technical overview of the MINT framework architecture. It describes the key 
+                components of the system and their interactions.
+            </p>
+            
+            <div class="architecture-diagram">
+                <img src="../original/objects/4_2.jpg" alt="MINT Architecture Diagram" width="600" onerror="this.src='../original/title/4_2.jpg'; this.style.opacity='0.7';">
+                <figcaption>MINT Architecture Diagram</figcaption>
+            </div>
+            
+            <p>
+                The MINT framework employs a component-based architecture that separates concerns into distinct 
+                functional areas. This approach provides flexibility in deployment, maintenance, and customization.
+            </p>
+            
+            <div class="interactive-demo">
+                <img src="../original/objects/4_2.swf" alt="Interactive Architecture Demonstration" width="600" onerror="this.src='../original/objects/4_2.jpg'; this.style.opacity='1';">
+            </div>
+            
+            <div class="component-description">
+                <h3>Core Components</h3>
+                <p>
+                    The MINT framework consists of several core components that work together to provide the complete 
+                    functionality:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Presentation Engine:</strong> Handles the user interface and multimedia presentation, 
+                        including vehicle visualization, interactive catalogs, and guided selling tools.
+                    </li>
+                    <li>
+                        <strong>Business Logic Engine:</strong> Implements the business rules and processes, including 
+                        configuration validation, pricing calculations, and workflow management.
+                    </li>
+                    <li>
+                        <strong>Data Management:</strong> Manages the storage, retrieval, and synchronization of data, 
+                        including vehicle specifications, customer information, and order status.
+                    </li>
+                    <li>
+                        <strong>Integration Services:</strong> Provides interfaces to external systems, including dealer 
+                        management systems, ACME production systems, and other enterprise applications.
+                    </li>
+                    <li>
+                        <strong>Infrastructure Services:</strong> Delivers foundational capabilities such as security, 
+                        logging, configuration, and offline operation.
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="work-in-progress">
+                <p>This section is in development as part of the digital archaeology restoration project.</p>
+                <p>The complete content for Technical Overview will be added in a future update.</p>
+            </div>
+            
+            <p>
+                These components are organized into the <a href="4_3.html">MINT layers</a> that provide a structured 
+                approach to the overall architecture. The framework supports multiple <a href="4_4.html">deployment versions</a> 
+                to address different operational requirements.
+            </p>
+        </div>
+        
+        <div class="archaeology-note">
+    <strong>Digital Archaeology Note:</strong> This is a modern restoration of a 1997 web application. 
+    The original used Flash animations, auto-playing WAV files, frames, and obsolete web technologies. 
+    These have been replaced with HTML5 equivalents while preserving the original look and navigation structure. 
+    Background images are now more visible, and redundant copyright footers have been removed.
+</div>
+        
+        <hr>
+        
+        <div class="footer">
+            <div class="left">
+                <a href="4_1.html" class="nav-link">
+                    <span class="nav-arrow">⬅️</span>
+                    <span>Back: Technical Environment</span>
+                </a>
+            </div>
+            <div class="right">
+                <a href="4_3.html" class="nav-link">
+                    <span class="nav-arrow">➡️</span>
+                    <span>Next: MINT Layers</span>
+                </a>
+            </div>
+        
+    
+</div>
+</div>
+
+    <script>
+        // Store the current page location for navigation
+        if (window.parent && window.parent.updateCurrentPage) {
+            window.parent.updateCurrentPage("4_2.html");
+        }
+    </script>
+
+</body>
+</html>
